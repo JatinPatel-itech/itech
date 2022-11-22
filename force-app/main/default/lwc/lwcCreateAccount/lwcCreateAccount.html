@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Create Account Record" icon-name="standard:account">
+        <div style="margin-left: 6%" if:true={error}>
+            <lightning-badge label={error} style="color: red;"></lightning-badge>
+        </div>
+
+        <template if:true={accRecord}>
+            <div class="slds-m-around--xx-large">
+                <div class="container-fluid">
+                    <div class="form-group">
+                        <lightning-input label="Enter Account Name" name="Name" required="required" type="text" onchange={handleSave}></lightning-input>
+                    </div>
+                    <div class="form-group">
+                        <lightning-input label="Enter Phone Number" name="Phone" type="number" onchange={handleSave}></lightning-input>
+                    </div>
+                    <div class="form-group">
+                        <lightning-input label="Enter Website" name="Website" type="text"  onchange={handleSave}></lightning-input>
+                    </div>
+                    <div class="form-group">
+                        <lightning-input label="Enter Website" name="Website" type="text"  onchange={handleSave}></lightning-input>
+                    </div>
+                </div>
+                <br/>
+                <lightning-button label="Submit" onclick={createAccountHandle} variant="brand"></lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</template>

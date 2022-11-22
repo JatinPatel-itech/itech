@@ -1,0 +1,37 @@
+<template>
+    <lightning-card  title="Detail">
+
+       <lightning-button label="Cancel" slot="actions" variant="natural"></lightning-button>
+       <lightning-button label="Save" slot="actions" variant="brand" onclick={saveFormData}></lightning-button>
+
+        <div class="slds-m-around_medium">                
+           <lightning-input
+               type="string"
+               onchange={handleFirstName}
+               class="string-input"
+               label="First Name"
+               value={firstName}
+           ></lightning-input>            
+       </div>
+       <div class="slds-m-around_medium">                
+           <lightning-input
+               type="string"
+               onchange={handleFirstName}
+               class="string-input"
+               label="Last Name"
+               value={lastName}
+           ></lightning-input>            
+       </div>
+       <div class="slds-m-around_medium">                
+        <lightning-combobox
+            name="progress"
+            label="AccountName"
+            value=""
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange}
+            required
+    ></lightning-combobox>           
+    </div> 
+    </lightning-card>
+</template>

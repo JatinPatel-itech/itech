@@ -1,0 +1,48 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <h3>
+                <lightning-icon icon-name="standard:contact" size="small"></lightning-icon> Create Record Dynamic Form
+                </h3>
+            </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                <lightning-input label="First Name" name="firstName"  type="text" onchange={handleSave}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+            <div class="slds-form-element">
+                <lightning-input label="Last Name" name="lastName" type="text" onchange={handleSave}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+            <div class="slds-form-element">
+                <lightning-input type="date"   label="Birth Date"  name="bday" onchange={handleSave} ></lightning-input>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+            <div class="slds-form-element">
+                <lightning-input label="Email" name="emailId" type="text" onchange={handleSave} ></lightning-input>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+            <div class="slds-form-element">
+                <lightning-input label="Department" type="text"  name="departmentVal" onchange={handleSave} ></lightning-input>
+                </div>
+            </div>
+
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <label class="slds-m-bottom--medium" > Account Name : </label>
+            <c-lwc-lookup obj-name="Account"   onchange={handleSave}  search-placeholder="Search Accounts"  icon-name="standard:account" onlookupselected={lookupSelection}> </c-lwc-lookup>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+            <div class="slds-form-element slds-p-top_large ">
+                <lightning-button label="Create Contact Record" variant="brand" onclick={insertAction}></lightning-button>
+            </div>
+            </div>
+        </div>
+    </lightning-card>
+    </template>
