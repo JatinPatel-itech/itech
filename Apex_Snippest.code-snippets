@@ -1,0 +1,144 @@
+{
+	"ApexMethod": {
+		"prefix": "Create-Apex-Method",
+		"body": [
+		  "public static void Method1(){",
+		  "        ",
+		  "    }"
+		],
+		"description": ""
+	  },
+	  "TestClass": {
+		"prefix": "Create-TestClass",
+		"body": [
+		  "@isTest",
+		  "public class AccountControllerTest {",
+		  "    @TestSetup",
+		  "    static void createAccount(){",
+		  "    //all Initial DML operation here",
+		  "    }",
+		  "     @isTest",
+		  "    static void TestMethod1(){",
+		  "    //coverage code",
+		  "    }"
+		],
+		"description": ""
+	  },
+	  "WrapperClass": {
+		"prefix": "Create-WrapperClass",
+		"body": [
+		  "//wrapper class",
+		  "public class AccountController{",
+		  "",
+		  "    public static void method1(){",
+		  "    //code",
+		  "    }",
+		  "}"
+		],
+		"description": ""
+	  },
+	  "SingleMail": {
+		"prefix": "Send-SingleMail",
+		"body": [
+		  "        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();",
+		  "        mail.setToAddresses(new String[] {'XYZ@gmail.com'});",
+		  "        mail.setSenderDisplayName('Batch Processing');",
+		  "        mail.setSubject('Batch Process Completed');",
+		  "        mail.setPlainTextBody('Batch Process has completed ');",
+		  "        ",
+		  "        Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });"
+		],
+		"description": ""
+	  },
+	  "TryCatch": {
+		"prefix": "Try-Catch",
+		"body": [
+		  "//If any Exception occurs entier operation will rollback ",
+		  "        Savepoint savedata = Database.setSavePoint();",
+		  "        try {",
+		  "            //code",
+		  "            System.debug('Line of code after exception');",
+		  "        }catch (QueryException e) {",
+		  "              //If a query exception occurs it will go here",
+		  "              System.debug('Query Exception hit');",
+		  "              ",
+		  "        }catch (DmlException e) {",
+		  "            //If a DML exception occurs it will go to this statement",
+		  "            System.debug('DmlException hit');",
+    	  "            //Database.rollback( savedata );",
+          "         }catch (Exception e) {",
+		  "               //Any other exceptions that occur will go here",
+		  "              System.debug('Exception hit');",
+		  "        } finally {",
+		  "            //Clean up",
+		  "            System.debug('finally we exit');",
+		  "        }"
+		],
+		"description": "TryCatch"
+	  },
+	  "ApexNotification": {
+		"prefix": "Apex-Notification",
+		"body": [
+		  "String title = 'hello';String Body='jatin';String recordId = '0015i00000QtEHVAA3'; ",
+		  "        set<String> userId = new set<String>{Userinfo.getUserId()};",
+		  "        if(String.isNotBlank(title) && String.isNotBlank(Body) && userid.size()>0){",
+		  "            ",
+		  "            FeedItem post = new FeedItem();",
+		  "            List<String> userList= new List<String>();",
+		  "            userList.addall(userid);",
+		  "            post.ParentId = userList[0];",
+		  "            post.Body = Body;",
+		  "            insert post;",
+		  "            ",
+		  "            CustomNotificationType notificationType = [Select Id, DeveloperName From CustomNotificationType Where DeveloperName='TestNotification' Limit 1];",
+		  "            ",
+		  "            // Create a new custom notification",
+		  "            Messaging.CustomNotification notification = new Messaging.CustomNotification();",
+		  "            ",
+		  "            // Set the contents for the notification",
+		  "            notification.setTitle('Record : '+title);",
+		  "            notification.setBody(Body);",
+		  "            ",
+		  "            // Set the notification type and target",
+		  "            notification.setNotificationTypeId(notificationType.Id);",
+		  "            notification.setTargetId(recordId);",
+		  "            ",
+		  "            // Actually send the notification",
+		  "            try {",
+		  "                notification.send(userid);",
+		  "            }",
+		  "            catch (Exception e) {",
+		  "                System.debug('Problem sending notification: ' + e.getMessage());",
+		  "            }",
+		  "        }"
+		],
+		"description": "ApexNotification"
+	  },
+	  "ApexGetRecordTypeId": {
+		"prefix": "Apex-GetRecordTypeId",
+		"body": [
+		  "",
+		  "Id devRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('name of Recordtype').getRecordTypeId();"
+		],
+		"description": "ApexGetRecordTypeId"
+	  },
+	  "ApexGetobjectId": {
+		"prefix": "Apex-GetobjectId",
+		"body": [
+		  "if(!String.isEmpty(recordId)){",
+		  "                if(((Id)recordId).getSObjectType().getDescribe().getName()=='account'){",
+		  "}"
+		],
+		"description": "ApexGetobjectId"
+	  },
+	  "ApexGetListofSobject": {
+		"prefix": "Apex-GetListofSobject",
+		"body": [
+		  "for( Schema.SObjectType obj : Schema.getGlobalDescribe().Values() ){",
+		  "    System.debug('all object list '+obj);        ",
+		  "    String prefix = obj.getDescribe().getKeyPrefix();   ",
+		  " }"
+		],
+		"description": "ApexGetListofSobject"
+	  }
+}

@@ -1,0 +1,126 @@
+{
+	"TostEvent": {
+		"prefix": "Tost-Event",
+		"body": [
+		  "toastHandlersuccess(){   ",
+		  "        this.showtoastmessage('success!!','testing screen!!','success')",
+		  "    }",
+		  "",
+		  "    toastHandlererror(){   ",
+		  "        this.showtoastmessage('error!!','there is some problem','error')",
+		  "    }",
+		  "    toastHandlerinfo(){   ",
+		  "        this.showtoastmessage('info!!','there is some problem','info')",
+		  "    }",
+		  "    toastHandlerworning(){   ",
+		  "        this.showtoastmessage('Worning!!','there is some problem','worning')",
+		  "    }",
+		  "",
+		  "    showtoastmessage(title,message,variant){",
+		  "        const event = new ShowToastEvent({",
+		  "            title,",
+		  "            message,",
+		  "            variant",
+		  "        })",
+		  "        this.dispatchEvent(event)",
+		  "    }"
+		],
+		"description": ""
+	  },
+
+	  "ApiMethod": {
+		"prefix": "Api-Method",
+		"body": [
+		  "apiAllData(){",
+		  "    CreateAccount({alldata: JSON.parse(JSON.stringify(this.alldata))})",
+		  "    .then(Respone=>{",
+		  "        console.log(Respone);",
+		  "    })",
+		  "    .catch(error=>{",
+		  "    })",
+		  " }"
+		],
+		"description": ""
+	  },
+
+	  "RowActionColumns": {
+		"prefix": "Row-Action-Columns",
+		"body": [
+		  "// row actions",
+		  "const actions = [",
+		  "    { label: 'Record Details', name: 'record_details'}, ",
+		  "    { label: 'Edit', name: 'edit'}, ",
+		  "    { label: 'Delete', name: 'delete'}",
+		  "];",
+		  "",
+		  "// datatable columns with row actions",
+		  "const columns = [",
+		  "    { label: 'FirstName', fieldName: 'FirstName' }, ",
+		  "    { label: 'LastName', fieldName: 'LastName' },",
+		  "    { label: 'Phone', fieldName: 'Phone', type: 'phone'}, ",
+		  "    { label: 'Email', fieldName: 'Email', type: 'email' }, ",
+		  "    {",
+		  "        type: 'action',",
+		  "        typeAttributes: {",
+		  "            rowActions: actions,",
+		  "            menuAlignment: 'right'",
+		  "        }",
+		  "    }",
+		  "];"
+		],
+		"description": ""
+	  },
+	  "SwitchCase": {
+		"prefix": "Row-Action-SwitchCase",
+		"body": [
+		  "handleRowActions(event) {",
+		  "     let actionName = event.detail.action.name;",
+		  "",
+		  "     window.console.log('actionName ====> ' + actionName);",
+		  "",
+		  "     let row = event.detail.row;",
+		  "",
+		  "     window.console.log('row ====> ' + row);",
+		  "     // eslint-disable-next-line default-case",
+		  "     switch (actionName) {",
+		  "         case 'record_details':",
+		  "             this.viewCurrentRecord(row);",
+		  "             break;",
+		  "         case 'edit':",
+		  "             this.editCurrentRecord(row);",
+		  "             break;",
+		  "         case 'delete':",
+		  "             this.deleteCons(row);",
+		  "             break;",
+		  "     }",
+		  " }"
+		],
+		"description": ""
+	  },
+	  "TargetEvent": {
+		"prefix": "Target-Event",
+		"body": [
+		  "@track data={};",
+		  "handleSave(event){",
+		  "        this.data[event.target.name] = event.target.value;",
+		  "        console.log('data List@@',this.data[event.target.name]);",
+		  "    }"
+		],
+		"description": ""
+	  },
+	  "JSONStringify": {
+		"prefix": "JSON-Stringify",
+		"body": [
+		  "@track data={};",	
+		  "JSON.stringify(this.allData)"
+		],
+		"description": ""
+	  },
+	  "JSONParse": {
+		"prefix": "JSON-Parse",
+		"body": [
+		  "this.parsedValue = JSON.parse(JSON.stringify(res));"
+		],
+		"description": ""
+	  }
+}
