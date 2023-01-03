@@ -1,0 +1,61 @@
+String j1 = '{ "bob": "bobby","name":"jatin"}';      
+Map<String, String> b1 = (Map<String,String>) JSON.deserialize(j1, Map<String,String>.class);
+System.debug('b1'+b1);
+
+
+
+public static String JSONList(){
+        List<String> listData = new List<String>();
+        listData.add('test1');
+        listData.add('test2');
+        listData.add('test3');
+        String listSerialize = JSON.serialize(listData);
+        //this throw an error
+        List<String> listDeserialize = (List<String>)JSON.deserialize(listSerialize, List<String>.class);
+        System.debug('listDeserialize'+listDeserialize);
+        
+        //This will throw error cause List will alway type, it contains only one type of variable
+        List<String> listDeserializeUntyped = (List<String>)JSON.deserializeUntyped(listSerialize); 
+        System.debug('listDeserializeUntyped'+listDeserializeUntyped);
+        
+        
+        return null;
+    } 
+    //Json Example
+    public static String JSONMap(){
+        Map<String,String> mapReturn = new Map<String,String>();
+        mapReturn.put('firstname','jatin');
+        mapReturn.put('lastname','patel');
+        mapReturn.put('active','true');
+        
+        String mapSerialize = JSON.serialize(mapReturn);
+        
+        Map<String,String> mapDeserializeUntyped = (Map<String,String>)JSON.deserialize(mapSerialize,Map<String,String>.class);
+        System.debug('mapDeserializeUntyped'+mapDeserializeUntyped);
+        
+        Map<String,Object> mapReturn1 = new Map<String,Object>();
+        mapReturn1.put('firstname','jatin');
+        mapReturn1.put('lastname','patel');
+        mapReturn1.put('active','true');
+        
+        String mapSerialize1 = JSON.serialize(mapReturn1);
+        
+        Map<String,Object> mapDeserializeUntyped1 = (Map<String,Object>)JSON.deserializeUntyped(mapSerialize);
+        System.debug('mapDeserializeUntyped1'+mapDeserializeUntyped1);
+        
+        List<account> acc = [select id,name from account limit 3];
+        String acclist = JSON.serialize(acc);
+        
+        List<account> mapacc = (List<account>)JSON.deserialize(acclist,List<account>.class);
+        System.debug('mapacc'+mapacc);
+        
+        Map<Id,account> mapAccID = new Map<Id,account>(acc);
+        String mapserid = JSON.serialize(mapAccID);
+        Map<Id,account> mapAccIds = (Map<Id,account>)JSON.deserialize(mapserid,map<Id,account>.class);
+        
+        Map<String,Map<String,Object>> mapmix = new Map<String,Map<String,Object>>();
+        String mapmixser = JSON.serialize(mapmix);
+        
+        Map<String,Map<String,Object>> mapmixdes = (Map<String,Map<String,Object>>)JSON.deserialize(mapmixser,Map<String,Map<String,Object>>.class);
+        return null;
+    }

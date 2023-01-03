@@ -1,0 +1,23 @@
+	Exception Type	Description
+1	DmlException	Failure of DML Operation Example – Missing required field value during insertion
+
+2	LimitException	Transaction reached Salesforce Governor Limit: Example – SOQL 101 Exception
+
+3	ListException	Any problem with List operation Example – List Index out of bound (While accessing data from list but is was null)
+
+4	NullPointerException	Reference null value Example – Accessing uninitialized variable
+
+5	QueryException	Issue with query execution Example – Try to assign more records to single instance
+
+
+DML:
+	List<lead> allleadlist = new List<lead>();
+        for(lead led : [select id,name,description,website from lead]){
+            led.website = 'example.com';
+            allleadlist.add(led);
+        }
+         if(allleadlist.size()>0 && Limits.getDMLStatements() < Limits.getLimitDmlStatements()){ 
+             update allleadlist;
+         }
+		 
+		 2022-10-15T12:06:09.000+0000

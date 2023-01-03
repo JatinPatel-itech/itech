@@ -1,0 +1,10 @@
+//this is delete
+List<Account> Accounts = [Select ID, Name from Account];
+set<string> DuplicateCheck = new set<string>();
+set<Id> DupAccountIds = new set<Id>();
+for(Account acc: Accounts){
+	if(!DuplicateCheck.add(acc.Name))
+	DupAccountIds.add(acc.Id);
+}
+
+delete [select Id from Account where Id IN :DupAccountIds];

@@ -1,0 +1,85 @@
+public without sharing class QuoteEmail {
+
+    @InvocableMethod
+    public static void QuoteCreateAndEmail(List < Id > quoteIds) {
+
+        List < Quote > quoteList = [SELECT ID, Opportunity.Primary_Contacts_Email__c, Opportunity.ContactId  FROM Quote WHERE ID =: quoteIds];
+
+        //If a Quote is found lets generate a new Qutote PDF
+        if (!quoteList.isEmpty()) {
+            CreateQuotePDF(quoteList[0].id);
+        }
+    }
+
+    //Generates a Quote PDF and associates it to the Quote
+    @future(callout=true)
+    public static void CreateQuotePDF(Id quoteID) {
+
+        AutoQuoteEmail__mdt emailInfo = [SELECT Id, Email_Template_ID__c, Quote_Template_ID__c FROM AutoQuoteEmail__mdt WHERE MasterLabel = 'Master'];
+        Quote newQuote = [SELECT ID, Opportunity.Primary_Contacts_Email__c, Opportunity.ContactId  FROM Quote WHERE ID = :quoteID];
+        
+        //This Url creates the pdf for quote
+        String quoteUrl = '/quote/quoteTemplateDataViewer.apexp?id=';
+        quoteUrl += quoteID;
+        quoteUrl += '&headerHeight=190&footerHeight=188&summlid=';
+        quoteUrl += emailInfo.Quote_Template_ID__c;
+        quoteUrl += '#toolbar=1&navpanes=0&zoom=90';
+
+        //Create pdf content
+        PageReference pg = new PageReference(quoteUrl);
+
+        //Document object of quote which holds the quote pdf
+        QuoteDocument quotedoc = new QuoteDocument();
+
+        //Get the content of Pdf.
+        Blob b = pg.getContentAsPDF();
+
+        //content assign to document
+        quotedoc.Document = b;
+
+        //assign quote id where pdf should attach
+        quotedoc.QuoteId = QuoteID;
+
+        //insert the quotdoc
+        insert quotedoc;
+        
+        SendEmail(newQuote.id, emailInfo.Email_Template_ID__c, newQuote.Opportunity.Primary_Contacts_Email__c, newQuote.Opportunity.ContactId, quotedoc.Id);
+    }
+
+    public static void SendEmail(Id quoteID, String emailTemplateID, String emailAddress, Id contactID, Id quotedocID) {
+
+        Messaging.SingleEmailMessage message = new Messaging.SingleEmailMessage();
+        message.setTargetObjectId(contactID);
+        message.setSenderDisplayName('Company Support');
+        message.setReplyTo('no-reply@company.com');
+        message.setUseSignature(false);
+        message.setBccSender(false);
+        message.setSaveAsActivity(false);
+        message.setTemplateID(emailTemplateID);
+        message.setWhatId(quoteID); //This is important for the merge fields in template to work
+        message.toAddresses = new String[]{emailAddress};
+        
+        //Get and attach the Quote Document
+        List<QuoteDocument> QDs = [SELECT Name, Document, ContentVersionDocumentId FROM QuoteDocument WHERE QuoteId = :quoteID];   
+        List<Messaging.EmailFileAttachment> attachments = new List<Messaging.EmailFileAttachment>();
+        for (QuoteDocument QD: QDs) {
+        Messaging.EmailFileAttachment efa = new Messaging.EmailFileAttachment();
+        efa.setFileName(QD.Name);
+        efa.setBody(QD.Document);
+        attachments.add(efa);}
+        message.setFileAttachments(attachments);
+            
+         
+        Messaging.SingleEmailMessage[] messages = new List < Messaging.SingleEmailMessage > {
+            message
+        };
+        Messaging.SendEmailResult[] results = Messaging.sendEmail(messages);
+
+        if (results[0].success) {
+            System.debug('The email was sent successfully.');
+        } else {
+            System.debug('The email failed to send: '+results[0].errors[0].message);
+        }
+
+    }
+}
