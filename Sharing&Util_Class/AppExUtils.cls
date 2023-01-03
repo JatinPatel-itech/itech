@@ -1,4 +1,4 @@
-global with sharing class aedonAppExUtils {
+global with sharing class AppExUtils {
     global static Boolean hasFieldAccess(String operationName, String objectName, Set<String> fields){
         
         if(operationName == 'Insert'){
