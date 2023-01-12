@@ -1,4 +1,4 @@
-	Exception Type	Description
+	//Exception Type	Description
 1	DmlException	Failure of DML Operation Example – Missing required field value during insertion
 
 2	LimitException	Transaction reached Salesforce Governor Limit: Example – SOQL 101 Exception
