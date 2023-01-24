@@ -53,6 +53,13 @@ public static String JSONList(){
         String mapserid = JSON.serialize(mapAccID);
         Map<Id,account> mapAccIds = (Map<Id,account>)JSON.deserialize(mapserid,map<Id,account>.class);
         
+		List<object> listObject = new List<object>{'name',true};
+        String listObjectSer = JSON.serialize(listObject);
+        System.debug('listObjectSer'+listObjectSer);
+        
+        List<object> getObjectData = (List<object>)JSON.deserialize(listObjectSer, List<object>.class);
+        System.debug('getObjectData'+getObjectData);
+		
         Map<String,Map<String,Object>> mapmix = new Map<String,Map<String,Object>>();
         String mapmixser = JSON.serialize(mapmix);
         
