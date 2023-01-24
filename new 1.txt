@@ -1,3 +1,4 @@
+//this is for quote
 public without sharing class QuoteEmail {
 
     @InvocableMethod
