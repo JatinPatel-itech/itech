@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sash_Operation__c</fullName>
+    <externalId>false</externalId>
+    <label>Sash Operation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Window_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Both Sash Operate</fullName>
+                <default>false</default>
+                <label>Both Sash Operate</label>
+            </value>
+            <value>
+                <fullName>Top/Left Sash</fullName>
+                <default>false</default>
+                <label>Top/Left Sash</label>
+            </value>
+            <value>
+                <fullName>Bottom/Right Sash</fullName>
+                <default>false</default>
+                <label>Bottom/Right Sash</label>
+            </value>
+            <value>
+                <fullName>Left Sash</fullName>
+                <default>false</default>
+                <label>Left Sash</label>
+            </value>
+            <value>
+                <fullName>Right Sash</fullName>
+                <default>false</default>
+                <label>Right Sash</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Casement</controllingFieldValue>
+            <controllingFieldValue>Double Hung</controllingFieldValue>
+            <controllingFieldValue>Picture Window</controllingFieldValue>
+            <controllingFieldValue>Additional Hidden Balances</controllingFieldValue>
+            <valueName>Both Sash Operate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Casement</controllingFieldValue>
+            <controllingFieldValue>Double Hung</controllingFieldValue>
+            <controllingFieldValue>Picture Window</controllingFieldValue>
+            <controllingFieldValue>Additional Hidden Balances</controllingFieldValue>
+            <valueName>Top/Left Sash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Casement</controllingFieldValue>
+            <controllingFieldValue>Double Hung</controllingFieldValue>
+            <controllingFieldValue>Picture Window</controllingFieldValue>
+            <controllingFieldValue>Additional Hidden Balances</controllingFieldValue>
+            <valueName>Bottom/Right Sash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>French Casement</controllingFieldValue>
+            <valueName>Left Sash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>French Casement</controllingFieldValue>
+            <valueName>Right Sash</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

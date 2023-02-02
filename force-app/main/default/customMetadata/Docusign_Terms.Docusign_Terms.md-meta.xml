@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Docusign Terms</label>
+    <protected>false</protected>
+    <values>
+        <field>Terms_Condition__c</field>
+        <value xsi:type="xsd:string">WHEREAS, Seller owns certain Goods, as defined below, and Seller desires to sell such Goods under the terms and conditions set forth in this Agreement; and 
+
+WHEREAS, Buyer desires to purchase the Goods offered for sale by Seller under the terms and conditions set forth in this Agreement.
+
+NOW THEREFORE, in consideration of the mutual promises and for other good and valuable consideration exchanged by the Parties as set forth in this Agreement, the Parties, intending to be legally bound, hereby mutually agrees as follows:
+3. Buyer’s Responsibility for Providing Accurate Specifications on SLIP Orders.
+Customers who place an order are asked to provide their measurements to determine the SLIP’s specifications. It is important to make certain that measurements are correct. Once a final measurement is provided and the order is placed, we cannot accept later modification of product specifications once an order has been placed. A refund will not be issued due to customer error.
+
+
+3. Payment.  
+Seller shall invoice Buyer upon the shipment of the Goods. Unless otherwise stated, payment for the Goods is due within __60__ days of the date of Seller’s invoice, which date will not be before the date of Seller’s delivery of the Goods.
+
+4. Delivery/Shipment
+All shipments under this order shall be made F.O.B. Seller’s plant unless otherwise specified. Buyer shall assume freight charges and risks of transportation, including delay, damage, and loss, unless otherwise specified by Seller. In the absence of specific instructions, Seller reserves the right to select a carrier and to specify the routing of all shipments.
+
+The promised delivery date is the best estimate possible of when the products will be shipped. Seller shall not be liable for any loss, damage, incidental or consequential damages due to delays. In the event Buyer changes the location of delivery after the products have shipped, 
+a $125.00 change fee will be charged. Shipments can be large and heavy. Buyer is responsible for having the necessary personnel, a loading dock or a fork lift to unload the crate(s). Buyer is responsible at all times for the manner and costs of arranging a complete delivery. Buyer must inspect shipment for damages at the time of delivery. Someone who is authorized to sign over the shipment and Freight Center BOL must be present at the time of pickup. If the driver arrives at the pickup location and either the freight is not ready or there is no one available to sign the BOL, he/she will not normally wait. The pickup must then be re-dispatched, which some freight companies charge a re-delivery fee for to cover extra time and miles.
+
+5. Cancellation of Order and Refunds (When Allowed). Items will only be refunded for products that do not conform to the specifications as stated in the Agreement. Seller will replace or refund a product at its discretion if errors are made in the construction of the product building or damage occurs in shipping. Any product purchased that is delivered damaged or found to be defective through no fault of the customer will be repaired or replaced at no cost to the customer. A SALE CANNOT BE CANCELLED BY THE BUYER WITHOUT PRIOR WRITTEN CONSENT FROM THE SELLER.  
+
+6. Shipping Delays. Seller’s products are custom made to the Seller’s specifications. Shipment is generally made within 6-8 weeks. Shipping times are estimated and may vary according to the volume of work being conducted at our facility, SLIP sizes in the order, order volume, the number of boxes being shipped and your location. As such refunds or price discounts will not be provided based on shipping delays. Therefore, it is important to account for manufacturing and shipping times when placing an order that may be part of time sensitive work. 
+
+7. Risk of Loss. Title to and risk of loss of the Goods shall pass to Buyer upon shipment of the Goods in accordance with this Agreement. 
+
+8. Right of Inspection. Buyer shall be allowed to examine the Goods once received and shall do so within 24 hours after the receipt of the Goods. In the event that Buyer discovers any damages, shortages or other nonconformance of the Goods, Buyer shall notify Seller within 24 hours after receipt of the Goods, specifying the basis for its claim. Failure to notify Seller by such date shall constitute an acceptance of delivery of the Goods as is. In the event the Goods are non-conforming based on an error committed by the Seller, Buyer may at its option:
+- return the Goods for a replacement, at Seller’s expense
+- return the Goods at Seller’s expense for a credit of the full purchase price on future transactions with Seller 
+- return the Goods at Seller’s expense for a full refund of the purchase price
+The above shall be the sole remedy of Buyer and only obligation of Seller with respect to any non-conforming Goods.
+
+7. Warranties. Although Chosen Wood Window Maintenance, Inc (CWWM) is not the SLIP installer, CWWM warrants this product (not the installation) to be free from defects in workmanship and materials, under normal residential use and conditions, for ten (10) years from the original date of purchase. This warranty does not cover glass breakage, wear spots, or scratches.
+CWWM agrees, at its option during the warranty period, to repair any defect in workmanship or materials or to replace the product without charge (except for a fee for shipping, handling, packing, return postage, and insurance which will be incurred by the customer). Such repair or replacement is subject to verification of the defect or malfunction and proof of purchase as confirmed by showing the fabricated dimensions of the SLIP on the original dated invoice or sales receipt. Installation/shipping of the repaired or replaced product is not covered.
+
+
+10. Force Majeure. Seller shall not be responsible for any claims or damages resulting from any delays in performance or for non-performance due to unforeseen circumstances or causes beyond Seller’s reasonable control.
+
+11. Limitation of Liability. Seller will not be liable for any indirect, special, consequential, or punitive damages (including lost profits) arising out of or relating to this Agreement or the transactions it contemplates (whether for breach of contract, tort, negligence, or other form of action) and irrespective of whether Seller has been advised of the possibility of any such damage. In no event will Seller’s liability exceed the price paid by Buyer to Seller for the Goods giving rise to the claim or cause of action.
+
+12. Assignment. Neither Party may not assign any of its rights under this Agreement or delegate any performance under this Agreement, except with the prior written consent of the other Party. Any purported assignment of rights or delegation of performance in violation of this section is void.
+
+14. Governing Law. The terms of this Agreement shall be governed by and construed in accordance with the laws of the State of Oregon, not including its conflicts of law provisions.
+Any dispute arising from this Agreement shall be resolved in the courts of the State of Oregon.
+
+18. Waiver.  No Party shall be deemed to have waived any provision of this Agreement or the exercise of any rights held under this Agreement unless such waiver is made expressly and in writing. Waiver by any Party of a breach or violation of any provision of this Agreement shall not constitute a waiver of any other subsequent breach or violation.
+
+19.	Customer Installation Disclaimer
+Proper installation is essential for the acceptable performance of the SLIP System
+The instructions shown in the installation video, open to you after purchase, represents best practices for installation. Other methods/procedures may be acceptable. However, determining the acceptability of alternate installation methods is the sole responsibility of the installer, contractor or architect.
+
+It is the user’s responsibility to inspect and verify the dimensions, specifications, and performance of all products and parts as being appropriate for their purpose. 
+
+Appropriate personal protective equipment (such as safety glasses, gloves, respirators, boots.) should be worn during the installation process. 
+
+CAUTION: WEIGHT OF PRODUCTS REQUIRES PROPER LIFTING TECHNIQUES. USE A REASONABLE NUMBER OF PEOPLE WITH THE REQUIRED STRENGTH TO CARRY, LIFT, AND INSTALL THE SLIP. ALWAYS USE PROPER PRECAUTION WHEN INSTALLING THE SLIP FROM A LADDER OR SCAFFOLDING. 
+
+These instructions are not intended to address all of the safety issues associated with the installation of these windows; it is the responsibility of the installer, contractor or architect to establish appropriate safety practices.
+
+20.	Egress Warning: The use of any storm window unit that is not approved for the existing egress primary window unit nullifies the primary window units egress certification</value>
+    </values>
+</CustomMetadata>

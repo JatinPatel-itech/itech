@@ -1,0 +1,14 @@
+<apex:page standardController="quote" extensions="QuotePDFController" applyHtmlTag="false" showHeader="false" showQuickActionVfHeader="false">
+    <apex:form >    
+        <center>   
+            <apex:commandButton action="{!savepdf}"  value="Save PDF"/> 
+            <apex:commandButton action="{!sendEmail}"  value="Send Email" />
+        	<apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+        </center> <br/>
+        <center>
+            <span style="font-size: 20px;Color:Red;">{!errorMessage}</span>
+            <span style="font-size: 20px;Color:Green;">{!success}</span><br/>
+            <apex:iframe height="700px"  width="90%" src="/apex/GenerateQuotePDF?id={!MstrID}"/>
+        </center>
+    </apex:form>
+</apex:page>

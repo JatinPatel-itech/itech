@@ -1,0 +1,298 @@
+<apex:page standardController="order" extensions="GlassPoPDFController" applyHtmlTag="false" showHeader="false" renderAs="pdf">
+  <html lang="en">
+        
+        <head>
+            
+            <title>Document</title>
+            
+            <style>
+                body {
+                font-family: sans-serif;
+                font-size:14px;
+                }
+                
+                
+                .orderLeftBorder {
+                border: 1px solid black;
+                margin-bottom: 25px;
+                padding: 4px;
+                }
+                
+                .purchaseOrder {
+                
+                font-size: 35px;
+                font-weight: bold;
+                }
+                
+                .job {
+                font-weight: bold;
+                padding: 4px;
+                }
+                
+                .jobRight {
+                padding-left: 8px;
+                font-size: 24px;
+                }
+                
+                .ship,
+                .vendorLeft {
+                font-weight: bold;
+                }
+                
+                .shipAddress {
+                margin-bottom: 25px;
+                }
+                
+                .phone {
+                margin-bottom: 25px;
+                }
+                
+                .state {
+                padding: 8px;
+                }
+                
+                .vendor {
+                display: flex;
+                padding: 4px;
+                }
+                
+                .orderRight {
+                
+                padding: 5px;
+                }
+                
+                .image {
+                text-align: right;
+                }
+                
+                .date {
+                margin-bottom: 25px;
+                font-size: 16px;
+                }
+                
+                .orderRightJob {
+                margin-bottom: 25px;
+                font-size: 16px;
+                }
+                
+                .jobName {
+                margin-bottom: 25px;
+                font-size: 16px;
+                }
+                
+                .message {
+                font-weight: bold;
+                text-align: center;
+                text-decoration: underline;
+                margin-bottom: 5px;
+                }
+                
+                .glass {
+                text-decoration: underline;
+                }
+                
+                .glassLeft {
+                font-weight: bold;
+                font-size: 18px;
+                }
+                
+                .noteRight {
+                padding: 0px 50px;
+                }
+               
+                
+                .orderSlipLeft {
+                font-size: 38px;
+                }
+                
+                .customers td {
+                border: 1px solid #000;
+                padding: 8px;
+                }
+                
+            </style>
+        </head>
+        
+        <body>         
+             <div class="order">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="orderLeft">
+                                <div class="purchaseOrder">PURCHASE ORDER</div>
+                                <table>
+                                    <tr class="job">
+                                        <td class="jobLeft">Job In:</td>
+                                        <td class="jobRight">Oregon</td>
+                                    </tr>
+                                </table>
+                                
+                                <div class="orderLeftBorder">
+                                    <div class="ship">Ship to:</div>
+                                    <div class="shipAddress">Chosen Wood Window Maintenance
+                                        18574 Pacific Hwy
+                                        Oregon City, OR 97045
+                                    </div>
+                                    <div>Contact:</div>
+                                    <div class="phone">Phone: 503-266-3830</div>
+                                    <div>Email: Purchasing@chosenwwm.com</div>
+                                    <div class="fax">Fax: 503-266-3804</div>
+                                </div>
+                                
+                                <div class="state">State: Oregon</div>
+                                <div class="vendor">
+                                    <div class="vendorLeft">Vendor: Portland Glass</div>
+                                    
+                                </div>
+                            </div>        
+                        </td>
+                        <td>
+                            <div class="orderRight">
+                                <div class="image"><apex:image width="100" value="{!$Resource.ChosenWoodWindowLogo}" /></div>
+                                <div class="date">
+                                    <div>Date: &nbsp;{!orderDate}</div>
+                                </div>
+                                <div class="orderRightJob">
+                                    <div>Estimate #: &nbsp;<apex:outputfield value="{!order.Quote.QuoteNumber}" /></div>
+                                </div>
+                                <div class="jobName">
+                                    <div>Job Name:<span><apex:outputfield value="{!order.Opportunity.Name}" /></span></div>
+                                </div>
+                                <div class="message">"*Message to vendor: Please put job
+                                    name AND number on order*"</div>
+                                <div class="glass">
+                                    <div class="glassLeft">GLASS</div>
+                                    <div></div>
+                                </div>
+                                <div class="note">
+                                    <div>Note: <span class="noteRight">Single Pane 1/4 inch glass</span></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+           
+            </div>
+            
+            <div>
+                <table style="width: 100%;">
+                	<tr>
+                    	<td style="font-size: 20px;text-align:right;">Emailed:</td>
+                        <td style="text-align:center;">{!orderDate}</td>
+                    </tr>
+                </table>
+                <table style="width: 100%;border-collapse: collapse;font-weight: bold;" class="customers">
+                    <tr style="background-color: #4472C4;color: #fff;">
+                        <td style="width: 10%;padding:2px,text-align:center;">QTY</td>
+                        <td style="width: 40%;padding:2px,text-align:center;">SIZE AND TYPE</td>
+                        <td style="width: 10%;padding:2px,text-align:center;">QTY</td>
+                        <td style="width: 40%;padding:2px,text-align:center;">SIZE AND TYPE</td>
+                    </tr>
+                    <apex:repeat var="oIt" value="{!orderItem}">
+                    <tr style="text-align: center;">
+                        <td style="width: 10%;"><apex:outputfield value="{!oIt.Quantity}" /></td>
+                        <td style="width: 40%;">Single Pane &nbsp;<apex:outputfield value="{!oIt.Top_Sash_Order_Width__c}" />&nbsp; x &nbsp;<apex:outputfield value="{!oIt.Top_Sash_Order_Height__c}" /></td>
+                        <td style="width: 10%;"></td>
+                        <td style="width: 40%;"></td>
+                    </tr>
+                        
+                    <tr style="text-align: center;">
+                        <td style="width: 10%;">
+                            <apex:outputPanel rendered="{!IF(oIt.Bottom_Sash_Order_Width__c != '',true,false)}">
+                            <apex:outputfield value="{!oIt.Quantity}" />
+                            </apex:outputPanel>
+                        </td>
+                        <td style="width: 40%;">
+                            <apex:outputPanel rendered="{!IF(oIt.Bottom_Sash_Order_Width__c != '',true,false)}">
+                            Single Pane &nbsp;<apex:outputfield value="{!oIt.Bottom_Sash_Order_Width__c}" />&nbsp; x &nbsp;<apex:outputfield value="{!oIt.Bottom_Sash_Order_Height__c}" />
+                            </apex:outputPanel>
+                        </td>
+                        <td style="width: 10%;"></td>
+                        <td style="width: 40%;"></td>
+                    </tr>    
+                    <tr style="text-align: center;">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </apex:repeat>
+                </table>
+                <!--<div style="text-align: center;font-weight: bold;font-size: 16px;margin-top:2px;text-decoration: underline;">Shop / Wood / SLIPs / Sash</div>-->
+            </div>
+           <!-- <div>
+                <table style="width: 100%;">
+                	<tr>
+                    	<td style="font-size: 20px;text-align:center;">Emailed:</td>
+                       
+                    </tr>
+                </table>
+                <table style="width: 100%;border-collapse: collapse;margin-bottom: 8px;" class="customers">
+                    <tr>
+                        <td colspan="2" rowspan="2" style="text-align: center;">Manufacturer: <br/>Vintage (New style SLIP)</td>
+                        <td>Need By : </td>
+                        <td>1</td>
+                    </tr>
+                    <tr style="background-color: transparent">
+                        <td>Year :</td>
+                        <td>1</td>
+                    </tr>
+                    <tr style="background-color: #4472C4;color: #fff;font-weight: bold;">
+                        <td style="width: 10%;padding:2px">Column2</td>
+                        <td style="width: 40%;padding:2px">Column1</td>
+                        <td style="width: 10%;padding:2px">QTY</td>
+                        <td style="width: 40%;padding:2px">SIZE AND TYPE   </td>
+                    </tr>
+                    <tr style="text-align: center;">
+                        <td style="width: 10%;">1</td>
+                        <td style="width: 40%;">Single Pane 1/4/CL/Temp 80 7/8 x 63 7/8</td>
+                        <td style="width: 10%;">1</td>
+                        <td style="width: 40%;">Single Pane 1/4/CL/Temp 80 7/8 x 63 7/8</td>
+                    </tr>
+                    <tr style="text-align: center;">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div style="font-weight: bold; text-align: center;margin-bottom: 8px;text-decoration: underline;">MISC.</div>
+                <table style="width: 100%;">
+                	<tr>
+                    	<td style="font-size: 16px;width:40%">Vendor:____________________</td>
+                        <td style="text-align: left;padding-left:10px">Note:</td>
+                    </tr> 
+                </table>
+            </div>
+            
+            
+            <div>
+                <table style="width: 100%;">
+                	<tr>
+                    	<td style="font-size: 20px;text-align:center;">Emailed:</td>
+                    </tr>
+                </table>
+                <table style="width: 100%;border-collapse: collapse;font-weight: bold;" class="customers">
+                    <tr style="background-color: #4472C4;color: #fff;">
+                        <td style="width: 10%;padding:2px">QTY</td>
+                        <td style="width: 40%;padding:2px">SIZE AND TYPE</td>
+                        <td style="width: 10%;padding:2px">QTY</td>
+                        <td style="width: 40%;padding:2px">SIZE AND TYPE</td>
+                    </tr>
+                    <tr style="text-align: center;">
+                        <td style="width: 10%;">1</td>
+                        <td style="width: 40%;">Single Pane 1/4/CL/Temp 80 7/8 x 63 7/8</td>
+                        <td style="width: 10%;">1</td>
+                        <td style="width: 40%;">Single Pane 1/4/CL/Temp 80 7/8 x 63 7/8</td>
+                    </tr>
+                    <tr style="text-align: center;">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>-->
+        </body> 
+    </html>  
+</apex:page>

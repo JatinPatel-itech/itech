@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Window_Type__c</columns>
+    <columns>Glass_Type__c</columns>
+    <columns>Quantity__c</columns>
+    <columns>Top_Sash_D_L_Width__c</columns>
+    <columns>Top_Sash_D_L_Height__c</columns>
+    <columns>Bottom_Sash_D_L_Width__c</columns>
+    <columns>Bottom_Sash_D_L_Height__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

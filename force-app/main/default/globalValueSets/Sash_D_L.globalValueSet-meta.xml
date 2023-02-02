@@ -1,0 +1,2765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>0&quot;</fullName>
+        <default>false</default>
+        <label>0&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>12&quot;</fullName>
+        <default>false</default>
+        <label>12&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>12 1/8&quot;</fullName>
+        <default>false</default>
+        <label>12 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>12 1/4&quot;</fullName>
+        <default>false</default>
+        <label>12 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>12 3/8&quot;</fullName>
+        <default>false</default>
+        <label>12 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>12 1/2&quot;</fullName>
+        <default>false</default>
+        <label>12 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>12 5/8&quot;</fullName>
+        <default>false</default>
+        <label>12 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>12 3/4&quot;</fullName>
+        <default>false</default>
+        <label>12 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>12 7/8&quot;</fullName>
+        <default>false</default>
+        <label>12 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>13&quot;</fullName>
+        <default>false</default>
+        <label>13&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>13 1/8&quot;</fullName>
+        <default>false</default>
+        <label>13 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>13 1/4&quot;</fullName>
+        <default>false</default>
+        <label>13 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>13 3/8&quot;</fullName>
+        <default>false</default>
+        <label>13 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>13 1/2&quot;</fullName>
+        <default>false</default>
+        <label>13 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>13 5/8&quot;</fullName>
+        <default>false</default>
+        <label>13 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>13 3/4&quot;</fullName>
+        <default>false</default>
+        <label>13 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>13 7/8&quot;</fullName>
+        <default>false</default>
+        <label>13 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>14&quot;</fullName>
+        <default>false</default>
+        <label>14&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>14 1/8&quot;</fullName>
+        <default>false</default>
+        <label>14 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>14 1/4&quot;</fullName>
+        <default>false</default>
+        <label>14 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>14 3/8&quot;</fullName>
+        <default>false</default>
+        <label>14 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>14 1/2&quot;</fullName>
+        <default>false</default>
+        <label>14 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>14 5/8&quot;</fullName>
+        <default>false</default>
+        <label>14 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>14 3/4&quot;</fullName>
+        <default>false</default>
+        <label>14 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>14 7/8&quot;</fullName>
+        <default>false</default>
+        <label>14 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>15&quot;</fullName>
+        <default>false</default>
+        <label>15&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>15 1/8&quot;</fullName>
+        <default>false</default>
+        <label>15 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>15 1/4&quot;</fullName>
+        <default>false</default>
+        <label>15 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>15 3/8&quot;</fullName>
+        <default>false</default>
+        <label>15 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>15 1/2&quot;</fullName>
+        <default>false</default>
+        <label>15 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>15 5/8&quot;</fullName>
+        <default>false</default>
+        <label>15 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>15 3/4&quot;</fullName>
+        <default>false</default>
+        <label>15 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>15 7/8&quot;</fullName>
+        <default>false</default>
+        <label>15 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>16&quot;</fullName>
+        <default>false</default>
+        <label>16&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>16 1/8&quot;</fullName>
+        <default>false</default>
+        <label>16 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>16 1/4&quot;</fullName>
+        <default>false</default>
+        <label>16 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>16 3/8&quot;</fullName>
+        <default>false</default>
+        <label>16 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>16 1/2&quot;</fullName>
+        <default>false</default>
+        <label>16 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>16 5/8&quot;</fullName>
+        <default>false</default>
+        <label>16 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>16 3/4&quot;</fullName>
+        <default>false</default>
+        <label>16 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>16 7/8&quot;</fullName>
+        <default>false</default>
+        <label>16 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>17&quot;</fullName>
+        <default>false</default>
+        <label>17&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>17 1/8&quot;</fullName>
+        <default>false</default>
+        <label>17 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>17 1/4&quot;</fullName>
+        <default>false</default>
+        <label>17 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>17 3/8&quot;</fullName>
+        <default>false</default>
+        <label>17 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>17 1/2&quot;</fullName>
+        <default>false</default>
+        <label>17 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>17 5/8&quot;</fullName>
+        <default>false</default>
+        <label>17 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>17 3/4&quot;</fullName>
+        <default>false</default>
+        <label>17 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>17 7/8&quot;</fullName>
+        <default>false</default>
+        <label>17 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>18&quot;</fullName>
+        <default>false</default>
+        <label>18&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>18 1/8&quot;</fullName>
+        <default>false</default>
+        <label>18 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>18 1/4&quot;</fullName>
+        <default>false</default>
+        <label>18 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>18 3/8&quot;</fullName>
+        <default>false</default>
+        <label>18 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>18 1/2&quot;</fullName>
+        <default>false</default>
+        <label>18 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>18 5/8&quot;</fullName>
+        <default>false</default>
+        <label>18 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>18 3/4&quot;</fullName>
+        <default>false</default>
+        <label>18 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>18 7/8&quot;</fullName>
+        <default>false</default>
+        <label>18 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>19&quot;</fullName>
+        <default>false</default>
+        <label>19&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>19 1/8&quot;</fullName>
+        <default>false</default>
+        <label>19 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>19 1/4&quot;</fullName>
+        <default>false</default>
+        <label>19 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>19 3/8&quot;</fullName>
+        <default>false</default>
+        <label>19 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>19 1/2&quot;</fullName>
+        <default>false</default>
+        <label>19 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>19 5/8&quot;</fullName>
+        <default>false</default>
+        <label>19 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>19 3/4&quot;</fullName>
+        <default>false</default>
+        <label>19 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>19 7/8&quot;</fullName>
+        <default>false</default>
+        <label>19 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>20&quot;</fullName>
+        <default>false</default>
+        <label>20&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>20 1/8&quot;</fullName>
+        <default>false</default>
+        <label>20 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>20 1/4&quot;</fullName>
+        <default>false</default>
+        <label>20 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>20 3/8&quot;</fullName>
+        <default>false</default>
+        <label>20 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>20 1/2&quot;</fullName>
+        <default>false</default>
+        <label>20 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>20 5/8&quot;</fullName>
+        <default>false</default>
+        <label>20 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>20 3/4&quot;</fullName>
+        <default>false</default>
+        <label>20 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>20 7/8&quot;</fullName>
+        <default>false</default>
+        <label>20 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>21&quot;</fullName>
+        <default>false</default>
+        <label>21&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>21 1/8&quot;</fullName>
+        <default>false</default>
+        <label>21 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>21 1/4&quot;</fullName>
+        <default>false</default>
+        <label>21 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>21 3/8&quot;</fullName>
+        <default>false</default>
+        <label>21 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>21 1/2&quot;</fullName>
+        <default>false</default>
+        <label>21 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>21 5/8&quot;</fullName>
+        <default>false</default>
+        <label>21 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>21 3/4&quot;</fullName>
+        <default>false</default>
+        <label>21 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>21 7/8&quot;</fullName>
+        <default>false</default>
+        <label>21 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>22&quot;</fullName>
+        <default>false</default>
+        <label>22&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>22 1/8&quot;</fullName>
+        <default>false</default>
+        <label>22 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>22 1/4&quot;</fullName>
+        <default>false</default>
+        <label>22 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>22 3/8&quot;</fullName>
+        <default>false</default>
+        <label>22 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>22 1/2&quot;</fullName>
+        <default>false</default>
+        <label>22 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>22 5/8&quot;</fullName>
+        <default>false</default>
+        <label>22 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>22 3/4&quot;</fullName>
+        <default>false</default>
+        <label>22 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>22 7/8&quot;</fullName>
+        <default>false</default>
+        <label>22 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>23&quot;</fullName>
+        <default>false</default>
+        <label>23&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>23 1/8&quot;</fullName>
+        <default>false</default>
+        <label>23 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>23 1/4&quot;</fullName>
+        <default>false</default>
+        <label>23 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>23 3/8&quot;</fullName>
+        <default>false</default>
+        <label>23 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>23 1/2&quot;</fullName>
+        <default>false</default>
+        <label>23 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>23 5/8&quot;</fullName>
+        <default>false</default>
+        <label>23 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>23 3/4&quot;</fullName>
+        <default>false</default>
+        <label>23 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>23 7/8&quot;</fullName>
+        <default>false</default>
+        <label>23 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>24&quot;</fullName>
+        <default>false</default>
+        <label>24&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>24 1/8&quot;</fullName>
+        <default>false</default>
+        <label>24 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>24 1/4&quot;</fullName>
+        <default>false</default>
+        <label>24 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>24 3/8&quot;</fullName>
+        <default>false</default>
+        <label>24 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>24 1/2&quot;</fullName>
+        <default>false</default>
+        <label>24 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>24 5/8&quot;</fullName>
+        <default>false</default>
+        <label>24 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>24 3/4&quot;</fullName>
+        <default>false</default>
+        <label>24 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>24 7/8&quot;</fullName>
+        <default>false</default>
+        <label>24 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>25&quot;</fullName>
+        <default>false</default>
+        <label>25&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>25 1/8&quot;</fullName>
+        <default>false</default>
+        <label>25 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>25 1/4&quot;</fullName>
+        <default>false</default>
+        <label>25 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>25 3/8&quot;</fullName>
+        <default>false</default>
+        <label>25 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>25 1/2&quot;</fullName>
+        <default>false</default>
+        <label>25 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>25 5/8&quot;</fullName>
+        <default>false</default>
+        <label>25 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>25 3/4&quot;</fullName>
+        <default>false</default>
+        <label>25 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>25 7/8&quot;</fullName>
+        <default>false</default>
+        <label>25 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>26&quot;</fullName>
+        <default>false</default>
+        <label>26&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>26 1/8&quot;</fullName>
+        <default>false</default>
+        <label>26 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>26 1/4&quot;</fullName>
+        <default>false</default>
+        <label>26 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>26 3/8&quot;</fullName>
+        <default>false</default>
+        <label>26 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>26 1/2&quot;</fullName>
+        <default>false</default>
+        <label>26 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>26 5/8&quot;</fullName>
+        <default>false</default>
+        <label>26 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>26 3/4&quot;</fullName>
+        <default>false</default>
+        <label>26 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>26 7/8&quot;</fullName>
+        <default>false</default>
+        <label>26 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>27&quot;</fullName>
+        <default>false</default>
+        <label>27&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>27 1/8&quot;</fullName>
+        <default>false</default>
+        <label>27 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>27 1/4&quot;</fullName>
+        <default>false</default>
+        <label>27 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>27 3/8&quot;</fullName>
+        <default>false</default>
+        <label>27 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>27 1/2&quot;</fullName>
+        <default>false</default>
+        <label>27 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>27 5/8&quot;</fullName>
+        <default>false</default>
+        <label>27 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>27 3/4&quot;</fullName>
+        <default>false</default>
+        <label>27 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>27 7/8&quot;</fullName>
+        <default>false</default>
+        <label>27 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>28&quot;</fullName>
+        <default>false</default>
+        <label>28&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>28 1/8&quot;</fullName>
+        <default>false</default>
+        <label>28 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>28 1/4&quot;</fullName>
+        <default>false</default>
+        <label>28 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>28 3/8&quot;</fullName>
+        <default>false</default>
+        <label>28 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>28 1/2&quot;</fullName>
+        <default>false</default>
+        <label>28 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>28 5/8&quot;</fullName>
+        <default>false</default>
+        <label>28 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>28 3/4&quot;</fullName>
+        <default>false</default>
+        <label>28 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>28 7/8&quot;</fullName>
+        <default>false</default>
+        <label>28 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>29&quot;</fullName>
+        <default>false</default>
+        <label>29&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>29 1/8&quot;</fullName>
+        <default>false</default>
+        <label>29 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>29 1/4&quot;</fullName>
+        <default>false</default>
+        <label>29 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>29 3/8&quot;</fullName>
+        <default>false</default>
+        <label>29 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>29 1/2&quot;</fullName>
+        <default>false</default>
+        <label>29 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>29 5/8&quot;</fullName>
+        <default>false</default>
+        <label>29 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>29 3/4&quot;</fullName>
+        <default>false</default>
+        <label>29 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>29 7/8&quot;</fullName>
+        <default>false</default>
+        <label>29 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>30&quot;</fullName>
+        <default>false</default>
+        <label>30&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>30 1/8&quot;</fullName>
+        <default>false</default>
+        <label>30 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>30 1/4&quot;</fullName>
+        <default>false</default>
+        <label>30 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>30 3/8&quot;</fullName>
+        <default>false</default>
+        <label>30 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>30 1/2&quot;</fullName>
+        <default>false</default>
+        <label>30 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>30 5/8&quot;</fullName>
+        <default>false</default>
+        <label>30 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>30 3/4&quot;</fullName>
+        <default>false</default>
+        <label>30 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>30 7/8&quot;</fullName>
+        <default>false</default>
+        <label>30 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>31&quot;</fullName>
+        <default>false</default>
+        <label>31&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>31 1/8&quot;</fullName>
+        <default>false</default>
+        <label>31 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>31 1/4&quot;</fullName>
+        <default>false</default>
+        <label>31 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>31 3/8&quot;</fullName>
+        <default>false</default>
+        <label>31 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>31 1/2&quot;</fullName>
+        <default>false</default>
+        <label>31 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>31 5/8&quot;</fullName>
+        <default>false</default>
+        <label>31 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>31 3/4&quot;</fullName>
+        <default>false</default>
+        <label>31 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>31 7/8&quot;</fullName>
+        <default>false</default>
+        <label>31 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>32&quot;</fullName>
+        <default>false</default>
+        <label>32&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>32 1/8&quot;</fullName>
+        <default>false</default>
+        <label>32 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>32 1/4&quot;</fullName>
+        <default>false</default>
+        <label>32 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>32 3/8&quot;</fullName>
+        <default>false</default>
+        <label>32 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>32 1/2&quot;</fullName>
+        <default>false</default>
+        <label>32 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>32 5/8&quot;</fullName>
+        <default>false</default>
+        <label>32 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>32 3/4&quot;</fullName>
+        <default>false</default>
+        <label>32 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>32 7/8&quot;</fullName>
+        <default>false</default>
+        <label>32 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>33&quot;</fullName>
+        <default>false</default>
+        <label>33&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>33 1/8&quot;</fullName>
+        <default>false</default>
+        <label>33 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>33 1/4&quot;</fullName>
+        <default>false</default>
+        <label>33 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>33 3/8&quot;</fullName>
+        <default>false</default>
+        <label>33 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>33 1/2&quot;</fullName>
+        <default>false</default>
+        <label>33 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>33 5/8&quot;</fullName>
+        <default>false</default>
+        <label>33 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>33 3/4&quot;</fullName>
+        <default>false</default>
+        <label>33 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>33 7/8&quot;</fullName>
+        <default>false</default>
+        <label>33 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>34&quot;</fullName>
+        <default>false</default>
+        <label>34&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>34 1/8&quot;</fullName>
+        <default>false</default>
+        <label>34 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>34 1/4&quot;</fullName>
+        <default>false</default>
+        <label>34 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>34 3/8&quot;</fullName>
+        <default>false</default>
+        <label>34 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>34 1/2&quot;</fullName>
+        <default>false</default>
+        <label>34 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>34 5/8&quot;</fullName>
+        <default>false</default>
+        <label>34 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>34 3/4&quot;</fullName>
+        <default>false</default>
+        <label>34 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>34 7/8&quot;</fullName>
+        <default>false</default>
+        <label>34 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>35&quot;</fullName>
+        <default>false</default>
+        <label>35&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>35 1/8&quot;</fullName>
+        <default>false</default>
+        <label>35 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>35 1/4&quot;</fullName>
+        <default>false</default>
+        <label>35 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>35 3/8&quot;</fullName>
+        <default>false</default>
+        <label>35 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>35 1/2&quot;</fullName>
+        <default>false</default>
+        <label>35 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>35 5/8&quot;</fullName>
+        <default>false</default>
+        <label>35 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>35 3/4&quot;</fullName>
+        <default>false</default>
+        <label>35 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>35 7/8&quot;</fullName>
+        <default>false</default>
+        <label>35 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>36&quot;</fullName>
+        <default>false</default>
+        <label>36&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>36 1/8&quot;</fullName>
+        <default>false</default>
+        <label>36 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>36 1/4&quot;</fullName>
+        <default>false</default>
+        <label>36 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>36 3/8&quot;</fullName>
+        <default>false</default>
+        <label>36 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>36 1/2&quot;</fullName>
+        <default>false</default>
+        <label>36 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>36 5/8&quot;</fullName>
+        <default>false</default>
+        <label>36 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>36 3/4&quot;</fullName>
+        <default>false</default>
+        <label>36 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>36 7/8&quot;</fullName>
+        <default>false</default>
+        <label>36 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>37&quot;</fullName>
+        <default>false</default>
+        <label>37&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>37 1/8&quot;</fullName>
+        <default>false</default>
+        <label>37 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>37 1/4&quot;</fullName>
+        <default>false</default>
+        <label>37 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>37 3/8&quot;</fullName>
+        <default>false</default>
+        <label>37 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>37 1/2&quot;</fullName>
+        <default>false</default>
+        <label>37 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>37 5/8&quot;</fullName>
+        <default>false</default>
+        <label>37 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>37 3/4&quot;</fullName>
+        <default>false</default>
+        <label>37 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>37 7/8&quot;</fullName>
+        <default>false</default>
+        <label>37 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>38&quot;</fullName>
+        <default>false</default>
+        <label>38&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>38 1/8&quot;</fullName>
+        <default>false</default>
+        <label>38 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>38 1/4&quot;</fullName>
+        <default>false</default>
+        <label>38 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>38 3/8&quot;</fullName>
+        <default>false</default>
+        <label>38 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>38 1/2&quot;</fullName>
+        <default>false</default>
+        <label>38 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>38 5/8&quot;</fullName>
+        <default>false</default>
+        <label>38 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>38 3/4&quot;</fullName>
+        <default>false</default>
+        <label>38 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>38 7/8&quot;</fullName>
+        <default>false</default>
+        <label>38 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>39&quot;</fullName>
+        <default>false</default>
+        <label>39&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>39 1/8&quot;</fullName>
+        <default>false</default>
+        <label>39 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>39 1/4&quot;</fullName>
+        <default>false</default>
+        <label>39 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>39 3/8&quot;</fullName>
+        <default>false</default>
+        <label>39 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>39 1/2&quot;</fullName>
+        <default>false</default>
+        <label>39 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>39 5/8&quot;</fullName>
+        <default>false</default>
+        <label>39 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>39 3/4&quot;</fullName>
+        <default>false</default>
+        <label>39 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>39 7/8&quot;</fullName>
+        <default>false</default>
+        <label>39 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>40&quot;</fullName>
+        <default>false</default>
+        <label>40&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>40 1/8&quot;</fullName>
+        <default>false</default>
+        <label>40 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>40 1/4&quot;</fullName>
+        <default>false</default>
+        <label>40 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>40 3/8&quot;</fullName>
+        <default>false</default>
+        <label>40 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>40 1/2&quot;</fullName>
+        <default>false</default>
+        <label>40 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>40 5/8&quot;</fullName>
+        <default>false</default>
+        <label>40 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>40 3/4&quot;</fullName>
+        <default>false</default>
+        <label>40 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>40 7/8&quot;</fullName>
+        <default>false</default>
+        <label>40 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>41&quot;</fullName>
+        <default>false</default>
+        <label>41&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>41 1/8&quot;</fullName>
+        <default>false</default>
+        <label>41 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>41 1/4&quot;</fullName>
+        <default>false</default>
+        <label>41 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>41 3/8&quot;</fullName>
+        <default>false</default>
+        <label>41 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>41 1/2&quot;</fullName>
+        <default>false</default>
+        <label>41 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>41 5/8&quot;</fullName>
+        <default>false</default>
+        <label>41 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>41 3/4&quot;</fullName>
+        <default>false</default>
+        <label>41 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>41 7/8&quot;</fullName>
+        <default>false</default>
+        <label>41 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>42&quot;</fullName>
+        <default>false</default>
+        <label>42&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>42 1/8&quot;</fullName>
+        <default>false</default>
+        <label>42 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>42 1/4&quot;</fullName>
+        <default>false</default>
+        <label>42 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>42 3/8&quot;</fullName>
+        <default>false</default>
+        <label>42 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>42 1/2&quot;</fullName>
+        <default>false</default>
+        <label>42 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>42 5/8&quot;</fullName>
+        <default>false</default>
+        <label>42 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>42 3/4&quot;</fullName>
+        <default>false</default>
+        <label>42 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>42 7/8&quot;</fullName>
+        <default>false</default>
+        <label>42 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>43&quot;</fullName>
+        <default>false</default>
+        <label>43&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>43 1/8&quot;</fullName>
+        <default>false</default>
+        <label>43 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>43 1/4&quot;</fullName>
+        <default>false</default>
+        <label>43 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>43 3/8&quot;</fullName>
+        <default>false</default>
+        <label>43 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>43 1/2&quot;</fullName>
+        <default>false</default>
+        <label>43 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>43 5/8&quot;</fullName>
+        <default>false</default>
+        <label>43 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>43 3/4&quot;</fullName>
+        <default>false</default>
+        <label>43 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>43 7/8&quot;</fullName>
+        <default>false</default>
+        <label>43 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>44&quot;</fullName>
+        <default>false</default>
+        <label>44&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>44 1/8&quot;</fullName>
+        <default>false</default>
+        <label>44 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>44 1/4&quot;</fullName>
+        <default>false</default>
+        <label>44 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>44 3/8&quot;</fullName>
+        <default>false</default>
+        <label>44 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>44 1/2&quot;</fullName>
+        <default>false</default>
+        <label>44 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>44 5/8&quot;</fullName>
+        <default>false</default>
+        <label>44 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>44 3/4&quot;</fullName>
+        <default>false</default>
+        <label>44 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>44 7/8&quot;</fullName>
+        <default>false</default>
+        <label>44 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>45&quot;</fullName>
+        <default>false</default>
+        <label>45&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>45 1/8&quot;</fullName>
+        <default>false</default>
+        <label>45 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>45 1/4&quot;</fullName>
+        <default>false</default>
+        <label>45 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>45 3/8&quot;</fullName>
+        <default>false</default>
+        <label>45 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>45 1/2&quot;</fullName>
+        <default>false</default>
+        <label>45 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>45 5/8&quot;</fullName>
+        <default>false</default>
+        <label>45 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>45 3/4&quot;</fullName>
+        <default>false</default>
+        <label>45 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>45 7/8&quot;</fullName>
+        <default>false</default>
+        <label>45 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>46&quot;</fullName>
+        <default>false</default>
+        <label>46&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>46 1/8&quot;</fullName>
+        <default>false</default>
+        <label>46 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>46 1/4&quot;</fullName>
+        <default>false</default>
+        <label>46 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>46 3/8&quot;</fullName>
+        <default>false</default>
+        <label>46 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>46 1/2&quot;</fullName>
+        <default>false</default>
+        <label>46 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>46 5/8&quot;</fullName>
+        <default>false</default>
+        <label>46 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>46 3/4&quot;</fullName>
+        <default>false</default>
+        <label>46 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>46 7/8&quot;</fullName>
+        <default>false</default>
+        <label>46 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>47&quot;</fullName>
+        <default>false</default>
+        <label>47&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>47 1/8&quot;</fullName>
+        <default>false</default>
+        <label>47 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>47 1/4&quot;</fullName>
+        <default>false</default>
+        <label>47 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>47 3/8&quot;</fullName>
+        <default>false</default>
+        <label>47 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>47 1/2&quot;</fullName>
+        <default>false</default>
+        <label>47 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>47 5/8&quot;</fullName>
+        <default>false</default>
+        <label>47 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>47 3/4&quot;</fullName>
+        <default>false</default>
+        <label>47 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>47 7/8&quot;</fullName>
+        <default>false</default>
+        <label>47 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>48&quot;</fullName>
+        <default>false</default>
+        <label>48&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>48 1/8&quot;</fullName>
+        <default>false</default>
+        <label>48 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>48 1/4&quot;</fullName>
+        <default>false</default>
+        <label>48 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>48 3/8&quot;</fullName>
+        <default>false</default>
+        <label>48 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>48 1/2&quot;</fullName>
+        <default>false</default>
+        <label>48 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>48 5/8&quot;</fullName>
+        <default>false</default>
+        <label>48 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>48 3/4&quot;</fullName>
+        <default>false</default>
+        <label>48 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>48 7/8&quot;</fullName>
+        <default>false</default>
+        <label>48 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>49&quot;</fullName>
+        <default>false</default>
+        <label>49&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>49 1/8&quot;</fullName>
+        <default>false</default>
+        <label>49 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>49 1/4&quot;</fullName>
+        <default>false</default>
+        <label>49 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>49 3/8&quot;</fullName>
+        <default>false</default>
+        <label>49 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>49 1/2&quot;</fullName>
+        <default>false</default>
+        <label>49 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>49 5/8&quot;</fullName>
+        <default>false</default>
+        <label>49 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>49 3/4&quot;</fullName>
+        <default>false</default>
+        <label>49 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>49 7/8&quot;</fullName>
+        <default>false</default>
+        <label>49 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>50&quot;</fullName>
+        <default>false</default>
+        <label>50&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>50 1/8&quot;</fullName>
+        <default>false</default>
+        <label>50 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>50 1/4&quot;</fullName>
+        <default>false</default>
+        <label>50 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>50 3/8&quot;</fullName>
+        <default>false</default>
+        <label>50 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>50 1/2&quot;</fullName>
+        <default>false</default>
+        <label>50 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>50 5/8&quot;</fullName>
+        <default>false</default>
+        <label>50 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>50 3/4&quot;</fullName>
+        <default>false</default>
+        <label>50 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>50 7/8&quot;</fullName>
+        <default>false</default>
+        <label>50 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>51&quot;</fullName>
+        <default>false</default>
+        <label>51&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>51 1/8&quot;</fullName>
+        <default>false</default>
+        <label>51 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>51 1/4&quot;</fullName>
+        <default>false</default>
+        <label>51 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>51 3/8&quot;</fullName>
+        <default>false</default>
+        <label>51 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>51 1/2&quot;</fullName>
+        <default>false</default>
+        <label>51 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>51 5/8&quot;</fullName>
+        <default>false</default>
+        <label>51 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>51 3/4&quot;</fullName>
+        <default>false</default>
+        <label>51 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>51 7/8&quot;</fullName>
+        <default>false</default>
+        <label>51 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>52&quot;</fullName>
+        <default>false</default>
+        <label>52&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>52 1/8&quot;</fullName>
+        <default>false</default>
+        <label>52 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>52 1/4&quot;</fullName>
+        <default>false</default>
+        <label>52 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>52 3/8&quot;</fullName>
+        <default>false</default>
+        <label>52 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>52 1/2&quot;</fullName>
+        <default>false</default>
+        <label>52 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>52 5/8&quot;</fullName>
+        <default>false</default>
+        <label>52 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>52 3/4&quot;</fullName>
+        <default>false</default>
+        <label>52 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>52 7/8&quot;</fullName>
+        <default>false</default>
+        <label>52 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>53&quot;</fullName>
+        <default>false</default>
+        <label>53&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>53 1/8&quot;</fullName>
+        <default>false</default>
+        <label>53 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>53 1/4&quot;</fullName>
+        <default>false</default>
+        <label>53 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>53 3/8&quot;</fullName>
+        <default>false</default>
+        <label>53 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>53 1/2&quot;</fullName>
+        <default>false</default>
+        <label>53 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>53 5/8&quot;</fullName>
+        <default>false</default>
+        <label>53 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>53 3/4&quot;</fullName>
+        <default>false</default>
+        <label>53 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>53 7/8&quot;</fullName>
+        <default>false</default>
+        <label>53 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>54&quot;</fullName>
+        <default>false</default>
+        <label>54&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>54 1/8&quot;</fullName>
+        <default>false</default>
+        <label>54 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>54 1/4&quot;</fullName>
+        <default>false</default>
+        <label>54 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>54 3/8&quot;</fullName>
+        <default>false</default>
+        <label>54 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>54 1/2&quot;</fullName>
+        <default>false</default>
+        <label>54 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>54 5/8&quot;</fullName>
+        <default>false</default>
+        <label>54 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>54 3/4&quot;</fullName>
+        <default>false</default>
+        <label>54 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>54 7/8&quot;</fullName>
+        <default>false</default>
+        <label>54 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>55&quot;</fullName>
+        <default>false</default>
+        <label>55&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>55 1/8&quot;</fullName>
+        <default>false</default>
+        <label>55 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>55 1/4&quot;</fullName>
+        <default>false</default>
+        <label>55 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>55 3/8&quot;</fullName>
+        <default>false</default>
+        <label>55 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>55 1/2&quot;</fullName>
+        <default>false</default>
+        <label>55 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>55 5/8&quot;</fullName>
+        <default>false</default>
+        <label>55 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>55 3/4&quot;</fullName>
+        <default>false</default>
+        <label>55 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>55 7/8&quot;</fullName>
+        <default>false</default>
+        <label>55 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>56&quot;</fullName>
+        <default>false</default>
+        <label>56&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>56 1/8&quot;</fullName>
+        <default>false</default>
+        <label>56 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>56 1/4&quot;</fullName>
+        <default>false</default>
+        <label>56 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>56 3/8&quot;</fullName>
+        <default>false</default>
+        <label>56 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>56 1/2&quot;</fullName>
+        <default>false</default>
+        <label>56 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>56 5/8&quot;</fullName>
+        <default>false</default>
+        <label>56 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>56 3/4&quot;</fullName>
+        <default>false</default>
+        <label>56 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>56 7/8&quot;</fullName>
+        <default>false</default>
+        <label>56 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>57&quot;</fullName>
+        <default>false</default>
+        <label>57&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>57 1/8&quot;</fullName>
+        <default>false</default>
+        <label>57 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>57 1/4&quot;</fullName>
+        <default>false</default>
+        <label>57 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>57 3/8&quot;</fullName>
+        <default>false</default>
+        <label>57 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>57 1/2&quot;</fullName>
+        <default>false</default>
+        <label>57 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>57 5/8&quot;</fullName>
+        <default>false</default>
+        <label>57 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>57 3/4&quot;</fullName>
+        <default>false</default>
+        <label>57 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>57 7/8&quot;</fullName>
+        <default>false</default>
+        <label>57 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>58&quot;</fullName>
+        <default>false</default>
+        <label>58&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>58 1/8&quot;</fullName>
+        <default>false</default>
+        <label>58 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>58 1/4&quot;</fullName>
+        <default>false</default>
+        <label>58 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>58 3/8&quot;</fullName>
+        <default>false</default>
+        <label>58 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>58 1/2&quot;</fullName>
+        <default>false</default>
+        <label>58 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>58 5/8&quot;</fullName>
+        <default>false</default>
+        <label>58 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>58 3/4&quot;</fullName>
+        <default>false</default>
+        <label>58 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>58 7/8&quot;</fullName>
+        <default>false</default>
+        <label>58 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>59&quot;</fullName>
+        <default>false</default>
+        <label>59&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>59 1/8&quot;</fullName>
+        <default>false</default>
+        <label>59 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>59 1/4&quot;</fullName>
+        <default>false</default>
+        <label>59 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>59 3/8&quot;</fullName>
+        <default>false</default>
+        <label>59 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>59 1/2&quot;</fullName>
+        <default>false</default>
+        <label>59 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>59 5/8&quot;</fullName>
+        <default>false</default>
+        <label>59 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>59 3/4&quot;</fullName>
+        <default>false</default>
+        <label>59 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>59 7/8&quot;</fullName>
+        <default>false</default>
+        <label>59 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>60&quot;</fullName>
+        <default>false</default>
+        <label>60&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>60 1/8&quot;</fullName>
+        <default>false</default>
+        <label>60 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>60 1/4&quot;</fullName>
+        <default>false</default>
+        <label>60 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>60 3/8&quot;</fullName>
+        <default>false</default>
+        <label>60 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>60 1/2&quot;</fullName>
+        <default>false</default>
+        <label>60 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>60 5/8&quot;</fullName>
+        <default>false</default>
+        <label>60 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>60 3/4&quot;</fullName>
+        <default>false</default>
+        <label>60 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>60 7/8&quot;</fullName>
+        <default>false</default>
+        <label>60 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>61&quot;</fullName>
+        <default>false</default>
+        <label>61&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>61 1/8&quot;</fullName>
+        <default>false</default>
+        <label>61 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>61 1/4&quot;</fullName>
+        <default>false</default>
+        <label>61 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>61 3/8&quot;</fullName>
+        <default>false</default>
+        <label>61 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>61 1/2&quot;</fullName>
+        <default>false</default>
+        <label>61 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>61 5/8&quot;</fullName>
+        <default>false</default>
+        <label>61 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>61 3/4&quot;</fullName>
+        <default>false</default>
+        <label>61 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>61 7/8&quot;</fullName>
+        <default>false</default>
+        <label>61 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>62&quot;</fullName>
+        <default>false</default>
+        <label>62&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>62 1/8&quot;</fullName>
+        <default>false</default>
+        <label>62 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>62 1/4&quot;</fullName>
+        <default>false</default>
+        <label>62 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>62 3/8&quot;</fullName>
+        <default>false</default>
+        <label>62 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>62 1/2&quot;</fullName>
+        <default>false</default>
+        <label>62 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>62 5/8&quot;</fullName>
+        <default>false</default>
+        <label>62 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>62 3/4&quot;</fullName>
+        <default>false</default>
+        <label>62 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>62 7/8&quot;</fullName>
+        <default>false</default>
+        <label>62 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>63&quot;</fullName>
+        <default>false</default>
+        <label>63&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>63 1/8&quot;</fullName>
+        <default>false</default>
+        <label>63 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>63 1/4&quot;</fullName>
+        <default>false</default>
+        <label>63 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>63 3/8&quot;</fullName>
+        <default>false</default>
+        <label>63 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>63 1/2&quot;</fullName>
+        <default>false</default>
+        <label>63 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>63 5/8&quot;</fullName>
+        <default>false</default>
+        <label>63 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>63 3/4&quot;</fullName>
+        <default>false</default>
+        <label>63 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>63 7/8&quot;</fullName>
+        <default>false</default>
+        <label>63 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>64&quot;</fullName>
+        <default>false</default>
+        <label>64&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>64 1/8&quot;</fullName>
+        <default>false</default>
+        <label>64 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>64 1/4&quot;</fullName>
+        <default>false</default>
+        <label>64 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>64 3/8&quot;</fullName>
+        <default>false</default>
+        <label>64 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>64 1/2&quot;</fullName>
+        <default>false</default>
+        <label>64 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>64 5/8&quot;</fullName>
+        <default>false</default>
+        <label>64 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>64 3/4&quot;</fullName>
+        <default>false</default>
+        <label>64 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>64 7/8&quot;</fullName>
+        <default>false</default>
+        <label>64 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>65&quot;</fullName>
+        <default>false</default>
+        <label>65&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>65 1/8&quot;</fullName>
+        <default>false</default>
+        <label>65 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>65 1/4&quot;</fullName>
+        <default>false</default>
+        <label>65 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>65 3/8&quot;</fullName>
+        <default>false</default>
+        <label>65 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>65 1/2&quot;</fullName>
+        <default>false</default>
+        <label>65 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>65 5/8&quot;</fullName>
+        <default>false</default>
+        <label>65 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>65 3/4&quot;</fullName>
+        <default>false</default>
+        <label>65 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>65 7/8&quot;</fullName>
+        <default>false</default>
+        <label>65 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>66&quot;</fullName>
+        <default>false</default>
+        <label>66&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>66 1/8&quot;</fullName>
+        <default>false</default>
+        <label>66 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>66 1/4&quot;</fullName>
+        <default>false</default>
+        <label>66 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>66 3/8&quot;</fullName>
+        <default>false</default>
+        <label>66 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>66 1/2&quot;</fullName>
+        <default>false</default>
+        <label>66 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>66 5/8&quot;</fullName>
+        <default>false</default>
+        <label>66 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>66 3/4&quot;</fullName>
+        <default>false</default>
+        <label>66 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>66 7/8&quot;</fullName>
+        <default>false</default>
+        <label>66 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>67&quot;</fullName>
+        <default>false</default>
+        <label>67&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>67 1/8&quot;</fullName>
+        <default>false</default>
+        <label>67 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>67 1/4&quot;</fullName>
+        <default>false</default>
+        <label>67 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>67 3/8&quot;</fullName>
+        <default>false</default>
+        <label>67 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>67 1/2&quot;</fullName>
+        <default>false</default>
+        <label>67 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>67 5/8&quot;</fullName>
+        <default>false</default>
+        <label>67 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>67 3/4&quot;</fullName>
+        <default>false</default>
+        <label>67 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>67 7/8&quot;</fullName>
+        <default>false</default>
+        <label>67 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>68&quot;</fullName>
+        <default>false</default>
+        <label>68&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>68 1/8&quot;</fullName>
+        <default>false</default>
+        <label>68 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>68 1/4&quot;</fullName>
+        <default>false</default>
+        <label>68 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>68 3/8&quot;</fullName>
+        <default>false</default>
+        <label>68 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>68 1/2&quot;</fullName>
+        <default>false</default>
+        <label>68 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>68 5/8&quot;</fullName>
+        <default>false</default>
+        <label>68 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>68 7/8&quot;</fullName>
+        <default>false</default>
+        <label>68 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>69&quot;</fullName>
+        <default>false</default>
+        <label>69&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>69 1/8&quot;</fullName>
+        <default>false</default>
+        <label>69 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>69 1/4&quot;</fullName>
+        <default>false</default>
+        <label>69 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>69 3/8&quot;</fullName>
+        <default>false</default>
+        <label>69 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>69 1/2&quot;</fullName>
+        <default>false</default>
+        <label>69 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>69 5/8&quot;</fullName>
+        <default>false</default>
+        <label>69 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>69 3/4&quot;</fullName>
+        <default>false</default>
+        <label>69 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>69 7/8&quot;</fullName>
+        <default>false</default>
+        <label>69 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>70&quot;</fullName>
+        <default>false</default>
+        <label>70&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>70 1/8&quot;</fullName>
+        <default>false</default>
+        <label>70 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>70 1/4&quot;</fullName>
+        <default>false</default>
+        <label>70 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>70 3/8&quot;</fullName>
+        <default>false</default>
+        <label>70 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>70 1/2&quot;</fullName>
+        <default>false</default>
+        <label>70 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>70 5/8&quot;</fullName>
+        <default>false</default>
+        <label>70 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>70 3/4&quot;</fullName>
+        <default>false</default>
+        <label>70 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>70 7/8&quot;</fullName>
+        <default>false</default>
+        <label>70 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>71&quot;</fullName>
+        <default>false</default>
+        <label>71&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>71 1/8&quot;</fullName>
+        <default>false</default>
+        <label>71 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>71 1/4&quot;</fullName>
+        <default>false</default>
+        <label>71 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>71 3/8&quot;</fullName>
+        <default>false</default>
+        <label>71 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>71 1/2&quot;</fullName>
+        <default>false</default>
+        <label>71 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>71 5/8&quot;</fullName>
+        <default>false</default>
+        <label>71 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>71 3/4&quot;</fullName>
+        <default>false</default>
+        <label>71 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>71 7/8&quot;</fullName>
+        <default>false</default>
+        <label>71 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>72&quot;</fullName>
+        <default>false</default>
+        <label>72&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>72 1/8&quot;</fullName>
+        <default>false</default>
+        <label>72 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>72 1/4&quot;</fullName>
+        <default>false</default>
+        <label>72 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>72 3/8&quot;</fullName>
+        <default>false</default>
+        <label>72 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>72 1/2&quot;</fullName>
+        <default>false</default>
+        <label>72 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>72 5/8&quot;</fullName>
+        <default>false</default>
+        <label>72 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>72 3/4&quot;</fullName>
+        <default>false</default>
+        <label>72 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>72 7/8&quot;</fullName>
+        <default>false</default>
+        <label>72 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>73&quot;</fullName>
+        <default>false</default>
+        <label>73&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>73 1/8&quot;</fullName>
+        <default>false</default>
+        <label>73 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>73 1/4&quot;</fullName>
+        <default>false</default>
+        <label>73 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>73 3/8&quot;</fullName>
+        <default>false</default>
+        <label>73 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>73 1/2&quot;</fullName>
+        <default>false</default>
+        <label>73 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>73 5/8&quot;</fullName>
+        <default>false</default>
+        <label>73 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>73 3/4&quot;</fullName>
+        <default>false</default>
+        <label>73 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>73 7/8&quot;</fullName>
+        <default>false</default>
+        <label>73 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>74&quot;</fullName>
+        <default>false</default>
+        <label>74&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>74 1/8&quot;</fullName>
+        <default>false</default>
+        <label>74 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>74 1/4&quot;</fullName>
+        <default>false</default>
+        <label>74 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>74 3/8&quot;</fullName>
+        <default>false</default>
+        <label>74 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>74 1/2&quot;</fullName>
+        <default>false</default>
+        <label>74 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>74 5/8&quot;</fullName>
+        <default>false</default>
+        <label>74 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>74 3/4&quot;</fullName>
+        <default>false</default>
+        <label>74 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>74 7/8&quot;</fullName>
+        <default>false</default>
+        <label>74 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>75&quot;</fullName>
+        <default>false</default>
+        <label>75&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>75 1/8&quot;</fullName>
+        <default>false</default>
+        <label>75 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>75 1/4&quot;</fullName>
+        <default>false</default>
+        <label>75 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>75 3/8&quot;</fullName>
+        <default>false</default>
+        <label>75 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>75 1/2&quot;</fullName>
+        <default>false</default>
+        <label>75 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>75 5/8&quot;</fullName>
+        <default>false</default>
+        <label>75 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>75 3/4&quot;</fullName>
+        <default>false</default>
+        <label>75 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>75 7/8&quot;</fullName>
+        <default>false</default>
+        <label>75 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>76&quot;</fullName>
+        <default>false</default>
+        <label>76&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>76 1/8&quot;</fullName>
+        <default>false</default>
+        <label>76 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>76 1/4&quot;</fullName>
+        <default>false</default>
+        <label>76 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>76 3/8&quot;</fullName>
+        <default>false</default>
+        <label>76 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>76 1/2&quot;</fullName>
+        <default>false</default>
+        <label>76 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>76 5/8&quot;</fullName>
+        <default>false</default>
+        <label>76 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>76 3/4&quot;</fullName>
+        <default>false</default>
+        <label>76 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>76 7/8&quot;</fullName>
+        <default>false</default>
+        <label>76 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>77&quot;</fullName>
+        <default>false</default>
+        <label>77&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>77 1/8&quot;</fullName>
+        <default>false</default>
+        <label>77 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>77 1/4&quot;</fullName>
+        <default>false</default>
+        <label>77 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>77 3/8&quot;</fullName>
+        <default>false</default>
+        <label>77 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>77 1/2&quot;</fullName>
+        <default>false</default>
+        <label>77 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>77 5/8&quot;</fullName>
+        <default>false</default>
+        <label>77 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>77 3/4&quot;</fullName>
+        <default>false</default>
+        <label>77 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>77 7/8&quot;</fullName>
+        <default>false</default>
+        <label>77 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>78&quot;</fullName>
+        <default>false</default>
+        <label>78&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>78 1/8&quot;</fullName>
+        <default>false</default>
+        <label>78 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>78 1/4&quot;</fullName>
+        <default>false</default>
+        <label>78 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>78 3/8&quot;</fullName>
+        <default>false</default>
+        <label>78 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>78 1/2&quot;</fullName>
+        <default>false</default>
+        <label>78 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>78 5/8&quot;</fullName>
+        <default>false</default>
+        <label>78 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>78 3/4&quot;</fullName>
+        <default>false</default>
+        <label>78 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>78 7/8&quot;</fullName>
+        <default>false</default>
+        <label>78 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>79&quot;</fullName>
+        <default>false</default>
+        <label>79&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>79 1/8&quot;</fullName>
+        <default>false</default>
+        <label>79 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>79 1/4&quot;</fullName>
+        <default>false</default>
+        <label>79 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>79 3/8&quot;</fullName>
+        <default>false</default>
+        <label>79 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>79 1/2&quot;</fullName>
+        <default>false</default>
+        <label>79 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>79 5/8&quot;</fullName>
+        <default>false</default>
+        <label>79 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>79 3/4&quot;</fullName>
+        <default>false</default>
+        <label>79 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>79 7/8&quot;</fullName>
+        <default>false</default>
+        <label>79 7/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>80&quot;</fullName>
+        <default>false</default>
+        <label>80&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>80 1/8&quot;</fullName>
+        <default>false</default>
+        <label>80 1/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>80 1/4&quot;</fullName>
+        <default>false</default>
+        <label>80 1/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>80 3/8&quot;</fullName>
+        <default>false</default>
+        <label>80 3/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>80 1/2&quot;</fullName>
+        <default>false</default>
+        <label>80 1/2&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>80 5/8&quot;</fullName>
+        <default>false</default>
+        <label>80 5/8&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>80 3/4&quot;</fullName>
+        <default>false</default>
+        <label>80 3/4&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>80 7/8&quot;</fullName>
+        <default>false</default>
+        <label>80 7/8&quot;</label>
+    </customValue>
+    <masterLabel>Sash D/L</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
