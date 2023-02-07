@@ -1,9 +1,9 @@
 public class QuotePDFControllerQueueable implements queueable,Database.AllowsCallouts{
     private Id quoteIds;
     public static quote quote {get;set;}
-    public static Decimal subtotal {get;set;}
-    public static Decimal shipping {get{return 100;} set;}
-    public static Decimal total {get; set;}
+    //public static Decimal subtotal {get;set;}
+    //public static Decimal shipping {get{return 100;} set;}
+    //public static Decimal total {get; set;}
     public static List<QuotelineItem> QuotelineItem{get; set;}
     public static String quoteDate {get;set;}
     public static Docusign_Terms__mdt docusignTerms {get;set;}

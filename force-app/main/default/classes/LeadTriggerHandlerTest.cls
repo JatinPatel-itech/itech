@@ -183,7 +183,7 @@ public class LeadTriggerHandlerTest {
         measurement4.Weatherstripping__c = 'Yes';
         measurement4.Top_Sash_D_L_Width__c = '12 1/2"';
         measurement4.Top_Sash_D_L_Height__c = '12 1/2"';
-        measurement4.Sash_Operation__c = 'Both Sash Operate';
+        measurement4.Sash_Operation__c = 'Left Sash';
         listMeasurement.add(measurement4);
         
         Measurement__c measurement5 = new Measurement__c();
@@ -196,7 +196,7 @@ public class LeadTriggerHandlerTest {
         measurement5.Weatherstripping__c = 'Yes';
         measurement5.Top_Sash_D_L_Width__c = '12 1/2"';
         measurement5.Top_Sash_D_L_Height__c = '12 1/2"';
-        measurement5.Sash_Operation__c = 'Bottom/Right Sash';
+        measurement5.Sash_Operation__c = 'Right Sash';
         listMeasurement.add(measurement5);
         
         Measurement__c measurement6 = new Measurement__c();
@@ -209,7 +209,7 @@ public class LeadTriggerHandlerTest {
         measurement6.Weatherstripping__c = 'Yes';
         measurement6.Top_Sash_D_L_Width__c = '12 1/2"';
         measurement6.Top_Sash_D_L_Height__c = '12 1/2"';
-        measurement6.Sash_Operation__c = 'Top/Left Sash';
+        measurement6.Sash_Operation__c = 'Right Sash';
         listMeasurement.add(measurement6);
         
         Measurement__c measurement7 = new Measurement__c();
@@ -262,7 +262,7 @@ public class LeadTriggerHandlerTest {
         measurement10.Weatherstripping__c = 'No';
         measurement10.Top_Sash_D_L_Width__c = '12 1/2"';
         measurement10.Top_Sash_D_L_Height__c = '12 1/2"';
-        measurement10.Sash_Operation__c = 'Top/Left Sash';
+        measurement10.Sash_Operation__c = 'Right Sash';
         listMeasurement.add(measurement10);
 
         

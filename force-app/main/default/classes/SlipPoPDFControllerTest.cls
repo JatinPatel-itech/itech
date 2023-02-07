@@ -9,10 +9,10 @@ public class SlipPoPDFControllerTest {
         List<Pricebook2> getPriceBook = [select id,Name from Pricebook2];
         List<PricebookEntry> getPricebookEntry = [Select Id,Pricebook2Id,Product2Id,Pricebook2.Name,Product2.Name,UnitPrice from PricebookEntry where Pricebook2.Name  = 'SLIP - Windows' Limit 5000];    
         Lead listLead = [Select Id,Measurement_Status__c from Lead where LastName = 'Test' limit 1];            
-        listLead.Measurement_Status__c = 'Measured';  
+        listLead.Measurement_Status__c = 'Measured Confirmed';  
         update listLead;
         
-        Opportunity getOpp = [Select Id,Name,StageName,Deposit_Amount__c from Opportunity Where Name = '001 Test' Limit 1];
+        Opportunity getOpp = [Select Id,Name,StageName,Deposit_Amount__c from Opportunity Where Name = '001 Test Order' Limit 1];
         List<vendor__c> listVendor = [Select Id,name from vendor__c];
         
         System.debug('getOpp'+getOpp);

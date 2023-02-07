@@ -1,9 +1,9 @@
 public class QuotePDFController {
     public String MstrId{get;set;}
     public static quote quote {get;set;}
-    public static Decimal subtotal {get;set;}
-    public static Decimal shipping {get{return 100;} set;}
-    public static Decimal total {get; set;} 
+    //public static Decimal subtotal {get;set;}
+   // public static Decimal shipping {get{return 100;} set;}
+    //public static Decimal total {get; set;} 
     Public Static String errorMessage {get; set;}
     Public Static String success {get; set;}
     public static List<QuotelineItem> QuotelineItem{get; set;}

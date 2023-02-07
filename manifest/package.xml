@@ -32,6 +32,17 @@
 		<name>ApexTrigger</name>
 	</types>
 	<types>
+		<members>Lead.SLIP_Window_compact_Layout</members>
+		<members>Opportunity.SLIP_Window_Opp_Compact_Layout</members>
+		<members>Order.Slip_Window_Order_Compact_Layout</members>
+		<members>Quote.Slip_Window_Quote_Compact_Layout</members>
+		<name>CompactLayout</name>
+	</types>
+	<types>
+		<members>SLIP_Windows</members>
+		<name>CustomApplication</name>
+	</types>
+	<types>
 		<members>PriceBookName</members>
 		<name>CustomLabel</name>
 	</types>
@@ -45,6 +56,24 @@
 		<name>CustomObject</name>
 	</types>
 	<types>
+		<members>Measurement__c</members>
+		<members>Vendor__c</members>
+		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>Slip_Window_Account_Record_Page</members>
+		<members>Slip_Window_Lead_Record_Page</members>
+		<members>Slip_Window_Opportunity_Record_Page</members>
+		<members>Slip_Window_Order_Record_Page</members>
+		<members>Slip_Window_Quote_Line_Item_Record_Page</members>
+		<members>Slip_Window_Quote_Record_Page</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Trigger_Order_IsActive</members>
+		<name>FlowDefinition</name>
+	</types>
+	<types>
 		<members>*</members>
 		<name>GlobalValueSet</name>
 	</types>
@@ -53,6 +82,11 @@
 		<members>Order.Save_SendSlipPoPDF</members>
 		<members>Quote.SlipCreateQuotePDF</members>
 		<name>QuickAction</name>
+	</types>
+	<types>
+		<members>ChosenWoodWindowLogo</members>
+		<members>SLIPLogo</members>
+		<name>StaticResource</name>
 	</types>
 	<version>55.0</version>
 </Package>
