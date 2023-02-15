@@ -1,0 +1,31 @@
+
+to find string where use in list of apex
+
+String searchString = 'Name';
+List<ApexClass> matchingClasses = [SELECT Name,Body FROM ApexClass ORDER BY CreatedDate desc];
+for (ApexClass ac : matchingClasses) {
+    if (ac.Body.contains(searchString)) {
+        Integer lineNum = -1;
+        Integer index = ac.Body.indexOf(searchString);
+        if (index != -1) {
+            lineNum = ac.Body.substring(0, index).split('\n').size();
+        }
+        System.debug('Class Name: ' + ac.Name + ', Line Number: ' + lineNum);
+    }
+}
+
+
+dynamic field name in object 
+List<String> dumyList = new list<string>{'Name','website'};
+ System.debug('dumyList'+dumyList);   
+List<account> listAcc = new List<account>();     
+account acc = new account();
+for(integer i=0;i<dumyList.size();i++){
+    listAcc.clear();
+    string ap = dumyList[i];
+    System.debug('list'+ap);
+    acc.put(ap, 'nishar003');
+    //listAcc.add(acc);
+}
+System.debug('listAcc'+listAcc);
+insert acc;
