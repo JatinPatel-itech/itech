@@ -75,3 +75,7 @@ wire: instante or repeate kind of data we use wire (not mendatory we neee)
 					
 			Query:
 				1>. SELECT MasterLabel, PluralLabel, KeyPrefix, DeveloperName, QualifiedApiName, NamespacePrefix FROM EntityDefinition
+
+*)Code Coverage check
+			query:
+				1>. SELECT ApexClassOrTrigger.Name, NumLinesCovered, NumLinesUncovered FROM ApexCodeCoverageAggregate ORDER BY ApexClassOrTrigger.Name ASC				
