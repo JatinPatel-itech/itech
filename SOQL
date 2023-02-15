@@ -17,8 +17,8 @@ SOQL:
 				select count(name) we can write field name also
 				
 				Notes:
-				1.when we want to get unique records
-				2.we must declare fields in groupby what we declare in select
+				1. when we want to get unique records
+				2. we must declare fields in groupby what we declare in select
 
 *)Order by: Object->Contact
 			
@@ -29,7 +29,7 @@ SOQL:
 				select firstname,lastname from contact order by firstname DESC
 				
 				Note:
-				1.when we want data in ascending,descending manner
+				1. when we want data in ascending,descending manner
 			
 *)Group by and order by together: Object->Contact
 				
