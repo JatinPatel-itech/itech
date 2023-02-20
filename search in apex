@@ -1,18 +1,21 @@
 
 to find string where use in list of apex
 
-String searchString = 'Name';
-List<ApexClass> matchingClasses = [SELECT Name,Body FROM ApexClass ORDER BY CreatedDate desc];
+String searchString = 'getData';
+List<ApexClass> matchingClasses = [SELECT Name, Body FROM ApexClass ORDER BY CreatedDate DESC];
 for (ApexClass ac : matchingClasses) {
     if (ac.Body.contains(searchString)) {
-        Integer lineNum = -1;
+        List<Integer> lineNums = new List<Integer>();
         Integer index = ac.Body.indexOf(searchString);
-        if (index != -1) {
-            lineNum = ac.Body.substring(0, index).split('\n').size();
+        while (index != -1) {
+            Integer lineNum = ac.Body.substring(0, index).split('\n').size();
+            lineNums.add(lineNum);
+            index = ac.Body.indexOf(searchString, index + searchString.length());
         }
-        System.debug('Class Name: ' + ac.Name + ', Line Number: ' + lineNum);
+        System.debug('Seach Key:-'+searchString+'->Class Name: ' + ac.Name + ', Line Numbers: ' + lineNums);
     }
 }
+
 
 
 dynamic field name in object 
