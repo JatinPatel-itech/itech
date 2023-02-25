@@ -78,4 +78,8 @@ wire: instante or repeate kind of data we use wire (not mendatory we neee)
 
 *)Code Coverage check
 			query:
-				1>. SELECT ApexClassOrTrigger.Name, NumLinesCovered, NumLinesUncovered FROM ApexCodeCoverageAggregate ORDER BY ApexClassOrTrigger.Name ASC				
+				1>. SELECT ApexClassOrTrigger.Name, NumLinesCovered, NumLinesUncovered FROM ApexCodeCoverageAggregate ORDER BY ApexClassOrTrigger.Name ASC	
+
+*)CustomLabel:
+			query:
+				1>. select Id,Name,Masterlabel,Value,IsProtected,Category,Language,ManageableState FROM ExternalString 
