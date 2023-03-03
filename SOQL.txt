@@ -83,3 +83,5 @@ wire: instante or repeate kind of data we use wire (not mendatory we neee)
 *)CustomLabel:
 			query:
 				1>. select Id,Name,Masterlabel,Value,IsProtected,Category,Language,ManageableState FROM ExternalString 
+
+*)
