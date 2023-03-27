@@ -84,4 +84,14 @@ wire: instante or repeate kind of data we use wire (not mendatory we neee)
 			query:
 				1>. select Id,Name,Masterlabel,Value,IsProtected,Category,Language,ManageableState FROM ExternalString 
 
-*)
+*)Content Documents:
+			query:
+				List<id> ContentDocumentids = new List<id>();
+				for(contentDocumentLink CDLink : [SELECT LinkedEntityid, ContentDocumentid FROM contentDocumentLink WHERE LinkedEntityid=:MstrID])
+		        {
+		            ContentDocumentids.add(CDLink.ContentDocumentid);
+		        } 
+		        List<ContentVersion> contVersion = [SELECT id,Title,VersionData,ContentDocumentId FROM ContentVersion WHERE ContentDocumentId IN : ContentDocumentids order by createddate desc Limit 1];
+		        if(contVersion.size() > 0){
+
+		        }
