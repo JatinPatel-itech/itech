@@ -1,0 +1,43 @@
+<aura:component implements="lightning:recordHomeTemplate" description="Full-width header above a main column and collapsible right sidebar.">
+
+    <aura:attribute name="header" type="Aura.Component[]" description="Header region"/>
+    <aura:attribute name="main" type="Aura.Component[]" description="Main region"/>
+    <aura:attribute name="sidebar" type="Aura.Component[]" description="Collapsible sidebar region"/>
+    <aura:attribute name="mainsize" type="String" default="8"/>
+	<aura:attribute name="sidebarsize" type="String" default="3.8"/>
+    <aura:attribute name="isSidebarCollapsed" type="Boolean" access="PRIVATE" default="false" />
+
+    
+    <div class="c-container">
+        <div>{!v.header}</div>
+        <lightning:layout>
+            <lightning:layoutItem size ="{!v.mainsize}"  flexibility="auto" padding="around-small">
+                <div class="flex-container ">
+                    
+                    <div class="flex-child layoutChangeWidth">
+                        {!v.main}
+                    </div>
+                    
+                    <div class="flex-child toggleChange">
+                        <lightning:buttonIcon onclick ="{!c.toggleSection}"
+                                              
+                                              variant="border-filled"
+                                              iconName="{! v.isSidebarCollapsed ? 'utility:chevronleft' : 'utility:chevronright' }" 
+                                              alternativeText="{! v.isSidebarCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar' }" />
+                        
+                        
+                    </div>
+                    
+                </div>
+               
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="4">
+                <div class="sidebar"><lightning:layoutItem class="{! v.isSidebarCollapsed ? ' slds-hide' : '' }"  >
+                    {!v.sidebar}
+                </lightning:layoutItem></div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    
+        
+</aura:component>

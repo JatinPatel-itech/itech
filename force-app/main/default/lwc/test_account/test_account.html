@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Account Details" icon-name="standard:Accounts">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="search" label="search" onchange={handleKeyChange} value={searchKey}></lightning-input>
+            <!-- <lightning-button variant="brand" label="NewLead" onclick={navigatetonewlead} ></lightning-button>
+            <lightning-button variant="brand" label="New" onclick={navigatetonewaccount} ></lightning-button>
+            <lightning-button variant="brand" label="test1" onclick={function1} ></lightning-button>
+            <lightning-button variant="brand" label="test2" onclick={function2} ></lightning-button> -->
+            <template if:true={data}>
+                
+                <lightning-datatable data={data}
+                                     columns={columns}
+                                     key-field="id"
+                                     show-row-number-column
+                                     row-number-offset={rowOffset}
+                                     suppress-bottom-bar
+                                     onrowaction={handleRowActions}></lightning-datatable>
+            </template>
+        </div>
+        <div if:true={isEditForm} class="slds-theme_default">
+            
+        </div>
+    </lightning-card>
+</template>

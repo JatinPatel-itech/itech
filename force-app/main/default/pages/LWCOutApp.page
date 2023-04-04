@@ -1,0 +1,18 @@
+<apex:page showHeader="false" sidebar="false" >
+    <br/>
+    <br/>
+    <br/>
+    <apex:includeLightning />    
+    <div id="LWCOutApp" />    
+    <script>
+    $Lightning.use("c:LWCOutApp", function() {
+        $Lightning.createComponent("c:SlipWindow",
+          { 
+          },
+          "LWCOutApp",
+          function(cmp) {
+             console.log('LWC Componenet added in VF page');
+          });
+    });
+    </script>
+</apex:page>

@@ -1,0 +1,21 @@
+.THIS .sidebar {
+   margin-left:5px;
+   margin-top:0px; 
+}
+.THIS .slds-p-around_small{ 
+    padding:0px;
+    margin-top:10px;
+}
+.THIS .layoutChangeWidth{
+    width : calc(100% - 32px )!important;
+}
+
+.THIS .flex-container {
+    display: flex;
+}
+
+.THIS .toggleChange{
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}

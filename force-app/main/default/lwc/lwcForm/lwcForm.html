@@ -1,0 +1,43 @@
+<template>
+    <!-- <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <span>Create Account LWC with Apex</span><br>
+            <lightning-button label="Create Account" type="Submit" onclick={activeCreateAccount}></lightning-button>
+            <template if:true={visibleCreateAccount}>
+                <c-lwc-create-account></c-lwc-create-account>
+            </template>
+            </div>
+        <div class="slds-col">
+            <span>Update Inline Contact</span><br>
+            <lightning-button label="update Contact" type="Submit" onclick={activeUpdateContact}></lightning-button>
+            <template if:true={visibleUpdateContact}>
+                <c-data-table></c-data-table>
+            </template>
+        </div> 
+            <div class="slds-col">
+            <span>3</span>
+        </div>
+    </div> -->
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_4-of-12 slds-medium-size_1-of-12 slds-size_1-of-12">
+            <c-lwc-create-account></c-lwc-create-account>
+        </div>
+        <div class="slds-col slds-large-size_4-of-12 slds-medium-size_1-of-12 slds-size_1-of-12">
+            <c-lwc-update-contact-inline></c-lwc-update-contact-inline>
+        </div>
+        <div class="slds-col slds-large-size_4-of-12 slds-medium-size_1-of-12 slds-size_1-of-12">
+            <c-lwc-create-dynamic-form></c-lwc-create-dynamic-form>
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_4-of-12 slds-medium-size_1-of-12 slds-size_1-of-12">
+            <c-wrapper-class></c-wrapper-class>
+        </div>
+        <div class="slds-col slds-large-size_4-of-12 slds-medium-size_1-of-12 slds-size_1-of-12">
+            
+        </div>
+        <div class="slds-col slds-large-size_4-of-12 slds-medium-size_1-of-12 slds-size_1-of-12">
+            
+        </div>
+    </div>
+</template>

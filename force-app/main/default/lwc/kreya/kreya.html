@@ -1,0 +1,39 @@
+<template>
+    
+  <div class="my-component">
+    <lightning-card title="Create Milestone/Proejct">
+        Project Name: {projectName}<br>
+        Opportunity Name :  {OpportunityName}   
+        <lightning-input type="search" onchange={handleKeywordChange} class="slds-m-bottom_small" label="Search" value={Keyword}></lightning-input>
+        <lightning-tabset>
+                <lightning-tab label="Milestones">
+                    <template if:true={allData}>
+                         <lightning-datatable
+                         key-field="Id"
+                         data={getLineitemMilestones}
+                         columns={MilestoneColumns}
+                         onsave={handleSave}
+                         draft-values={draftValues}
+                         onsort={handleShort}
+                         sorted-by={sortedField}
+                         sorted-direction={sortDirection}
+                         onrowselection={handleRowSelect}
+
+                    >
+                        </lightning-datatable> 
+                        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={CreateMilestone} class="slds-m-left_x-small"></lightning-button>
+                    </template> 
+                </lightning-tab>
+                <lightning-tab label="Actions">
+                    <template if:true={allData}>
+                        <lightning-datatable
+                        key-field="Id"
+                        data={getLineitemActions}
+                        columns={ActionColumns}>
+                       </lightning-datatable> 
+                   </template> 
+                </lightning-tab>
+            </lightning-tabset>  
+    </lightning-card>
+    </div>
+</template>

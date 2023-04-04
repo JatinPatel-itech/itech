@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Detailsdata">
+        
+        <lightning-combobox
+    name="select phone"
+    label="phone list"
+    value={value}
+    placeholder="select phone"
+    options={selectOptions}
+    onchange={handleChange} >
+    </lightning-combobox>
+    <template if:true={isVisible}>
+        <h1>template need to set</h1>
+    </template>
+    <lightning-button label="showdata" onclick={showdata}></lightning-button>
+    </lightning-card>
+</template>

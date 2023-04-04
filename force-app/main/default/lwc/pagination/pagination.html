@@ -1,0 +1,41 @@
+<template>
+    <ul class="slds-pagination slds-pagination--jump">
+        <li class="slds-pagination__item">
+            <button class="slds-button slds-button--icon-border-filled" disabled={currentPage === 1} onclick={handleFirstPage}>
+                <!-- <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#jump_to_left"></use>
+                </svg> -->
+                <span class="slds-assistive-text">First Page</span>
+            </button>
+        </li>
+        <li class="slds-pagination__item">
+            <button class="slds-button slds-button--icon-border-filled" disabled={currentPage === 1} onclick={handlePreviousPage}>
+                <!-- <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left"></use>
+                </svg> -->
+                <span class="slds-assistive-text">Previous Page</span>
+            </button>
+        </li>
+        <li class="slds-pagination__item slds-hide-small">
+            <span class="slds-pagination__pages">
+                Page {currentPage} of {totalPages}
+            </span>
+        </li>
+        <li class="slds-pagination__item">
+            <button class="slds-button slds-button--icon-border-filled" disabled={currentPage === totalPages} onclick={handleNextPage}>
+                <!-- <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#right"></use>
+                </svg> -->
+                <span class="slds-assistive-text">Next Page</span>
+            </button>
+        </li>
+        <li class="slds-pagination__item">
+            <button class="slds-button slds-button--icon-border-filled" disabled={currentPage === totalPages} onclick={handleLastPage}>
+                <!-- <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#jump_to_right"></use>
+                </svg> -->
+                <span class="slds-assistive-text">Last Page</span>
+            </button>
+        </li>
+    </ul>
+</template>

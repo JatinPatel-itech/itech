@@ -1,0 +1,19 @@
+<template>
+    <!--<div>hello world</div>
+    <div>name:{fullname}</div>
+    <div>{obj.name}</div>-->
+    <lightning-card title="two way data binding">
+        <div class="slds-var-m-around_small">
+            <lightning-input type="text" label="Enter some text" onkeyup={changevalue}></lightning-input>
+        </div>
+        <div>{fullname} and {title}</div>
+    </lightning-card>
+    <lightning-card title="two way data binding">
+        <div class="slds-var-m-around_small">
+            <lightning-input type="text" label="Enter some text" onkeyup={objectchangevalue}></lightning-input>
+        </div>
+        <div>{fullname} and {obj.name}</div>
+        <div>Total of num1+num2: {addition}</div>
+        <div>{firstword}</div>
+    </lightning-card>
+</template>

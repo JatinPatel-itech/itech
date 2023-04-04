@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Record Form">
+        <div>{record}</div>
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+            record-id="001N0000026IW2mIAG"
+              object-api-name={objectname}
+              fields={accountobject}
+              onsuccess={successHandler}
+            >
+        </lightning-record-form>
+        </div>
+    </lightning-card>
+    <lightning-card title="Record Form with edit">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+              record-id="001N0000026IW2mIAG"
+              object-api-name={objectname}
+              fields={accountobject}
+              onsuccess={successHandler}
+              onerror={errorHandler}
+              columns="2"
+              mode="edit"
+            >
+        </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-record-edit-form object-api-name="Contact">
+        <div class="slds-col slds-size_1-of-2">  
+                        <lightning-input-field field-name={BusinessType} onchange={handleBusinessTypeChange}></lightning-input-field></div>
+                        <div class="slds-col slds-size_1-of-2">  
+                        <lightning-input-field field-name={AccountName}></lightning-input-field></div>
+                        <template if:true={DisplayFixedfee}>
+                        <div class="slds-col slds-size_1-of-2">  
+                        <lightning-input-field field-name={FixedAmount} disabled={DisplayFixedfee}></lightning-input-field></div>
+                        </template>
+    </lightning-record-edit-form>
+
+</template>

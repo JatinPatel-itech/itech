@@ -1,0 +1,24 @@
+<template>
+    <div class="container">
+        <lightning-card title="Memory">
+            <div class="slds-var-p-around_medium">
+                <section class="score-panel">
+                    <span class="moves">1</span> Move(s)
+                    <div class="timer">10 seconds</div>
+                    <div class="restart">
+                        <i class="fa fa-repeat"></i>
+                    </div>
+                </section>
+                <section class="game-panel">
+                   <ul class="deck card-deck grid-container">
+                        <template for:each={cards} for:item="card">
+                            <li class={card.listclass} key={card.id} type={card.type}>
+                                <i class={card.icon}></i>
+                            </li>
+                        </template>
+                   </ul>
+                </section>
+            </div>
+        </lightning-card>
+    </div>
+</template>

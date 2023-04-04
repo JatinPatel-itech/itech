@@ -1,0 +1,74 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <h3>
+                <lightning-icon icon-name="standard:contact" size="small"></lightning-icon> Ceate Lead
+                </h3>
+            </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                <lightning-input label="First Name" name="firstName"  type="text" onchange={handleleadSave}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+            <div class="slds-form-element">
+                <lightning-input label="Last Name" name="lastName" type="text" onchange={handleleadSave}></lightning-input>
+                </div>
+            </div>
+            
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+            <div class="slds-form-element slds-p-top_large ">
+                <lightning-button label="Create" variant="brand" onclick={insertAction}></lightning-button>
+            </div>
+            </div>
+        </div>
+    </lightning-card>
+    <lightning-card>
+        <div slot="title">
+            <h3>
+                <lightning-icon icon-name="standard:contact" size="small"></lightning-icon> Ceate Measurement
+                </h3>
+            </div>
+            <template if:true={collectMeasurement}>
+                <lightning-datatable
+                key-field="Id"
+                data={collectMeasurement}
+                columns={MeasurementColumns}>
+               </lightning-datatable> 
+           </template> 
+           <lightning-button label="Add WindowType" variant="brand" onclick={createNewMeasurements}></lightning-button>
+           <template if:true={createNewMeasurement}>
+           <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">add WindowType
+                    </h2>
+                </header>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                        <div class="slds-form-element">
+                        <lightning-input label="WindowType" name="windowtype"  type="text" onchange={handlemeasurementSave}></lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                    <div class="slds-form-element">
+                        <lightning-input label="color" name="color" type="text" onchange={handlemeasurementSave}></lightning-input>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                    
+                    </div>
+                </div>
+               <footer class="slds-modal__footer">
+                <div class="slds-form-element slds-p-top_large ">
+                    <lightning-button label="Add" variant="brand" onclick={addMeasurement}></lightning-button>
+                </div>
+                </footer>
+            </div>
+        </section>
+    </template>
+    </lightning-card>
+</template>

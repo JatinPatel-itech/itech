@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Foreach Loop">
+        <div class="slds-var-m-around_small">
+            <template for:each={carlist} for:item="car">
+                <ul key={car} class="slds-has-dividers_around-space">
+                    <li class="slds-item">{car}</li>
+                    </ul>
+            </template>
+        </div>
+        
+        <div class="slds-var-m-around_small">        
+            <template iterator:list={listofceo}>
+                <div key={list.value.id}>
+                    <ul class="slds-has-dividers_around-space">
+                        <template if:true={list.first}>
+                            <strong>this is the first data</strong>
+                        </template>
+                        <li class="slds-item">{list.value.name},{list.value.company}</li> 
+                        <template if:true={list.last}>
+                            <strong>this is the last data</strong>
+                        </template>    
+                    </ul>
+                </div>   
+            </template>
+        </div>
+        
+    </lightning-card>
+</template>

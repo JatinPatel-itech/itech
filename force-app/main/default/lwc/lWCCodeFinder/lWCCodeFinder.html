@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Search-WireMethod" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search" onchange={handleSearch} class="slds-m-bottom_small" label="Search"
+                value={searchKey}></lightning-input>
+           <!-- <template if:true={Result}>-->
+                        <h2>ApexClasses</h2>
+                <template for:each={Result.Apex} for:item="data">
+                    <li key={data.ClassName}>
+                          {data.ClassName}, &nbsp;&nbsp;&nbsp;&nbsp; {data.LineNumbers}
+                    </li> 
+                </template>
+                
+            <!-- </template> -->
+            <!-- <lightning-button label="Search" title="Download action" icon-name="utility:search" class="slds-m-left_x-small" onclick={searchAction}></lightning-button> -->
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<template>
+    <div>Wellcome Mr. </div>
+    <div> Round 1.</div>
+    <lightning-card title="Game Board">
+        <div>
+            <span style="font-size: 20px; font-style: normal;"> Word: </span>
+            <span style="font-size: 20px; font-style: normal;color: red; ">{singleWord}</span>
+        </div>
+        <lightning-input type="text"></lightning-input>
+        <lightning-button variant="success" label="Start" title="Looks like a link" onclick={start}
+            class="slds-m-left_x-small"></lightning-button>
+
+        <lightning-button variant="brand" label="Next" title="Looks like a link" onclick={next}
+            class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Conditional rendering"> 
+        <div class="slds-var-m-around_small">
+            <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+           <template if:true={buttonvisible}>
+                <div>Hello, Welcome to itechcloud</div>
+            </template>
+            <template if:false={buttonvisible}>
+                <div>Click on the button</div>
+            </template>
+            <lightning-input type="input" label="Enter value" onkeyup={handelvalue}></lightning-input>
+            <template if:true={changevalue}>
+                <div>ok Done! {changevalue}</div>
+            </template>
+        </div> 
+    </lightning-card> 
+</template>

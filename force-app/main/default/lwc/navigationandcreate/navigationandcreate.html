@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="navigate to page">
+        <div class="slds-var-m-around_small">
+            <lightning-button variant="brand" label="Navigate" onclick={navigatetohome} ></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="create Lead">
+        <div class="slds-var-m-around_small">
+            <lightning-button variant="brand" label="NewLead" onclick={navigatetonewlead} ></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="test navigation">
+        <lightning-button
+            name="new-with-defaults"
+            label="Go to New Contact with Defaults"
+            class="slds-m-around_medium"
+            onclick={navigateToNewContactWithDefaults}
+        ></lightning-button>
+    </lightning-card>
+    <lightning-card title="Lead Listview">
+        <div class="slds-var-m-around_small">
+            <lightning-button variant="brand" label="Lead list view" onclick={showlistview} ></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Show record details">
+        <div class="slds-var-m-around_small">
+            <lightning-button variant="brand" label="Lead record view" onclick={showrecorddetails} ></lightning-button>
+        </div>
+    </lightning-card>
+</template>
