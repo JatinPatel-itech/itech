@@ -1,0 +1,1423 @@
+<template>
+
+    <lightning-card>
+        <div style="display:flex;" class="slds-p-around_small">
+            <!--Left part-->
+            <div class="form_left">
+                <!-- Insured Information -->
+                <div class=" slds-m-bottom_small">
+                    <div class="slds-grid slds-wrap slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_4-of-4 slds-p-around_small slds-m-bottom_x-small"
+                        style="background-color: #9C8C7D; color: white; border-top-left-radius: 12px;border-top-right-radius: 12px;">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
+                            <span style="font-size: 20px;">Insured Information</span>
+                        </div>
+                    </div>
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_4-of-4 slds-no-space">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label>Name of Organization</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-input class="slds-m-top_xx-small primeOrganizeNameValid" type="text"
+                                variant="label-hidden" name="primeOrganizeName" onchange={primeInsuredSave}
+                                message-when-value-missing="Please enter Name of Organization" required></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label>Years In Business</label> <lightning-input type="number"
+                                label="Years In Business" name="primeYearInBusiness" variant="label-hidden"
+                                class="slds-m-top_xx-small"
+                                onchange={primeInsuredSave}></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="Address">Address</label> <abbr title="required" class="slds-required">*</abbr>
+                            <lightning-input type="text" label="Address" name="primeAddress" variant="label-hidden"
+                                id="Address" class="slds-m-top_xx-small primeAddressValid" onchange={primeInsuredSave}
+                                message-when-value-missing="Please enter Address" required></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="Address_Line">Address Line 1</label> <lightning-input type="text"
+                                label="Address Line 1" name="primeAddressLine" variant="label-hidden" id="Address_Line"
+                                class="slds-m-top_xx-small" onchange={primeInsuredSave}></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="City">City</label> <lightning-input type="text" label="City" name="primeCity"
+                                variant="label-hidden" id="City" class="slds-m-top_xx-small"
+                                onchange={primeInsuredSave}></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="State">State</label> <lightning-input type="text" label="State" name="primeState"
+                                variant="label-hidden" id="State" class="slds-m-top_xx-small"
+                                onchange={primeInsuredSave}></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small"
+                            style=" padding-bottom: 22px;"> <label for="Country">Country</label> <lightning-input
+                                type="text" label="Country" name="PrimeCountry" variant="label-hidden" id="Country"
+                                class="slds-m-top_xx-small" onchange={primeInsuredSave}></lightning-input> 
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small"
+                            style=" padding-bottom: 22px; "> <label for="TypeofOrganization">Type of
+                                Organization</label> <abbr title="required" class="slds-required">*</abbr>
+                            <lightning-combobox name="primeTypeofOrganization" label="Type of Organization"
+                                placeholder="Select Organization" options={organizationOptions}
+                                onchange={typeOfOrganizationHandle} required variant="label-hidden" id="TypeofOrganization"
+                                class="slds-m-top_xx-small primeTypeofOrganizationValid" message-when-value-missing="Please enter type of Organization"> </lightning-combobox> <template
+                                if:true={showHideDetails.primeTypeofOrganization}> <lightning-input type="text" name="primeOthertypeofOrganization" onchange={primeInsuredSave} 
+                                class="primeOthertypeofOrganizationValid" placeholder="Enter other type of Organization" message-when-value-missing="Please enter other type of Organization" required></lightning-input> </template>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small"
+                            style="padding-top: 22px; border-top: 1px solid;border-color: #DDDBDA;"> <label
+                                for="firstName">First Name</label> <abbr title="required" class="slds-required">*</abbr>
+                            <lightning-input type="text" label="First Name" name="primeFirstName" onchange={primeInsuredSave}
+                                variant="label-hidden" id="firstName" class="slds-m-top_xx-small primeFirstNameValid"
+                                message-when-value-missing="Please enter First Name" required></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small"
+                            style="padding-top: 22px; border-top: 1px solid;border-color: #DDDBDA;"> <label
+                                for="lastName">Last Name</label> <abbr title="required" class="slds-required">*</abbr>
+                            <lightning-input type="text" label="Last Name" name="primeLastName" onchange={primeInsuredSave}
+                                variant="label-hidden" id="lastName" class="slds-m-top_xx-small primeLastNameValid"
+                                message-when-value-missing="Please enter Last Name" required></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="contactTitle">Contact Title</label> <lightning-input type="text"
+                                label="Contact Title" name="primeContactTitle" variant="label-hidden" id="contactTitle"
+                                class="slds-m-top_xx-small" onchange={primeInsuredSave}></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="contactEmail">Contact Email</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-input type="email" label="Contact Email"
+                                name="primeContactEmail" variant="label-hidden" id="contactEmail" class="slds-m-top_xx-small primeContactEmailValid"
+                                message-when-value-missing="Please enter valid Contact Email" required onchange={primeInsuredSave}></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="primeContactPhone">Contact Phone</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-input type="tel" label="Contact Phone"
+                                name="primeContactPhone" variant="label-hidden" id="contactPhone" class="slds-m-top_xx-small primeContactPhoneValid"
+                                onchange={primeInsuredSave} pattern="[0-9]{10}" message-when-value-missing="Please enter valid Contact Phone" required></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div align="right" class="slds-p-top_large"> <lightning-button variant="brand"
+                                    label="Add additional Insured" title="additional Insured"
+                                    onclick={addAdditionalInsured} class="slds-m-left_x-small"></lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Show Additional Insured in Table -->
+                <div class="slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_4-of-4 slds-no-space">
+                    <template if:true={allAdditionalInsuredData}>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+                            style="table-layout: fixed;">
+                            <thead style="background-color: rgba(156, 140, 125, 0.1);">
+                                <tr>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="Name of Organization">Name of Organization
+                                        </div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="City">City</div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="State">State</div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="Year In Business">Year In Business </div>
+                                    </th>
+                                    <th class="" style="width:10%;background-color: rgba(156, 140, 125, 0.1);"
+                                        scope="col">
+                                        <div class="slds-truncate" title="Actions">Actions</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody> <template for:each={allAdditionalInsuredData} for:item="insured" for:index="index">
+                                    <tr key={insured.Id}>
+                                        <td>{insured.organizeName}</td>
+                                        <td>{insured.city}</td>
+                                        <td>{insured.state}</td>
+                                        <td>{insured.yearInBusiness}</td>
+                                        <td> <lightning-button-icon icon-name="utility:edit" alternative-text="Edit"
+                                                title="Edit" data-index={index}
+                                                onclick={editInsuredAction}></lightning-button-icon>&nbsp;&nbsp;
+                                            <lightning-button-icon icon-name="utility:delete" alternative-text="Delete"
+                                                title="Delete" data-index={index}
+                                                onclick={deleteInsuredAction}></lightning-button-icon>
+                                        </td>
+                                    </tr>
+                                </template> </tbody>
+                        </table>
+                    </template>
+                </div>
+                <!--Add Additional Insured Modal-->
+                <template if:true={addInsuredModal}>
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <div align="left" style="display: flex;">
+                                    <div style="width: 95%;"> <span style="font-size: 16px; color:#014A99;">Add
+                                            Additional Insured</span> </div>
+                                    <div class="slds-align_absolute-center"> <lightning-icon icon-name="utility:close"
+                                            alternative-text="Utility close" title="close" size="x-small"
+                                            onclick={closeModal}></lightning-icon> </div>
+                                </div>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium">
+                                <div class="slds-grid slds-wrap">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="organizeName">Name of Organization</label> <abbr title="required"
+                                            class="slds-required">*</abbr> <lightning-input
+                                            class="slds-m-top_xx-small organizeNameValid" type="text"
+                                            variant="label-hidden" name="organizeName" value={organizeName}
+                                            onchange={additionalInsuredSave}
+                                            message-when-value-missing="Please enter Name of Organization"
+                                            required></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="yearInBusiness">Years In Business</label> <lightning-input
+                                            type="number" label="Years In Business" name="yearInBusiness"
+                                            value={yearInBusiness} variant="label-hidden" class="slds-m-top_xx-small"
+                                            onchange={additionalInsuredSave}></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="Address">Address</label> <abbr title="required"
+                                            class="slds-required">*</abbr> <lightning-input type="text" label="Address"
+                                            name="address" value={address} variant="label-hidden"
+                                            class="slds-m-top_xx-small addressValid" onchange={additionalInsuredSave}
+                                            message-when-value-missing="Please enter Address"
+                                            required></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="Address_Line">Address Line 1</label> <lightning-input type="text"
+                                            label="Address Line 1" name="addressLine1" value={addressLine1}
+                                            variant="label-hidden" class="slds-m-top_xx-small"
+                                            onchange={additionalInsuredSave}></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="City">City</label> <lightning-input type="text" label="City"
+                                            name="city" value={city} variant="label-hidden" class="slds-m-top_xx-small"
+                                            onchange={additionalInsuredSave}></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="State">State</label> <lightning-input type="text" label="State"
+                                            name="state" value={state} variant="label-hidden"
+                                            class="slds-m-top_xx-small"
+                                            onchange={additionalInsuredSave}></lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small"
+                                        style=" padding-bottom: 22px;"> <label for="Country">Country</label>
+                                        <lightning-input type="text" label="Country" name="country" value={country}
+                                            variant="label-hidden" class="slds-m-top_xx-small"
+                                            onchange={additionalInsuredSave}></lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small"
+                                        style=" padding-bottom: 22px; "> <label for="typeofOrganization">Type of
+                                            Organization</label> <abbr title="required" class="slds-required">*</abbr>
+                                        <lightning-combobox name="typeofOrganization" value={typeofOrganization}
+                                            label="Type of Organization" placeholder="Select Organization"
+                                            options={organizationOptions} onchange={modalShowHidehandle}
+                                            message-when-value-missing="Please select type of Organization" required
+                                            variant="label-hidden" class="slds-m-top_xx-small typeofOrganizationValid"> </lightning-combobox>
+                                        <template if:true={showHideDetails.typeofOrganization}> <lightning-input
+                                                type="text" name="otherTypeofOrganization"
+                                                value={otherTypeofOrganization} placeholder="Enter Type of Organization"
+                                                onchange={additionalInsuredSave} class="otherTypeofOrganizationValid"
+                                                message-when-value-missing="Please enter other type of Organization"
+                                                required></lightning-input> </template>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="slds-modal__footer"> <template if:true={addInsuredEnable}> <lightning-button
+                                        variant="brand" label="Add Record" title="Add Insured" onclick={addInsured}
+                                        class="slds-m-left_x-small slds-p-horizontal_medium"></lightning-button>
+                                </template> <template if:true={updateInsuredEnable}> <lightning-button variant="brand"
+                                        label="Update Record" title="Update Insured" onclick={updateInsured}
+                                        class="slds-m-left_x-small slds-p-horizontal_medium"></lightning-button>
+                                </template> </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                </template>
+                <!--Delete Confirm Additional Insured Modal-->
+                <template if:true={insuredDeleteModal}>
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <div align="left" style="display: flex;">
+                                    <div style="width: 95%;"> <span
+                                            style="font-size: 16px; color:#014A99;">Confirmation</span> </div>
+                                    <div class="slds-align_absolute-center"> <lightning-icon icon-name="utility:close"
+                                            alternative-text="Utility close" title="close" size="x-small"
+                                            onclick={closeModal}></lightning-icon> </div>
+                                </div>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium">
+                                <div class="slds-grid slds-wrap">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <div align="center"> <span>Are ypu sure you want to remove this record?</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="slds-modal__footer"> <lightning-button variant="brand-outline" label="No"
+                                    title="Add Insured" onclick={closeModal}
+                                    class="slds-m-left_x-small"></lightning-button> <lightning-button variant="brand"
+                                    label="Yes" title="Update Insured" onclick={deleteInsuredYes}
+                                    class="slds-m-left_x-small"></lightning-button> </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                </template>
+                <!--Broker Information-->
+                <div class=" slds-m-bottom_small">
+                    <div class="slds-large-size_4-of-4 slds-p-around_small slds-m-bottom_x-small"
+                        style="background-color: #9C8C7D; color: white;">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
+                            <span style="font-size: 20px;">BROKER INFORMATION</span>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="brokerAccount">Insurance Agency or Broker</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-input type="text"
+                                label="Insurance Agency or Broker" name="BrokerAccount" variant="label-hidden"
+                                id="brokerAccount" class="slds-m-top_xx-small" required> </lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="BrokerTitle">Broker Title</label> <lightning-input type="number"
+                                label="Broker Title" name="BrokerTitle" variant="label-hidden" id="BrokerTitle"
+                                class="slds-m-top_xx-small"></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="BrokerfirstName">First Name</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-input type="text" label="First Name"
+                                name="firstName" onchange={primeInsuredSave} variant="label-hidden" id="BrokerfirstName"
+                                class="slds-m-top_xx-small" required></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="BrokerlastName">Last Name</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-input type="text" label="Last Name"
+                                name="lastName" onchange={primeInsuredSave} variant="label-hidden" id="BrokerlastName"
+                                class="slds-m-top_xx-small" required></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="BrokerEmail">Broker Email</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-input type="email" label="Broker Email"
+                                name="BrokerEmail" variant="label-hidden" id="BrokerEmail" class="slds-m-top_xx-small"
+                                required></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="BrokerPhone">Broker Phone</label> <lightning-input type="tel"
+                                label="Broker Phone" pattern="[0-9]{10}" name="BrokerPhone" variant="label-hidden"
+                                id="BrokerPhone" class="slds-m-top_xx-small"></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
+                        </div>
+                    </div>
+                </div>
+                <!--Contract Information-->
+                <div class=" slds-m-bottom_small">
+                    <div class="slds-large-size_4-of-4 slds-p-around_small slds-m-bottom_x-small"
+                        style="background-color: #9C8C7D; color: white;">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
+                            <span style="font-size: 20px;">CONTRACT INFORMATION</span>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space slds-m-bottom_x-small"
+                        style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="EffectiveDate">Proposed Effective Date</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-input type="date"
+                                label="Proposed Effective Date" name="EffectiveDate" variant="label-hidden"
+                                id="EffectiveDate" class="slds-m-top_xx-small" required
+                                style="width: 70%;"></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="DueDate">Requested Quote Date</label> <lightning-input type="date"
+                                label="Requested Quote Date" name="DueDate" variant="label-hidden" id="DueDate"
+                                class="slds-m-top_xx-small" style="width: 70%;"></lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                        style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="TypeofContract">Type of Contract</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-combobox name="TypeofContract"
+                                label="Type of Contract" value={selectedTypeofContract} options={contractOptions}
+                                onchange={showHideDetailsHandle} variant="label-hidden" id="TypeofContract"
+                                class="slds-m-top_xx-small" required> </lightning-combobox> <template
+                                if:true={showHideDetails.TypeofContract}> <lightning-input type="text"
+                                    placeholder="Enter Type of Contract"></lightning-input> </template>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="ContractValue">Estimated Contract Value</label> <lightning-input type="number"
+                                step=".01" formatter="currency" name="ContractValue" variant="label-hidden"
+                                id="ContractValue" class="slds-m-top_xx-small"
+                                label="Estimated Contract Value"></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="ContractNumber">Contract Number</label> <lightning-input type="text"
+                                label="Contract Number" name="ContractNumber" variant="label-hidden" id="ContractNumber"
+                                class="slds-m-top_xx-small" required></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="ContractLength">Length of Contract</label> <lightning-input type="text"
+                                label="Length of Contract" name="ContractLength" variant="label-hidden"
+                                id="ContractLength" class="slds-m-top_xx-small"></lightning-input>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="contractCountry">Country</label> <abbr title="required"
+                                class="slds-required">*</abbr> <lightning-combobox name="Country" label="Country"
+                                value={selectedTypeofContract} options={countryOption}
+                                onchange={showHideDetailsHandle} variant="label-hidden"
+                                id="contractCountry" class="slds-m-top_xx-small" required> </lightning-combobox>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div align="right" class="slds-p-top_large"> <lightning-button variant="brand"
+                                    label="Add Contract" title="Add Contract" onclick={addAdditionalContract}
+                                    class="slds-m-left_x-small"></lightning-button> </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space">
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
+                                        type="checkbox" value="checkbox-toggle-21" name="contractQ1"
+                                        aria-describedby="contractQ1" /> <span id="contractQ1"
+                                        class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                            class="slds-checkbox_faux"></span> </span> <span
+                                        class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are you
+                                        the prime contractor on these contracts?</span> </label> </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
+                                        type="checkbox" value="checkbox-toggle-21" name="contractQ2"
+                                        aria-describedby="contractQ2" /> <span id="contractQ2"
+                                        class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                            class="slds-checkbox_faux"></span> </span> <span
+                                        class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Has the
+                                        organization previously carried DBA coverage?</span> </label> </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small"> <label
+                                for="DescriptionofOperations">Description of Operations</label> <lightning-textarea
+                                name="DescriptionofOperations" id="DescriptionofOperations" variant="label-hidden"
+                                class="slds-m-top_xx-small" label="Description of Operations"></lightning-textarea>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
+                                        type="checkbox" name="contractQ3" aria-describedby="contractQ3"
+                                        onchange={showHideDetailsHandle} /> <span id="contractQ3"
+                                        class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                            class="slds-checkbox_faux"></span> </span> <span
+                                        class="slds-m-bottom_none slds-m-left_small">Any work performed underground,
+                                        underwater, or above 15 Ft?</span> </label> </div> <template
+                                if:true={showHideDetails.contractQ3}> <label for="contractQ3Input"
+                                    class="slds-m-top_small">If Yes, please describe</label> <lightning-textarea
+                                    name="contractQ3Input" id="contractQ3Input" variant="label-hidden"
+                                    class="slds-m-top_xx-small" label="If Yes, please describe"></lightning-textarea>
+                            </template>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                        type="checkbox" value="checkbox-toggle-21" name="contractQ4"
+                                        aria-describedby="contractQ4" onchange={showHideDetailsHandle} /> <span
+                                        id="contractQ4" class="slds-checkbox_faux_container test" aria-live="assertive">
+                                        <span class="slds-checkbox_faux"></span> </span> <span
+                                        class="slds-m-bottom_none slds-m-left_small">If Prime Contractor, are
+                                        subcontractors used?</span> </label> </div> <template
+                                if:true={showHideDetails.contractQ4}> <label for="contractQ4Input"
+                                    class="slds-m-top_small">Please describe sub vetting process</label>
+                                <lightning-textarea name="contractQ4Input" id="contractQ4Input" variant="label-hidden"
+                                    class="slds-m-top_xx-small"
+                                    label="Please describe sub vetting process"></lightning-textarea> </template>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
+                        </div>
+                    </div>
+                </div>
+                <!--Show Additional Contract in Table -->
+                <div class="slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_4-of-4 slds-no-space">
+                    <template if:true={allAdditionalContractData}>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+                            style="table-layout: fixed;">
+                            <thead style="background-color: rgba(156, 140, 125, 0.1);">
+                                <tr>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="Name of Organization">Proposed Effective Date
+                                        </div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="State">Type of Contract</div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="Year In Business">Contract Number </div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="Year In Business">Estimated Contract Value
+                                        </div>
+                                    </th>
+                                    <th class="" style="width:10%;background-color: rgba(156, 140, 125, 0.1);"
+                                        scope="col">
+                                        <div class="slds-truncate" title="Actions">Actions</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody> <template for:each={allAdditionalContractData} for:item="contract"
+                                    for:index="index">
+                                    <tr key={contract.Id}>
+                                        <td>{contract.proposedEffectiveDate}</td>
+                                        <td>{contract.typeofContract}</td>
+                                        <td>{contract.contractNumber}</td>
+                                        <td>{contract.contractValue}</td>
+                                        <td> <lightning-button-icon icon-name="utility:edit" alternative-text="Edit"
+                                                title="Edit" data-index={index}
+                                                onclick={editContractAction}></lightning-button-icon>&nbsp;&nbsp;
+                                            <lightning-button-icon icon-name="utility:delete" alternative-text="Delete"
+                                                title="Delete" data-index={index}
+                                                onclick={deleteContractAction}></lightning-button-icon>
+                                        </td>
+                                    </tr>
+                                </template> </tbody>
+                        </table>
+                    </template>
+                </div>
+                <!--Add Additional Contract Modal-->
+                <template if:true={addContractModal}>
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-02" aria-modal="true"
+                        aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <div align="left" style="display: flex;">
+                                    <div style="width: 95%;"> <span style="font-size: 16px; color:#014A99;">Add Contract
+                                            Information</span> </div>
+                                    <div class="slds-align_absolute-center"> <lightning-icon icon-name="utility:close"
+                                            alternative-text="Utility close" title="close" size="x-small"
+                                            onclick={closeModal}></lightning-icon> </div>
+                                </div>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                                <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space slds-m-bottom_x-small"
+                                    style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="EffectiveDate">Proposed Effective Date</label> <abbr
+                                            title="required" class="slds-required">*</abbr> <lightning-input type="date"
+                                            label="Proposed Effective Date" name="proposedEffectiveDate"
+                                            value={proposedEffectiveDate} onchange={additionalContractSave}
+                                            variant="label-hidden" id="AddEffectiveDate"
+                                            message-when-value-missing="Please Select Effective Date"
+                                            class="slds-m-top_xx-small proposedEffectiveDateValid" required
+                                            style="width: 70%;"></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="AddDueDate">Requested Quote Date</label> <lightning-input
+                                            type="date" label="Requested Quote Date" name="requestedQuoteDate"
+                                            value={requestedQuoteDate} onchange={additionalContractSave}
+                                            variant="label-hidden" id="AddDueDate" class="slds-m-top_xx-small"
+                                            style="width: 70%;"></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                                    style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="typeofContract">Type of Contract</label> <abbr title="required"
+                                            class="slds-required">*</abbr> <lightning-combobox name="typeofContract"
+                                            label="Type of Contract" value={typeofContract} options={contractOptions}
+                                            message-when-value-missing="Please Select type of Contract"
+                                            onchange={modalShowHidehandle} variant="label-hidden" id="typeofContract"
+                                            class="slds-m-top_xx-small typeofContractValid" required>
+                                        </lightning-combobox> <template if:true={showHideDetails.typeofContract}>
+                                            <lightning-input type="text" name="otherTypeofContract"
+                                                value={otherTypeofContract} class="otherTypeofContractValid"
+                                                onchange={additionalContractSave}
+                                                message-when-value-missing="Please enter other type of Contract"
+                                                required placeholder="Enter Type of Contract"></lightning-input>
+                                        </template>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="AddContractValue">Estimated Contract Value</label> <lightning-input
+                                            type="number" step=".01" formatter="currency" name="contractValue"
+                                            value={contractValue} onchange={additionalContractSave}
+                                            variant="label-hidden" id="AddContractValue" class="slds-m-top_xx-small"
+                                            label="Estimated Contract Value"></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="AddContractNumber">Contract Number</label> <lightning-input
+                                            type="text" label="Contract Number" name="contractNumber"
+                                            value={contractNumber} onchange={additionalContractSave}
+                                            variant="label-hidden" id="AddContractNumber" class="slds-m-top_xx-small"
+                                            required></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="AddContractLength">Length of Contract</label> <lightning-input
+                                            type="text" label="Length of Contract" name="contractLength"
+                                            value={contractLength} onchange={additionalContractSave}
+                                            variant="label-hidden" id="AddContractLength"
+                                            class="slds-m-top_xx-small"></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="addContractCountry">Country</label> <abbr title="required"
+                                            class="slds-required">*</abbr> <lightning-combobox name="contractCountry"
+                                            label="Country" value={contractCountry} options={countryOption}
+                                            message-when-value-missing="Please Select Country"
+                                            onchange={modalShowHidehandle} variant="label-hidden"
+                                            id="addContractCountry" class="slds-m-top_xx-small contractCountryValid"
+                                            required> </lightning-combobox>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="slds-modal__footer"> <template if:true={addContractEnable}> <lightning-button
+                                        variant="brand" label="Add Record" title="Add contract" onclick={addContract}
+                                        class="slds-m-left_x-small slds-p-horizontal_medium"></lightning-button>
+                                </template> <template if:true={updateContractEnable}> <lightning-button variant="brand"
+                                        label="Update" title="Update Insured" onclick={updateContract}
+                                        class="slds-m-left_x-small slds-p-horizontal_medium"></lightning-button>
+                                </template> </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                </template>
+                <!--Delete Confirm Additional Contract Modal-->
+                <template if:true={contractDeleteModal}>
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <div align="left" style="display: flex;">
+                                    <div style="width: 95%;"> <span
+                                            style="font-size: 16px; color:#014A99;">Confirmation</span> </div>
+                                    <div class="slds-align_absolute-center"> <lightning-icon icon-name="utility:close"
+                                            alternative-text="Utility close" title="close" size="x-small"
+                                            onclick={closeModal}></lightning-icon> </div>
+                                </div>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium">
+                                <div class="slds-grid slds-wrap">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <div align="center"> <span>Are ypu sure you want to remove this record?</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="slds-modal__footer"> <lightning-button variant="brand-outline" label="No"
+                                    title="Add Contract" onclick={closeModal}
+                                    class="slds-m-left_x-small"></lightning-button> <lightning-button variant="brand"
+                                    label="Yes" title="Update Contract" onclick={deleteContractYes}
+                                    class="slds-m-left_x-small"></lightning-button> </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                </template>
+                <!--Remuneration / Employee Infomation-->
+                <div class=" slds-m-bottom_small">
+                    <div class="slds-large-size_4-of-4 slds-p-around_small slds-m-bottom_x-small"
+                        style="background-color: #9C8C7D; color: white;">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
+                            <span style="font-size: 20px;">REMUNERATION / EMPLOYEE INFORMATION</span>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
+                        <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                            style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="REMUNERATION">Country of Operation</label> <lightning-combobox
+                                    name="Country of Operation" value={value} placeholder="Select Progress"
+                                    options={operationContryOption} onchange={handleChange} variant="label-hidden"
+                                    class="slds-m-top_xx-small"></lightning-combobox>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="REMUNERATION">Job Description</label> <lightning-input type="text"
+                                    variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                            style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" name="checkbox-toggle-17" value="checkbox-toggle-17"
+                                            aria-describedby="checkbox-toggle-17" /> <span id="checkbox-toggle-17"
+                                            class="slds-checkbox_faux_container" aria-live="assertive"> <span
+                                                class="slds-checkbox_faux"></span> </span> &nbsp; Include United States
+                                        national employees </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="REMUNERATION">Number of US National's</label> <lightning-input type="text"
+                                    variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="REMUNERATION">Total remuneration US National's</label> <lightning-input
+                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" name="checkbox-toggle-17" value="checkbox-toggle-17"
+                                            aria-describedby="checkbox-toggle-17" /> <span id="checkbox-toggle-18"
+                                            class="slds-checkbox_faux_container" aria-live="assertive"> <span
+                                                class="slds-checkbox_faux"></span> </span> &nbsp; Include Third-Country
+                                        national employees </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="REMUNERATION">Number of Third-Country National's</label> <lightning-input
+                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="REMUNERATION">Total remuneration Third-Country National’s</label>
+                                <lightning-input type="text" variant="label-hidden"
+                                    class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" name="checkbox-toggle-17" value="checkbox-toggle-17"
+                                            aria-describedby="checkbox-toggle-17" /> <span id="checkbox-toggle-19"
+                                            class="slds-checkbox_faux_container" aria-live="assertive"> <span
+                                                class="slds-checkbox_faux"></span> </span> &nbsp; Include Local national
+                                        employees </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="REMUNERATION">Number of Local National's</label> <lightning-input
+                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="REMUNERATION">Total remuneration Local National</label> <lightning-input
+                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div align="right" class="slds-p-top_large"> <lightning-button variant="brand"
+                                    label="Add Countries" title="Add Countries" onclick={addAdditionalCountries}
+                                    class="slds-m-left_x-small"></lightning-button> </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Show Additional Countries in Table -->
+                <div class="slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_4-of-4 slds-no-space"> <template
+                        if:true={allAdditionalCountriesData}>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+                            style="table-layout: fixed;">
+                            <thead style="background-color: rgba(156, 140, 125, 0.1);">
+                                <tr>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="Name of Organization">Country of Operation
+                                        </div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="State">Number of US National's</div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="Year In Business">Number of Third-Country
+                                            National's </div>
+                                    </th>
+                                    <th class="" style=" background-color: rgba(156, 140, 125, 0.1);" scope="col">
+                                        <div class="slds-truncate" title="Year In Business">Number of Local National’s
+                                        </div>
+                                    </th>
+                                    <th class="" style="width:10%;background-color: rgba(156, 140, 125, 0.1);"
+                                        scope="col">
+                                        <div class="slds-truncate" title="Actions">Actions</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody> <template for:each={allAdditionalCountriesData} for:item="countries"
+                                    for:index="index">
+                                    <tr key={countries.Id}>
+                                        <td>{countries.countryOfOperation}</td>
+                                        <td>{countries.numberOfUSN}</td>
+                                        <td>{countries.numberOfTCN}</td>
+                                        <td>{countries.numberLN}</td>
+                                        <td> <lightning-button-icon icon-name="utility:edit" alternative-text="Edit"
+                                                title="Edit" data-index={index}
+                                                onclick={editCountryAction}></lightning-button-icon>&nbsp;&nbsp;
+                                            <lightning-button-icon icon-name="utility:delete" alternative-text="Delete"
+                                                title="Delete" data-index={index}
+                                                onclick={deleteCountryAction}></lightning-button-icon> </td>
+                                    </tr>
+                                </template> </tbody>
+                        </table>
+                    </template> </div>
+                <!--Add Additional Countries Modal-->
+                <template if:true={addCountriesModal}>
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <div align="left" style="display: flex;">
+                                    <div style="width: 95%;"> <span style="font-size: 16px; color:#014A99;">Add
+                                            Remuneration / Employee Information</span> </div>
+                                    <div class="slds-align_absolute-center"> <lightning-icon icon-name="utility:close"
+                                            alternative-text="Utility close" title="close" size="x-small"
+                                            onclick={closeModal}></lightning-icon> </div>
+                                </div>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium slds-grid slds-wrap">
+                                <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                                    style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="REMUNERATION">Country of Operation</label> <lightning-combobox
+                                            name="countryOfOperation" value={countryOfOperation}
+                                            placeholder="Select Progress" options={operationContryOption}
+                                            onchange={modalShowHidehandle} variant="label-hidden"
+                                            class="slds-m-top_xx-small"></lightning-combobox>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="REMUNERATION">Job Description</label> <lightning-input type="text"
+                                            variant="label-hidden" name="jobDescription" value={jobDescription}
+                                            class="slds-m-top_xx-small"
+                                            onchange={additionalCountriesSave}></lightning-input>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                                    style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid">
+                                                <input type="checkbox" name="checkbox-toggle-17"
+                                                    value="checkbox-toggle-17" aria-describedby="checkbox-toggle-17" />
+                                                <span id="checkbox-toggle-20" class="slds-checkbox_faux_container"
+                                                    aria-live="assertive"> <span class="slds-checkbox_faux"></span>
+                                                </span> &nbsp; Include United States national employees </label> </div>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="REMUNERATION">Number of US National's</label> <lightning-input
+                                            type="text" name="numberOfUSN" value={numberOfUSN}
+                                            onchange={additionalCountriesSave} variant="label-hidden"
+                                            class="slds-m-top_xx-small"></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="REMUNERATION">Total remuneration US National's</label>
+                                        <lightning-input type="text" name="totalRemunerationUSN"
+                                            value={totalRemunerationUSN} onchange={additionalCountriesSave}
+                                            variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid">
+                                                <input type="checkbox" name="checkbox-toggle-17"
+                                                    value="checkbox-toggle-17" aria-describedby="checkbox-toggle-17" />
+                                                <span id="checkbox-toggle-22" class="slds-checkbox_faux_container"
+                                                    aria-live="assertive"> <span class="slds-checkbox_faux"></span>
+                                                </span> &nbsp; Include Third-Country national employees </label> </div>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="REMUNERATION">Number of Third-Country National's</label>
+                                        <lightning-input type="text" name="numberOfTCN" value={numberOfTCN}
+                                            onchange={additionalCountriesSave} variant="label-hidden"
+                                            class="slds-m-top_xx-small"></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="REMUNERATION">Total remuneration Third-Country National’s</label>
+                                        <lightning-input type="text" name="totalRemunerationTCN"
+                                            value={totalRemunerationTCN} onchange={additionalCountriesSave}
+                                            variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid">
+                                                <input type="checkbox" name="checkbox-toggle-17"
+                                                    value="checkbox-toggle-17" aria-describedby="checkbox-toggle-17" />
+                                                <span id="checkbox-toggle-23" class="slds-checkbox_faux_container"
+                                                    aria-live="assertive"> <span class="slds-checkbox_faux"></span>
+                                                </span> &nbsp; Include Local national employees </label> </div>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="REMUNERATION">Number of Local National's</label> <lightning-input
+                                            type="text" name="numberLN" value={numberLN}
+                                            onchange={additionalCountriesSave} variant="label-hidden"
+                                            class="slds-m-top_xx-small"></lightning-input>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <label for="REMUNERATION">Total remuneration Local National</label>
+                                        <lightning-input type="text" name="totalRemunerationLN"
+                                            value={totalRemunerationLN} onchange={additionalCountriesSave}
+                                            variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="slds-modal__footer"> <template if:true={addCountriesEnable}> <lightning-button
+                                        variant="brand" label="Add Record" title="Add Countries" onclick={addCountries}
+                                        class="slds-m-left_x-small slds-p-horizontal_medium"></lightning-button>
+                                </template> <template if:true={updateCountriesEnable}> <lightning-button variant="brand"
+                                        label="Update Record" title="Update Countries" onclick={updateCountries}
+                                        class="slds-m-left_x-small slds-p-horizontal_medium"></lightning-button>
+                                </template> </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                </template>
+                <!--Delete Confirm Additional Countries Modal-->
+                <template if:true={countriesDeleteModal}>
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                        aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">
+                                <div align="left" style="display: flex;">
+                                    <div style="width: 95%;"> <span
+                                            style="font-size: 16px; color:#014A99;">Confirmation</span> </div>
+                                    <div class="slds-align_absolute-center"> <lightning-icon icon-name="utility:close"
+                                            alternative-text="Utility close" title="close" size="x-small"
+                                            onclick={closeModal}></lightning-icon> </div>
+                                </div>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium">
+                                <div class="slds-grid slds-wrap">
+                                    <div
+                                        class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                        <div align="center"> <span>Are ypu sure you want to remove this record?</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="slds-modal__footer"> <lightning-button variant="brand-outline" label="No"
+                                    title="Add Contract" onclick={closeModal}
+                                    class="slds-m-left_x-small"></lightning-button> <lightning-button variant="brand"
+                                    label="Yes" title="Update Contract" onclick={deleteCountryYes}
+                                    class="slds-m-left_x-small"></lightning-button> </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                </template>
+                <!--Additional Contract Information-->
+                <div class=" slds-m-bottom_small">
+                    <div class="slds-large-size_4-of-4 slds-p-around_small slds-m-bottom_x-small"
+                        style="background-color: #9C8C7D; color: white;">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
+                            <span style="font-size: 20px;">ADDITIONAL CONTRACT INFORMATION</span>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
+                        <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                            style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ1"
+                                            aria-describedby="additionalContractQ1" /> <span id="additionalContractQ1"
+                                            class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                                class="slds-checkbox_faux"></span> </span> <span
+                                            class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
+                                            tenured employees utilized for contract?</span> </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ2"
+                                            aria-describedby="additionalContractQ2" /> <span id="additionalContractQ2"
+                                            class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                                class="slds-checkbox_faux"></span> </span> <span
+                                            class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Will
+                                            employees retain employment with company after contract is complete?</span>
+                                    </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ3"
+                                            aria-describedby="additionalContractQ3" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ3" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">If
+                                            Prime Contractor, are subcontractors used?</span> </label> </div> <template
+                                    if:true={showHideDetails.additionalContractQ3}> <label
+                                        for="additionalContractQ3Input" class="slds-m-top_small">Please describe sub
+                                        vetting process</label> <lightning-textarea name="additionalContractQ3Input"
+                                        id="additionalContractQ3Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"
+                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ4"
+                                            aria-describedby="additionalContractQ4" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ4" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
+                                            physicals provided prior to deployment?</span> </label> </div> <template
+                                    if:true={showHideDetails.additionalContractQ4}> <label
+                                        for="additionalContractQ4Input" class="slds-m-top_small">Please describe
+                                        pre-deployment process</label> <lightning-textarea
+                                        name="additionalContractQ4Input" id="additionalContractQ4Input"
+                                        variant="label-hidden" class="slds-m-top_xx-small"
+                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ5"
+                                            aria-describedby="additionalContractQ5" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ5" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
+                                            psychiatric pre-screening completed prior to departure?</span> </label>
+                                </div> <template if:true={showHideDetails.additionalContractQ5}> <label
+                                        for="additionalContractQ5Input" class="slds-m-top_small">If Yes, who
+                                        administers?</label> <lightning-textarea name="additionalContractQ5Input"
+                                        id="additionalContractQ5Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"
+                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ6"
+                                            aria-describedby="additionalContractQ6" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ6" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> <span
+                                                class="slds-checkbox_off"></span> </span> <span
+                                            class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
+                                            psychiatric pre-screening completed prior to departure?</span> </label>
+                                </div> <template if:true={showHideDetails.additionalContractQ6}> <label
+                                        for="additionalContractQ6Input" class="slds-m-top_small">If Yes, who
+                                        administers?</label> <lightning-textarea name="additionalContractQ6Input"
+                                        id="additionalContractQ6Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"
+                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ7"
+                                            aria-describedby="additionalContractQ7" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ7" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
+                                            post deployment screenings completed?</span> </label> </div> <template
+                                    if:true={showHideDetails.additionalContractQ7}> <label
+                                        for="additionalContractQ7Input" class="slds-m-top_small">If Yes, please
+                                        describe.</label> <lightning-textarea name="additionalContractQ7Input"
+                                        id="additionalContractQ7Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"
+                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ8"
+                                            aria-describedby="additionalContractQ8" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ8" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
+                                            all work performed on a military base or embassy?</span> </label> </div>
+                                <template if:false={showHideDetails.additionalContractQ8}> <label
+                                        for="additionalContractQ8Input" class="slds-m-top_small">If No, please
+                                        describe.</label> <lightning-textarea name="additionalContractQ8Input"
+                                        id="additionalContractQ8Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"
+                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ9"
+                                            aria-describedby="additionalContractQ9" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ9" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
+                                            EEs provided with non-work-related medical insurance?</span> </label> </div>
+                                <template if:false={showHideDetails.additionalContractQ9}> <label
+                                        for="additionalContractQ9Input" class="slds-m-top_small">Maximum Flight
+                                        concentration to and from contract.</label> <lightning-textarea
+                                        name="additionalContractQ9Input" id="additionalContractQ9Input"
+                                        variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea>
+                                </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ10"
+                                            aria-describedby="additionalContractQ10" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ10" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
+                                            employees housed on base?</span> </label> </div> <template
+                                    if:false={showHideDetails.additionalContractQ10}> <label
+                                        for="additionalContractQ10Input" class="slds-m-top_small">What type of housing
+                                        is provided to employees when on contract?</label> <lightning-textarea
+                                        name="additionalContractQ10Input" id="additionalContractQ10Input"
+                                        variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea>
+                                </template> <template if:false={showHideDetails.additionalContractQ10}> <label
+                                        for="additionalContractQ11Input" class="slds-m-top_small">How do EEs get to work
+                                        location?</label> <lightning-textarea name="additionalContractQ11Input"
+                                        id="additionalContractQ11Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"></lightning-textarea> </template> <template
+                                    if:false={showHideDetails.additionalContractQ10}> <label
+                                        for="additionalContractQ12Input" class="slds-m-top_small">How far is housing
+                                        from work?</label> <lightning-textarea name="additionalContractQ12Input"
+                                        id="additionalContractQ12Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"></lightning-textarea> </template> <template
+                                    if:false={showHideDetails.additionalContractQ10}> <label
+                                        for="additionalContractQ13Input" class="slds-m-top_small">What is the maximum
+                                        concentration of EE's during transportation?</label> <lightning-textarea
+                                        name="additionalContractQ13Input" id="additionalContractQ13Input"
+                                        variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea>
+                                </template> <template if:false={showHideDetails.additionalContractQ10}> <label
+                                        for="additionalContractQ14Input" class="slds-m-top_small">What security (If any)
+                                        is provided EEs at housing and during transportation?</label>
+                                    <lightning-textarea name="additionalContractQ14Input"
+                                        id="additionalContractQ14Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"></lightning-textarea> </template>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                            style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ15"
+                                            aria-describedby="additionalContractQ15" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ15" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
+                                            you a flight contractor?</span> </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ16"
+                                            aria-describedby="additionalContractQ16" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ16" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
+                                            the aircraft a helicopter?</span> </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ17"
+                                            aria-describedby="additionalContractQ17" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ17" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Do
+                                            you also service the aircraft?</span> </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="AddtionalContract">What type of aircraft are you flying?</label>
+                                <lightning-input type="text" variant="label-hidden"
+                                    class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="AddtionalContract">Number of pilots and crew?</label> <lightning-input
+                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="AddtionalContract">How many flights per week?</label> <lightning-input
+                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="AddtionalContract">Where are base operations located?</label>
+                                <lightning-input type="text" variant="label-hidden"
+                                    class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="AddtionalContract">Where are flights to?</label> <lightning-input
+                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                            style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ18"
+                                            aria-describedby="additionalContractQ18" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ18" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
+                                            you a Security Contractor?</span> </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ19"
+                                            aria-describedby="additionalContractQ19" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ19" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
+                                            your EEs armed?</span> </label> </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ20"
+                                            aria-describedby="additionalContractQ20" onchange={showHideDetailsHandle} />
+                                        <span id="additionalContractQ20" class="slds-checkbox_faux_container test"
+                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
+                                            body armour required to be worn?</span> </label> </div> <template
+                                    if:true={showHideDetails.additionalContractQ20}> <label
+                                        for="additionalContractQ20Input" class="slds-m-top_small">If yes, please
+                                        describe what level of body armor and when its required</label>
+                                    <lightning-textarea name="additionalContractQ14Input"
+                                        id="additionalContractQ20Input" variant="label-hidden"
+                                        class="slds-m-top_xx-small"></lightning-textarea> </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="AddtionalContract">What % of work is mobile?</label> <lightning-input
+                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="AddtionalContract">Where are you providing security?</label>
+                                <lightning-input type="text" variant="label-hidden"
+                                    class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                        type="checkbox" value="checkbox-toggle-21" name="additionalContractQ21"
+                                        aria-describedby="additionalContractQ21" onchange={showHideDetailsHandle} />
+                                    <span id="additionalContractQ21" class="slds-checkbox_faux_container test"
+                                        aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span> <span
+                                        class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are you a
+                                        linguistic/translator contractor?</span> </label> </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="workProvided">What type of work is being provided?</label> <lightning-combobox
+                                name="TypeofOrganization" value={value}
+                                placeholder="What type of work is being provided?" options={workOption}
+                                onchange={showHideDetailsHandle} required variant="label-hidden" id="workProvided"
+                                class="slds-m-top_xx-small"> </lightning-combobox>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                        type="checkbox" value="checkbox-toggle-21" name="additionalContractQ22"
+                                        aria-describedby="additionalContractQ22" onchange={showHideDetailsHandle} />
+                                    <span id="additionalContractQ22" class="slds-checkbox_faux_container test"
+                                        aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span> <span
+                                        class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is any
+                                        work embedded with forward operating units?</span> </label> </div> <template
+                                if:true={showHideDetails.additionalContractQ22}> <label for="additionalContractQ22Input"
+                                    class="slds-m-top_small">If yes, what percentage of EEs will do off base
+                                    work:</label> <lightning-textarea name="additionalContractQ9Input"
+                                    id="additionalContractQ22Input" variant="label-hidden"
+                                    class="slds-m-top_xx-small"></lightning-textarea> </template>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                        type="checkbox" value="checkbox-toggle-21" name="additionalContractQ23"
+                                        aria-describedby="additionalContractQ23" onchange={showHideDetailsHandle} />
+                                    <span id="additionalContractQ23" class="slds-checkbox_faux_container test"
+                                        aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span> <span
+                                        class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is body
+                                        armor required to be worn?</span> </label> </div> <template
+                                if:true={showHideDetails.additionalContractQ23}> <label for="additionalContractQ23Input"
+                                    class="slds-m-top_small">If yes, please describe what level of body armor and when
+                                    its required</label> <lightning-textarea name="additionalContractQ9Input"
+                                    id="additionalContractQ23Input" variant="label-hidden"
+                                    class="slds-m-top_xx-small"></lightning-textarea> </template>
+                        </div>
+                    </div>
+                </div>
+                <!--Requested Documents-->
+                <div class=" slds-m-bottom_small">
+                    <div class="slds-large-size_4-of-4 slds-p-around_small slds-m-bottom_x-small"
+                        style="background-color: #9C8C7D; color: white;">
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
+                            <span style="font-size: 20px;">REQUESTED DOCUMENTS</span>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
+                        <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
+                            style="border-bottom: 1px solid;border-color: #DDDBDA; padding-bottom: 22px;">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <span style="color:#7E99AA;">In addition to completing this application, please provide
+                                    the following information:</span>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="requiteddoc">Type of Organization</label> <lightning-combobox
+                                    name="TypeofOrganization" value={value} placeholder="Type of Organization"
+                                    options={requiredTypeOrganization} onchange={showHideDetailsHandle} required
+                                    variant="label-hidden" id="requiteddoc" class="slds-m-top_xx-small">
+                                </lightning-combobox>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <label for="requiteddoc"></label> <lightning-input type="File"
+                                    class="slds-m-top_xx-small"></lightning-input>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div style="width:20rem">
+                                    <div class="slds-file slds-file_card slds-has-title">
+                                        <figure> <a href="#" class="slds-file__crop"> <span
+                                                    class="slds-assistive-text">Preview:</span> <img src=""
+                                                    alt="Description of the image" /> </a>
+                                            <figcaption class="slds-file__title slds-file__title_card">
+                                                <div class="slds-media slds-media_small slds-media_center">
+                                                    <div class="slds-media__figure slds-line-height_reset"> <span
+                                                            class="slds-icon_container" title="pdf"> <svg
+                                                                class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                                                <use
+                                                                    xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#pdf">
+                                                                </use>
+                                                            </svg> <span class="slds-assistive-text">pdf</span> </span>
+                                                    </div>
+                                                    <div class="slds-media__body"> <span
+                                                            class="slds-file__text slds-truncate"
+                                                            title="Proposal.pdf">file1.pdf</span> </div>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <div align="Center" class="slds-form-element slds-p-top_large ">
+                                <div style="background-color: #014A99; color: #fff; padding: 10px 26px;cursor: pointer;width: 40%; border-radius: 5px;"
+                                    onclick={submitForm}>Submit Form</div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-smal slds-p-top_large"
+                            style="background-color: #9C8C7D;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: #FFFFFF; ">
+                            <p
+                                style="align-items: left !important;padding-bottom: 10px;padding-top: 10px; font-size: 18px">
+                                Fraud Disclosure </p>
+                            <p class=" slds-m-bottom_small" style="align-items: left !important;"> <b>Notice to
+                                    applicants:</b> Any person who knowingly and with intent to defraud any insurance
+                                company or other person files an application for insurance or statement of claim
+                                containing any materially false information or, conceals, for the purpose of misleading,
+                                information concerning any fact material thereto, commits a fraudulent act, which is a
+                                crime and may subject such person to criminal and civil penalties. NOTICE: This
+                                application is for the purpose of obtaining a quotation and does not bind the applicant
+                                or the Company to complete the insurance. However, if a policy is later issued, this
+                                form shall be the basis of and become part of the contract. The undersigned applicant
+                                warrants that to the best of his or her knowledge the statements set forth herein are
+                                true. The applicant further warrants that if the information supplied on the application
+                                changes between the date of this application and the time when the policy is issued, the
+                                applicant will immediately notify the Company in writing of any change, and the insurer
+                                may withdraw or modify any outstanding quotations and/or authorization or agreements to
+                                bind the insurance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Right part-->
+            <div>
+                <div class="form_right slds-p-around_small">
+                    <div align="center">
+                        <img src={trailheadLogoUrl} style="width: 50%;">
+                    </div>
+
+                    <!-- progress bar -->
+                    <div class="slds-progress slds-progress_vertical">
+                        <ol class="slds-progress__list progres_bar">
+                            <li class="progres_bar_list">
+                                <div class="progres_bar_list_left"></div>
+                                <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Insured
+                                    Information</div>
+                            </li>
+                            <li class="progres_bar_list">
+                                <div class="progres_bar_list_left"></div>
+                                <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Broker
+                                    Information</div>
+                            </li>
+                            <li class="progres_bar_list">
+                                <div class="progres_bar_list_left"></div>
+                                <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Contract
+                                    Information</div>
+                            </li>
+                            <li class="progres_bar_list">
+                                <div class="progres_bar_list_left"></div>
+                                <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Remuneration/
+                                    Employee Information</div>
+                            </li>
+                            <li class="progres_bar_list">
+                                <div class="progres_bar_list_left"></div>
+                                <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Additional
+                                    Contract Information</div>
+                            </li>
+                            <li class="progres_bar_list">
+                                <div class="progres_bar_list_left"></div>
+                                <div class="slds-progress__item_content slds-grid slds-grid_align-spread">Requested
+                                    Documents</div>
+                            </li>
+                        </ol>
+                        <div aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" role="progressbar">
+                            <span class="slds-assistive-text">Progress: 25%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,37 @@
+<template>      
+    <lightning-card >
+        <div align="right" class="slds-m-right_large slds-m-bottom_small">
+            <lightning-button icon-name="utility:add" variant="brand"  onclick={addEvents} label="Add"></lightning-button>
+        </div>
+        <template for:each={events} for:item="event" for:index="index">
+            <div class="slds-grid slds-wrap slds-border_bottom slds-p-bottom_small" key={event}>   
+                <div class="slds-col slds-size_11-of-12"> 
+                    <div class="slds-grid slds-wrap slds-p-bottom_small" >    
+                        <div class="slds-col slds-size_6-of-12">
+                            <div class="slds-form-element slds-p-horizontal_medium">
+                            <lightning-input type="text"    data-index={index}  label="Event Name" placeholder="Event Name"  class=" slds-m-left_medium" value={event.Event_Name__c} name="Event_Name__c" onchange={handleEventChange}></lightning-input></b> 
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <div class="slds-form-element slds-p-horizontal_medium">
+                                <lightning-input type="date"   data-index={index}  label="Event Start Date" placeholder="Event Start Date"  class=" slds-m-left_medium" value={event.Event_Start_Date__c} name="Event_Start_Date__c" onchange={handleEventChange} ></lightning-input></b> 
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <div class="slds-form-element slds-p-horizontal_medium">
+                            <lightning-input type="date"    data-index={index}  label="Event End Date" placeholder="Event End Date"  class=" slds-m-left_medium" value={event.Event_End_Date__c} name="Event_End_Date__c" onchange={handleEventChange} ></lightning-input></b> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-12"> 
+                    <div align="right" class="slds-m-right_large slds-m-top_small">
+                        <template if:true={eventDeleteEnable}>
+                            <lightning-button-icon icon-name="utility:delete"  alternative-text="Delete"  title="Delete"  data-index={index}  onclick={deleteEvent}></lightning-button-icon>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>
