@@ -166,12 +166,16 @@ export default class DbaApplication extends LightningElement {
 
    //TABLE CHANGES BY JATIN
      /*--------------------------------------------------------ja Start------------------------------------------------------*/
-    @track addInsuredModal = false;
+    
+     @track primeInsureData = [];
+     @track brokerInformationData = [];
+     @track primeContractData = [];
+    
+     @track addInsuredModal = false;
     @track addInsuredEnable = true;
     @track updateInsuredEnable = false; 
     @track insuredDeleteModal = false;
     
-    @track primeInsureData = [];
     @track additionalInsuredData = [];
     @track currentInsured = [];
     @track allAdditionalInsuredData;
@@ -193,7 +197,6 @@ export default class DbaApplication extends LightningElement {
     @track updateContractEnable = true;
     @track contractDeleteModal = false;
 
-    @track primeContractData = [];
     @track additionalContractData = [];
     @track currentContract = [];
     @track allAdditionalContractData;
@@ -266,12 +269,41 @@ export default class DbaApplication extends LightningElement {
         console.log('Prime InsuredData->',this.primeInsureData);
         console.log(this.showHideDetails);
     }
+
+    typeOfContractHandle(event) {
+        let name = event.target.name;
+        let value = event.target.value;
+        if (value == 'Yes' || value == 'Other' || event.target.checked) {
+             this.showHideDetails[name] =  true; 
+             this.primeContractData[event.target.name] = event.target.value;
+        }else {
+            this.primeContractData[event.target.name] = event.target.value;
+            if(this.primeContractData['primeTypeofContract'] != 'Other'){
+                this.primeContractData['primeOthertypeofContract'] = '';
+            }
+            this.showHideDetails[name] =  false;
+        }
+        console.log('Prime primeContractData->',this.primeContractData);
+        console.log(this.showHideDetails);
+    }
     
     //get prime Insured
         primeInsuredSave(event){
             this.primeInsureData[event.target.name] = event.target.value;
             console.log('primeInsureData->',this.primeInsureData);
         }
+
+    //get Broker Information
+    brokerInformationSave(event){
+        this.brokerInformationData[event.target.name] = event.target.value;
+        console.log('brokerInformationData->',this.brokerInformationData);
+    }  
+    
+    //get Contract Information
+    primeContractSave(event){
+        this.primeContractData[event.target.name] = event.target.value;
+        console.log('primeContractData->',this.primeContractData);
+    }  
 
 
  //slected value for combobox to all type
@@ -704,17 +736,19 @@ deleteCountryYes(){
 
 //Submit Form
 submitForm(){
-    const isAllInputsCorrect = [...this.template.querySelectorAll('.primeOrganizeNameValid,.primeAddressValid,.primeTypeofOrganizationValid,.primeOthertypeofOrganizationValid,.primeFirstNameValid,.primeLastNameValid,.primeContactEmailValid,.primeContactPhoneValid')]
+    const isAllInputsCorrect = [...this.template.querySelectorAll('.primeOrganizeNameValid,.primeAddressValid,.primeTypeofOrganizationValid,.primeOthertypeofOrganizationValid,.primeFirstNameValid,.primeLastNameValid,.primeContactEmailValid,.primeContactPhoneValid,.brokerIABValid,.brokerFirstNameValid,.brokerLastNameValid,.brokerEmailValid,.primeEffectiveDateValid,.primeTypeofContractValid,.primeOthertypeofContractValid,.primeContractCountryValid')]
             .reduce((validSoFar, inputField) => {
                 inputField.reportValidity();
                 return validSoFar && inputField.checkValidity();
             }, true);
     if(isAllInputsCorrect){
         console.log('All Inputs Correct');   
-     console.log('Prime InsuredData->',this.primeInsureData);
-    console.log("all Additional Insured",this.allAdditionalInsuredData);    
-    console.log("all Additional Contract",this.allAdditionalContractData);
-    console.log("all Additional Countries",this.allAdditionalCountriesData);
+        console.log('Prime InsuredData->',this.primeInsureData);
+        console.log('brokerInformationData->',this.brokerInformationData);
+        console.log('primeContractData->',this.primeContractData);
+        console.log("all Additional Insured",this.allAdditionalInsuredData);    
+        console.log("all Additional Contract",this.allAdditionalContractData);
+        console.log("all Additional Countries",this.allAdditionalCountriesData);
     }        
     
 }

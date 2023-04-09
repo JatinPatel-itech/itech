@@ -294,44 +294,39 @@
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
-                        <div
-                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="brokerAccount">Insurance Agency or Broker</label> <abbr title="required"
-                                class="slds-required">*</abbr> <lightning-input type="text"
-                                label="Insurance Agency or Broker" name="BrokerAccount" variant="label-hidden"
-                                id="brokerAccount" class="slds-m-top_xx-small" required> </lightning-input>
+                                class="slds-required">*</abbr> <lightning-input type="text" label="Insurance Agency or Broker" message-when-value-missing="Please enter Insurance Agency or Broker"
+                                name="brokerIAB" onchange={brokerInformationSave} variant="label-hidden" id="brokerAccount"
+                                class="slds-m-top_xx-small brokerIABValid" required></lightning-input>
                         </div>
-                        <div
-                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
-                            <label for="BrokerTitle">Broker Title</label> <lightning-input type="number"
-                                label="Broker Title" name="BrokerTitle" variant="label-hidden" id="BrokerTitle"
-                                class="slds-m-top_xx-small"></lightning-input>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="BrokerTitle">Broker Title</label> <lightning-input type="text"
+                                label="Broker Title" name="brokerTitle" onchange={brokerInformationSave} variant="label-hidden"
+                                id="BrokerTitle" class="slds-m-top_xx-small"></lightning-input>
                         </div>
-                        <div
-                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="BrokerfirstName">First Name</label> <abbr title="required"
-                                class="slds-required">*</abbr> <lightning-input type="text" label="First Name"
-                                name="firstName" onchange={primeInsuredSave} variant="label-hidden" id="BrokerfirstName"
-                                class="slds-m-top_xx-small" required></lightning-input>
+                                class="slds-required">*</abbr> <lightning-input type="text" label="First Name" message-when-value-missing="Please enter First Name"
+                                name="brokerFirstName" onchange={brokerInformationSave} variant="label-hidden" id="BrokerfirstName"
+                                class="slds-m-top_xx-small brokerFirstNameValid" required></lightning-input>
                         </div>
-                        <div
-                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="BrokerlastName">Last Name</label> <abbr title="required"
-                                class="slds-required">*</abbr> <lightning-input type="text" label="Last Name"
-                                name="lastName" onchange={primeInsuredSave} variant="label-hidden" id="BrokerlastName"
-                                class="slds-m-top_xx-small" required></lightning-input>
+                                class="slds-required">*</abbr> <lightning-input type="text" label="Last Name" message-when-value-missing="Please enter Last Name"
+                                name="brokerLastName" onchange={brokerInformationSave} variant="label-hidden" id="BrokerlastName"
+                                class="slds-m-top_xx-small brokerLastNameValid" required></lightning-input>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="BrokerEmail">Broker Email</label> <abbr title="required"
-                                class="slds-required">*</abbr> <lightning-input type="email" label="Broker Email"
-                                name="BrokerEmail" variant="label-hidden" id="BrokerEmail" class="slds-m-top_xx-small"
+                                class="slds-required">*</abbr> <lightning-input type="email" label="Broker Email" message-when-value-missing="Please enter valid Email" 
+                                name="brokerEmail" onchange={brokerInformationSave} variant="label-hidden" id="BrokerEmail" class="slds-m-top_xx-small brokerEmailValid"
                                 required></lightning-input>
                         </div>
-                        <div
-                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="BrokerPhone">Broker Phone</label> <lightning-input type="tel"
-                                label="Broker Phone" pattern="[0-9]{10}" name="BrokerPhone" variant="label-hidden"
+                                label="Broker Phone" pattern="[0-9]{10}" name="brokerPhone" onchange={brokerInformationSave} variant="label-hidden"
                                 id="BrokerPhone" class="slds-m-top_xx-small"></lightning-input>
                         </div>
                         <div
@@ -353,16 +348,16 @@
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="EffectiveDate">Proposed Effective Date</label> <abbr title="required"
-                                class="slds-required">*</abbr> <lightning-input type="date"
-                                label="Proposed Effective Date" name="EffectiveDate" variant="label-hidden"
-                                id="EffectiveDate" class="slds-m-top_xx-small" required
+                                class="slds-required">*</abbr> <lightning-input type="date" name="primeEffectiveDate"
+                                label="Proposed Effective Date" variant="label-hidden" message-when-value-missing="Please select vald date"
+                                id="EffectiveDate" class="slds-m-top_xx-small primeEffectiveDateValid" onchange={primeContractSave} required
                                 style="width: 70%;"></lightning-input>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="DueDate">Requested Quote Date</label> <lightning-input type="date"
-                                label="Requested Quote Date" name="DueDate" variant="label-hidden" id="DueDate"
-                                class="slds-m-top_xx-small" style="width: 70%;"></lightning-input>
+                                label="Requested Quote Date" name="primeRequestedQuoteDate" variant="label-hidden" id="DueDate"
+                                class="slds-m-top_xx-small " onchange={primeContractSave} style="width: 70%;"></lightning-input>
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
@@ -370,42 +365,41 @@
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="TypeofContract">Type of Contract</label> <abbr title="required"
-                                class="slds-required">*</abbr> <lightning-combobox name="TypeofContract"
-                                label="Type of Contract" value={selectedTypeofContract} options={contractOptions}
-                                onchange={showHideDetailsHandle} variant="label-hidden" id="TypeofContract"
-                                class="slds-m-top_xx-small" required> </lightning-combobox> <template
-                                if:true={showHideDetails.TypeofContract}> <lightning-input type="text"
-                                    placeholder="Enter Type of Contract"></lightning-input> </template>
+                                class="slds-required">*</abbr> <lightning-combobox name="primeTypeofContract"
+                                label="Type of Contract"  options={contractOptions} message-when-value-missing="Please select type of Contract"
+                                onchange={typeOfContractHandle} variant="label-hidden" id="TypeofContract"
+                                class="slds-m-top_xx-small primeTypeofContractValid" required> </lightning-combobox> <template
+                                if:true={showHideDetails.primeTypeofContract}> <lightning-input type="text" name="primeOthertypeofContract" onchange={primeContractSave} 
+                                class="primeOthertypeofContractValid" placeholder="Enter other type of contract" message-when-value-missing="Please enter other type of Organization" required></lightning-input> </template>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="ContractValue">Estimated Contract Value</label> <lightning-input type="number"
-                                step=".01" formatter="currency" name="ContractValue" variant="label-hidden"
+                                step=".01" formatter="currency" name="primeContractValue" onchange={primeContractSave} variant="label-hidden"
                                 id="ContractValue" class="slds-m-top_xx-small"
                                 label="Estimated Contract Value"></lightning-input>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="ContractNumber">Contract Number</label> <lightning-input type="text"
-                                label="Contract Number" name="ContractNumber" variant="label-hidden" id="ContractNumber"
+                                label="Contract Number" name="primeContractNumber" onchange={primeContractSave} variant="label-hidden" id="ContractNumber"
                                 class="slds-m-top_xx-small" required></lightning-input>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
-                            <label for="ContractLength">Length of Contract</label> <lightning-input type="text"
-                                label="Length of Contract" name="ContractLength" variant="label-hidden"
-                                id="ContractLength" class="slds-m-top_xx-small"></lightning-input>
+                            <label >Length of Contract</label> <lightning-input type="text"
+                                label="Length of Contract" name="primeContractLength" onchange={primeContractSave} variant="label-hidden"
+                                 class="slds-m-top_xx-small"></lightning-input>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="contractCountry">Country</label> <abbr title="required"
-                                class="slds-required">*</abbr> <lightning-combobox name="Country" label="Country"
-                                value={selectedTypeofContract} options={countryOption}
-                                onchange={showHideDetailsHandle} variant="label-hidden"
-                                id="contractCountry" class="slds-m-top_xx-small" required> </lightning-combobox>
+                                class="slds-required">*</abbr> <lightning-combobox name="primeContractCountry" label="Country"
+                                options={countryOption} 
+                                onchange={typeOfContractHandle} variant="label-hidden" message-when-value-missing="Please select Country"
+                                id="contractCountry" class="slds-m-top_xx-small primeContractCountryValid" required> </lightning-combobox>
                         </div>
-                        <div
-                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div align="right" class="slds-p-top_large"> <lightning-button variant="brand"
                                     label="Add Contract" title="Add Contract" onclick={addAdditionalContract}
                                     class="slds-m-left_x-small"></lightning-button> </div>
@@ -414,8 +408,8 @@
                     <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space">
                         <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
-                                        type="checkbox" value="checkbox-toggle-21" name="contractQ1"
-                                        aria-describedby="contractQ1" /> <span id="contractQ1"
+                                        type="checkbox" name="Prime_contractor__c"
+                                        onchange={primeContractSave} /> <span
                                         class="slds-checkbox_faux_container test" aria-live="assertive"> <span
                                             class="slds-checkbox_faux"></span> </span> <span
                                         class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are you
