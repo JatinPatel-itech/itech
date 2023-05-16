@@ -1,0 +1,157 @@
+All Logins
+
+*)	www.udemy.com
+	https://www.udemy.com/join/login-popup/
+	subhashpanchani@gmail.com
+	subhash@101
+
+1> PellaQa:
+	test.salesforce.com
+	https://test.salesforce.com/
+	dhruv.javiyasfdc@gmail.com.pella.pellaqa
+	qpmz5555
+
+2> Abacus:
+	https://abacusph2-dev-1-dev-ed.my.salesforce.com/	
+	subhash@abacusph2-dev-1.com	
+	abacus@101
+	
+3> Hexagon:
+	gkimura-220527-730-demo.my.salesforce.com
+	https://gkimura-220527-730-demo.my.salesforce.com/
+	msriv@hexagon.demo
+	Salesforce1	
+	
+4> Aspire
+	test.salesforce.com
+	aspirecrm@ideagen.newworld.dev
+	6bJSwN785mG9
+	
+	Mulesoft
+	anypoint.mulesoft.com
+	https://anypoint.mulesoft.com/login/
+	humbertowithvero
+	Hcro0302!	
+
+5> Lemme:
+	
+	Sandbox
+	test.salesforce.com
+	https://test.salesforce.com/	
+	2epic.erin@zephyrsales.com.lemme	
+	Salesforcerocks!1!
+
+	Production
+	https://login.salesforce.com/
+	2epic.erin@zephyrsales.com
+	Salesforcerocks!1!	
+
+6> Ebe:
+	https://ebetalent--full.sandbox.my.salesforce.com/
+	cloud113@ebetalent.com.full
+	ebeiscool!2018q2
+
+7> Toppan Merrill:
+	ccmg--uat.my.salesforce.com
+	https://ccmg--uat.my.salesforce.com/	
+	cloud113@ccmg.com.uat	
+	pnQvJ/yt#kxx7Xa6bektwo
+
+8> Ideagen:
+	ideagenplcorg--dev.my.salesforce.com
+	https://ideagenplcorg--dev.my.salesforce.com/	
+	aspirecrm@ideagen.newworld.dev	
+	6bJSwN785mG9
+
+9> ClarkCapital:
+	test.salesforce.com
+	cloud113@ccmg.com.uat
+	pnQvJ/yt#kxx7Xa6bektwo
+	
+10> Leankor:
+	test.salesforce.com
+	https://test.salesforce.com/
+	subhash.panchani@itechcloudsolution.com.lkpartial2
+	leankor@101
+
+	login.salesforce.com
+	leankor@swgdemo-2022.demo
+	salesforce1
+	
+11> CCMG: 
+	test.salesforce.com
+	https://ccmg--apexdoc.sandbox.lightning.force.com/
+	cloud113@ccmg.com.apexdoc
+	pnQvJ/yt#kxx7Xa6bektwo
+	
+12> ASC Dev
+		Email:
+		Url:	  http://aspiresoftwareconsultancy.com:2096/	
+		UserName: jatin.patel@aspiresoftwareconsultancy.com
+		Password: jR24eaDXkFz*
+		
+13> OS Insurance		
+		https://globalseguros--ta.sandbox.my.salesforce.com
+		subhash@globalseguros.ta
+		@@Globalseguros2022		
+		
+14> wingsinsurance 
+		URL: https://wingsinsurance--partialcop.my.salesforce.com/
+		Username: cloud113@wingsinsurance.com.partialcop
+		Password: wingsiscool!2022q1
+		
+15>	globalseguros
+	https://globalseguros--ta.sandbox.lightning.force.com/
+	ivan@gsf.com.ta	
+	@@Global2022		
+	
+16> test.salesforce.com
+	Username:cetrix@cetrixcloud.com
+	Password: 1qaz2wsx!QAZ@WSX	
+	
+17> OS Insurance
+	https://sociedadganadero--dev2.sandbox.lightning.force.com/
+	ivan@cloudblue.us.prod.dev2
+	@@Ganadero2022
+
+	https://sociedadganadero--uat0.sandbox.lightning.force.com/
+	ivan@cloudblue.us.prod.uat0
+	@@Ganadero2022	
+	
+18> humberto
+
+	Microfoft
+	login.microsoftonline.com
+	humrey@signicat.com
+	FlyingOwls0=
+
+	cpqDev -- sandbox
+	signicat--cpqdev.sandbox.my.salesforce.com
+	humberto.reyes@signicat.com
+	Hcro0302!
+
+	prodMaster - sandbox
+	signicat--prodmaster.sandbox.my.salesforce.com
+	humrey@signicat.com.prodmaster
+	Hcro0302!
+
+	prod
+	signicat.my.salesforce.com
+	humberto.reyes@signicat.com
+	Hcro0302!	
+	
+19> SLIP Window:
+	url: https://hgjbkhi--cetrixdev.sandbox.lightning.force.com/
+	Username: cetrix@cetrix.com.cetrixdev
+	old Password: 1qaz2wsx
+	new Password: 1qaz2wsx@@
+	
+
+20> Aedonpd3:
+	aedonpd3-dev-ed.develop.my.salesforce.com
+		subhash-pd3@itechcloudsolution.com
+	$ubhash-pd31
+
+21> CircleBlack:
+	markk@circleblack.com
+	sGtKVKArInJUlNecMELt33

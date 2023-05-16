@@ -1,0 +1,38 @@
+or create a new repository on the command line
+echo "# temp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/JatinPatel-itech/itech.git
+git push -f origin main
+
+or push an existing repository from the command line
+git 
+git branch -M main
+git push -u origin main
+
+
+Final
+
+git init
+git add .
+git commit -m 'Message'
+git remote add origin https://github.com/JatinPatel-itech/itech.git
+git branch -M Notes
+git push -f origin Notes
+
+if we want to pull
+
+git pull origin Notes
+
+
+if we want to remove git remote origin
+git remote remove origin
+
+if you change name
+
+git branch -m main master
+git fetch origin
+git branch -u origin/master master
+git remote set-head origin -a
