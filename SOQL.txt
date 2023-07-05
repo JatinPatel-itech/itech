@@ -94,4 +94,6 @@ wire: instante or repeate kind of data we use wire (not mendatory we neee)
 		        List<ContentVersion> contVersion = [SELECT id,Title,VersionData,ContentDocumentId FROM ContentVersion WHERE ContentDocumentId IN : ContentDocumentids order by createddate desc Limit 1];
 		        if(contVersion.size() > 0){
 		        	//get contVersion
-		        } 
+		        }
+
+//all query				 
