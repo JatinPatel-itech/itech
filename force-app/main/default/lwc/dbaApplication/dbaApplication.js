@@ -125,6 +125,15 @@ export default class DbaApplication extends LightningElement {
             ];
      }
 
+     get providingSecurityOption() {
+        return [
+            { label: 'Base', value: 'Base' },
+            { label: 'Embassy', value: 'Embassy' },
+            { label: 'Mobile', value: 'Mobile' },
+            { label: 'Other', value: 'Other' },
+        ];
+    }
+
     showHideDetailsHandle(event) {
         let name = event.target.name;
         let value = event.target.value;
@@ -167,9 +176,12 @@ export default class DbaApplication extends LightningElement {
    //TABLE CHANGES BY JATIN
      /*--------------------------------------------------------ja Start------------------------------------------------------*/
     
+     @track InputData = {}
      @track primeInsureData = [];
      @track brokerInformationData = [];
      @track primeContractData = [];
+     @track primeREInformationData = [];
+     @track ACInformationData = [];
     
      @track addInsuredModal = false;
     @track addInsuredEnable = true;
@@ -218,7 +230,7 @@ export default class DbaApplication extends LightningElement {
     @track updateCountriesEnable = true;
     @track countriesDeleteModal = false;
 
-    @track primeRMInformationData = [];
+    
     @track additionalCountriesData = [];
     @track currentCountry = [];
     @track allAdditionalCountriesData;
@@ -234,6 +246,11 @@ export default class DbaApplication extends LightningElement {
     @track numberLN = '';
     @track totalRemunerationLN = '';
 
+    connectedCallback(){
+    this.showHideDetails = {
+        'Carry_firearms__c' : true
+    };
+    }
 //slected value for combobox to all type
     // AllComboboxDetailsHandle(event) {
     //     let name = event.target.name;
@@ -286,6 +303,31 @@ export default class DbaApplication extends LightningElement {
         console.log('Prime primeContractData->',this.primeContractData);
         console.log(this.showHideDetails);
     }
+
+    primeREHandle(event) {    
+        this.primeREInformationData[event.target.name] = event.target.value;          
+         console.log('primeREInformationData->',this.primeREInformationData);
+    }
+
+    ACInformationhandle(event){
+        let name = event.target.name;
+        let value = event.target.value;
+        if (value == 'Yes' || value == 'Other' || event.target.checked) {
+             this.showHideDetails[name] =  true; 
+             this.ACInformationData[event.target.name] = event.target.value;
+        }else {
+            this.ACInformationData[event.target.name] = event.target.value;
+            if(this.ACInformationData['Translator_type__c'] != 'Other'){
+                this.ACInformationData['Translator_other_type__c'] = '';
+            }
+            if(this.ACInformationData['Security_location__c'] != 'Other'){
+                this.ACInformationData['Other_security_location__c'] = '';
+            }
+            this.showHideDetails[name] =  false;
+        }
+        console.log('ACInformationData->',this.ACInformationData);
+        console.log(this.showHideDetails);
+    }
     
     //get prime Insured
         primeInsuredSave(event){
@@ -303,7 +345,102 @@ export default class DbaApplication extends LightningElement {
     primeContractSave(event){
         this.primeContractData[event.target.name] = event.target.value;
         console.log('primeContractData->',this.primeContractData);
-    }  
+    } 
+
+    //get Remuneration / Employee Information
+    primeREInformationSave(event){
+        this.primeREInformationData[event.target.name] = event.target.value;          
+         console.log('primeREInformationData->',this.primeREInformationData);
+    } 
+
+    //Addtional Contract Information
+    ACInformationSave(event){
+        this.ACInformationData[event.target.name] = event.target.value;          
+         console.log('primeACInformationData->',this.ACInformationData);
+    } 
+    
+    //
+    handleCheckboxChange(event) {
+        let name = event.target.name;
+        const isChecked = event.target.checked;
+        
+        //contract true/false
+        if(name == 'Prime_contractor__c' || name == 'Previous_dba_coverage__c' ||name == 'Under_or_above_ground_work__c' || name == 'Subcontractors_used__c'){
+        this.primeContractData[event.target.name] = isChecked;
+        if (event.target.checked) {
+            this.showHideDetails[name] =  true; 
+       }else {
+            if(name == 'Under_or_above_ground_work__c'){
+                this.primeContractData['Work_environment_description__c'] = '';
+            }
+            if(name == 'Subcontractors_used__c'){
+                this.primeContractData['Subcontractors_vetting_process__c'] = '';
+            }       
+           this.showHideDetails[name] =  false;
+       }
+        console.log('primeContractData->',this.primeContractData);
+        } 
+
+       //Remuneration / Employee true/false
+       if(name == 'US_National__c' || name == 'ThirdCountry_National__c' || name == 'Local_National__c'){
+        this.primeREInformationData[event.target.name] = isChecked; 
+        console.log('primeREInformationData->',this.primeREInformationData);
+       } 
+
+       //Addtional Contract Information true/false
+       if(name == 'Tenured_employees__c' || name == 'Employees_retained_post_contract__c' || name == 'Subcontractors_used__c' ||
+          name == 'Physicals_provided__c' || name == 'Psychiatric_prescreening__c'|| name == 'Post_deployment_screenings__c' ||
+          name == 'Exclusively_military_or_embassy__c' || name == 'Nonworkrelated_medical_insurance__c' || name == 'Housed_on_base__c' ||
+          name == 'Flight_contractor__c' || name == 'Helicopter__c' || name == 'Aircraft_service__c' || name == 'Security_contractor__c' ||
+          name == 'Armed_employees__c' || name == 'Security_Body_armour_required__c' || name == 'Translator_contractor__c' ||
+          name == 'Forward_operating_units__c' || name == 'Translator_Body_armour_required__c' || name == 'Carry_firearms__c')
+        {
+        this.ACInformationData[event.target.name] = isChecked; 
+        if (event.target.checked) {
+            if(name == 'Exclusively_military_or_embassy__c'){
+                this.ACInformationData['Describe_non_military_or_embassy_work__c'] = '';
+            } 
+            if(name == 'Nonworkrelated_medical_insurance__c'){
+                this.ACInformationData['Maximum_flight_concentration__c'] = '';
+            } 
+            if(name == 'Housed_on_base__c'){
+                this.ACInformationData['Type_of_housing__c'] = '';
+                this.ACInformationData['Transport_to_work__c'] = '';
+                this.ACInformationData['Distance_to_work__c'] = '';
+                this.ACInformationData['Transportation_concentration__c'] = '';
+                this.ACInformationData['Transport_security__c'] = '';
+            } 
+            this.showHideDetails[name] =  true; 
+       }else {
+        if(name == 'Carry_firearms__c'){
+            this.ACInformationData['Firearms_details__c'] = '';
+        } 
+            if(name == 'Subcontractors_used__c'){
+                this.ACInformationData['Subcontractors_vetting_process__c'] = '';
+            }  
+            if(name == 'Physicals_provided__c'){
+                this.ACInformationData['Physicals_provided_description__c'] = '';
+            }
+            if(name == 'Psychiatric_prescreening__c'){
+                this.ACInformationData['Psychiatric_prescreening_description__c'] = '';
+            }  
+            if(name == 'Post_deployment_screenings__c'){
+                this.ACInformationData['Post_deployment_screenings_description__c'] = '';
+            }  
+            if(name == 'Security_Body_armour_required__c'){
+                this.ACInformationData['Security_Body_armour_description__c'] = '';
+            }  
+            if(name == 'Forward_operating_units__c'){
+                this.ACInformationData['Translator_Mobile_work__c'] = '';
+            } 
+            if(name == 'Translator_Body_armour_required__c'){
+                this.ACInformationData['Translator_Body_armour_description__c'] = '';
+            }      
+           this.showHideDetails[name] =  false;
+       }
+        console.log('ACInformationData->',this.ACInformationData);
+       }
+    }
 
 
  //slected value for combobox to all type
@@ -735,21 +872,40 @@ deleteCountryYes(){
 }
 
 //Submit Form
-submitForm(){
+ submitForm(){
     const isAllInputsCorrect = [...this.template.querySelectorAll('.primeOrganizeNameValid,.primeAddressValid,.primeTypeofOrganizationValid,.primeOthertypeofOrganizationValid,.primeFirstNameValid,.primeLastNameValid,.primeContactEmailValid,.primeContactPhoneValid,.brokerIABValid,.brokerFirstNameValid,.brokerLastNameValid,.brokerEmailValid,.primeEffectiveDateValid,.primeTypeofContractValid,.primeOthertypeofContractValid,.primeContractCountryValid')]
             .reduce((validSoFar, inputField) => {
                 inputField.reportValidity();
                 return validSoFar && inputField.checkValidity();
             }, true);
     if(isAllInputsCorrect){
-        console.log('All Inputs Correct');   
+
+        // this.InputData = {
+        //     'primeInsuredInformation' : this.primeInsureData,
+        //     'additinoalInsured' : this.allAdditionalInsuredData,
+        //     'brokerInformation' : this.brokerInformationData,
+        //     'contractInfomation' : this.primeContractData,
+        //     'addtionalContract' : this.allAdditionalContractData,
+        //     'REInformation' : this.primeREInformationData,
+        //     'additionalCountries' : this.allAdditionalCountriesData,
+        //     'ACInformation' : this.ACInformationData,
+        
+        // }
+        // console.log('Inside loop'); 
+        // this.InputData = {
+        //     'prime' : 'data id',
+        //     'additinal' : 'ass'
+        // }
+        console.log('All Inputs Correct',this.InputData);   
         console.log('Prime InsuredData->',this.primeInsureData);
         console.log('brokerInformationData->',this.brokerInformationData);
         console.log('primeContractData->',this.primeContractData);
+        console.log('primeREInformationData->',this.primeREInformationData);
+        console.log('ACInformationData->',this.ACInformationData);    
         console.log("all Additional Insured",this.allAdditionalInsuredData);    
         console.log("all Additional Contract",this.allAdditionalContractData);
         console.log("all Additional Countries",this.allAdditionalCountriesData);
-    }        
+   }        
     
 }
     /*--------------------------------------------------------ja End--------------------------------------------------------*/

@@ -101,7 +101,7 @@
                             <label for="primeContactPhone">Contact Phone</label> <abbr title="required"
                                 class="slds-required">*</abbr> <lightning-input type="tel" label="Contact Phone"
                                 name="primeContactPhone" variant="label-hidden" id="contactPhone" class="slds-m-top_xx-small primeContactPhoneValid"
-                                onchange={primeInsuredSave} pattern="[0-9]{10}" message-when-value-missing="Please enter valid Contact Phone" required></lightning-input>
+                                onchange={primeInsuredSave} message-when-value-missing="Please enter valid Contact Phone" required></lightning-input>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
@@ -290,7 +290,7 @@
                         style="background-color: #9C8C7D; color: white;">
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
-                            <span style="font-size: 20px;">BROKER INFORMATION</span>
+                            <span style="font-size: 20px;">Broker Information</span>
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
@@ -326,7 +326,7 @@
                         </div>
                         <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="BrokerPhone">Broker Phone</label> <lightning-input type="tel"
-                                label="Broker Phone" pattern="[0-9]{10}" name="brokerPhone" onchange={brokerInformationSave} variant="label-hidden"
+                                label="Broker Phone" name="brokerPhone" onchange={brokerInformationSave} variant="label-hidden"
                                 id="BrokerPhone" class="slds-m-top_xx-small"></lightning-input>
                         </div>
                         <div
@@ -340,7 +340,7 @@
                         style="background-color: #9C8C7D; color: white;">
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
-                            <span style="font-size: 20px;">CONTRACT INFORMATION</span>
+                            <span style="font-size: 20px;">Contract Information</span>
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space slds-m-bottom_x-small"
@@ -409,51 +409,50 @@
                         <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
                                         type="checkbox" name="Prime_contractor__c"
-                                        onchange={primeContractSave} /> <span
-                                        class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                        onchange={handleCheckboxChange} /> <span
+                                        class="slds-checkbox_faux_container " aria-live="assertive"> <span
                                             class="slds-checkbox_faux"></span> </span> <span
                                         class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are you
                                         the prime contractor on these contracts?</span> </label> </div>
                         </div>
                         <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
-                                        type="checkbox" value="checkbox-toggle-21" name="contractQ2"
-                                        aria-describedby="contractQ2" /> <span id="contractQ2"
-                                        class="slds-checkbox_faux_container test" aria-live="assertive"> <span
-                                            class="slds-checkbox_faux"></span> </span> <span
+                                        type="checkbox"  name="Previous_dba_coverage__c"
+                                        onchange={handleCheckboxChange} /> <span class="slds-checkbox_faux_container " aria-live="assertive"> 
+                                            <span class="slds-checkbox_faux"></span> </span> <span
                                         class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Has the
                                         organization previously carried DBA coverage?</span> </label> </div>
                         </div>
                         <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small"> <label
                                 for="DescriptionofOperations">Description of Operations</label> <lightning-textarea
-                                name="DescriptionofOperations" id="DescriptionofOperations" variant="label-hidden"
+                                name="Description_of_operations__c" onchange={primeContractSave} id="DescriptionofOperations" variant="label-hidden"
                                 class="slds-m-top_xx-small" label="Description of Operations"></lightning-textarea>
                         </div>
                         <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
-                                        type="checkbox" name="contractQ3" aria-describedby="contractQ3"
-                                        onchange={showHideDetailsHandle} /> <span id="contractQ3"
-                                        class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                        type="checkbox" name="Under_or_above_ground_work__c" 
+                                        onchange={handleCheckboxChange} /> <span 
+                                        class="slds-checkbox_faux_container " aria-live="assertive"> <span
                                             class="slds-checkbox_faux"></span> </span> <span
                                         class="slds-m-bottom_none slds-m-left_small">Any work performed underground,
                                         underwater, or above 15 Ft?</span> </label> </div> <template
-                                if:true={showHideDetails.contractQ3}> <label for="contractQ3Input"
+                                if:true={showHideDetails.Under_or_above_ground_work__c}> <label
                                     class="slds-m-top_small">If Yes, please describe</label> <lightning-textarea
-                                    name="contractQ3Input" id="contractQ3Input" variant="label-hidden"
+                                    name="Work_environment_description__c" onchange={primeContractSave} variant="label-hidden"
                                     class="slds-m-top_xx-small" label="If Yes, please describe"></lightning-textarea>
                             </template>
                         </div>
                         <div class="slds-col slds-size_1-of-1 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                        type="checkbox" value="checkbox-toggle-21" name="contractQ4"
-                                        aria-describedby="contractQ4" onchange={showHideDetailsHandle} /> <span
-                                        id="contractQ4" class="slds-checkbox_faux_container test" aria-live="assertive">
+                                        type="checkbox" name="Subcontractors_used__c"
+                                         onchange={handleCheckboxChange} /> <span
+                                         class="slds-checkbox_faux_container " aria-live="assertive">
                                         <span class="slds-checkbox_faux"></span> </span> <span
                                         class="slds-m-bottom_none slds-m-left_small">If Prime Contractor, are
                                         subcontractors used?</span> </label> </div> <template
-                                if:true={showHideDetails.contractQ4}> <label for="contractQ4Input"
+                                if:true={showHideDetails.Subcontractors_used__c}> <label 
                                     class="slds-m-top_small">Please describe sub vetting process</label>
-                                <lightning-textarea name="contractQ4Input" id="contractQ4Input" variant="label-hidden"
+                                <lightning-textarea name="Subcontractors_vetting_process__c" onchange={primeContractSave} variant="label-hidden"
                                     class="slds-m-top_xx-small"
                                     label="Please describe sub vetting process"></lightning-textarea> </template>
                         </div>
@@ -648,7 +647,7 @@
                         style="background-color: #9C8C7D; color: white;">
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
-                            <span style="font-size: 20px;">REMUNERATION / EMPLOYEE INFORMATION</span>
+                            <span style="font-size: 20px;">Remuneration / Employee Information</span>
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
@@ -657,14 +656,14 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="REMUNERATION">Country of Operation</label> <lightning-combobox
-                                    name="Country of Operation" value={value} placeholder="Select Progress"
-                                    options={operationContryOption} onchange={handleChange} variant="label-hidden"
+                                    name="Country_Of_Operation__c" placeholder="Select Country"
+                                    options={operationContryOption} onchange={primeREHandle} variant="label-hidden"
                                     class="slds-m-top_xx-small"></lightning-combobox>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="REMUNERATION">Job Description</label> <lightning-input type="text"
-                                    variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    name="Job_Description__c" onchange={primeREInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
                         </div>
                         <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
@@ -672,8 +671,7 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" name="checkbox-toggle-17" value="checkbox-toggle-17"
-                                            aria-describedby="checkbox-toggle-17" /> <span id="checkbox-toggle-17"
+                                            type="checkbox" name="US_National__c" onchange={handleCheckboxChange}/> <span
                                             class="slds-checkbox_faux_container" aria-live="assertive"> <span
                                                 class="slds-checkbox_faux"></span> </span> &nbsp; Include United States
                                         national employees </label> </div>
@@ -681,58 +679,53 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="REMUNERATION">Number of US National's</label> <lightning-input type="text"
-                                    variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    name ='Number_US_national__c' onchange={primeREInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="REMUNERATION">Total remuneration US National's</label> <lightning-input
-                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    type="text" name="Total_Remuneration_USN__c" onchange={primeREInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" name="checkbox-toggle-17" value="checkbox-toggle-17"
-                                            aria-describedby="checkbox-toggle-17" /> <span id="checkbox-toggle-18"
-                                            class="slds-checkbox_faux_container" aria-live="assertive"> <span
+                                            type="checkbox" name="ThirdCountry_National__c" onchange={handleCheckboxChange}/>
+                                             <span class="slds-checkbox_faux_container" aria-live="assertive"> <span
                                                 class="slds-checkbox_faux"></span> </span> &nbsp; Include Third-Country
                                         national employees </label> </div>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="REMUNERATION">Number of Third-Country National's</label> <lightning-input
-                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    type="text" name="Number_ThirdCountry_National__c" onchange={primeREInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="REMUNERATION">Total remuneration Third-Country National’s</label>
                                 <lightning-input type="text" variant="label-hidden"
-                                    class="slds-m-top_xx-small"></lightning-input>
+                                name="Total_Remuneration_TCN__c" onchange={primeREInformationSave} class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" name="checkbox-toggle-17" value="checkbox-toggle-17"
-                                            aria-describedby="checkbox-toggle-17" /> <span id="checkbox-toggle-19"
-                                            class="slds-checkbox_faux_container" aria-live="assertive"> <span
+                                            type="checkbox" name="Local_National__c" onchange={handleCheckboxChange}/> 
+                                            <span class="slds-checkbox_faux_container" aria-live="assertive"> <span
                                                 class="slds-checkbox_faux"></span> </span> &nbsp; Include Local national
                                         employees </label> </div>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="REMUNERATION">Number of Local National's</label> <lightning-input
-                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    type="text" name="Number_Local_National__c" onchange={primeREInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="REMUNERATION">Total remuneration Local National</label> <lightning-input
-                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    type="text" name="Total_Remuneration_LN__c" onchange={primeREInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
-                        </div>
+                        </div>                    
                         <div
-                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
-                        </div>
-                        <div
-                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div align="right" class="slds-p-top_large"> <lightning-button variant="brand"
                                     label="Add Countries" title="Add Countries" onclick={addAdditionalCountries}
                                     class="slds-m-left_x-small"></lightning-button> </div>
@@ -939,7 +932,7 @@
                         style="background-color: #9C8C7D; color: white;">
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
-                            <span style="font-size: 20px;">ADDITIONAL CONTRACT INFORMATION</span>
+                            <span style="font-size: 20px;">Additional Contract Information</span>
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
@@ -948,9 +941,8 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ1"
-                                            aria-describedby="additionalContractQ1" /> <span id="additionalContractQ1"
-                                            class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                            type="checkbox" name="Tenured_employees__c" onchange={handleCheckboxChange} checked/>
+                                             <span  class="slds-checkbox_faux_container " aria-live="assertive"> <span
                                                 class="slds-checkbox_faux"></span> </span> <span
                                             class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
                                             tenured employees utilized for contract?</span> </label> </div>
@@ -958,9 +950,8 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element"> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ2"
-                                            aria-describedby="additionalContractQ2" /> <span id="additionalContractQ2"
-                                            class="slds-checkbox_faux_container test" aria-live="assertive"> <span
+                                            type="checkbox" name="Employees_retained_post_contract__c" onchange={handleCheckboxChange} checked/>
+                                            <span class="slds-checkbox_faux_container " aria-live="assertive"> <span
                                                 class="slds-checkbox_faux"></span> </span> <span
                                             class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Will
                                             employees retain employment with company after contract is complete?</span>
@@ -969,150 +960,113 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ3"
-                                            aria-describedby="additionalContractQ3" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ3" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Carry_firearms__c" onchange={handleCheckboxChange} checked/>
+                                        <span class="slds-checkbox_faux_container"
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
-                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">If
-                                            Prime Contractor, are subcontractors used?</span> </label> </div> <template
-                                    if:true={showHideDetails.additionalContractQ3}> <label
-                                        for="additionalContractQ3Input" class="slds-m-top_small">Please describe sub
-                                        vetting process</label> <lightning-textarea name="additionalContractQ3Input"
-                                        id="additionalContractQ3Input" variant="label-hidden"
-                                        class="slds-m-top_xx-small"
-                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">
+                                            Do any EEs carry firearms? </span> </label> </div> 
+                                            <template if:true={showHideDetails.Carry_firearms__c}> <label class="slds-m-top_small">
+                                            If Yes, please provide details</label> <lightning-textarea name="Firearms_details__c" onchange={ACInformationSave}
+                                         variant="label-hidden" class="slds-m-top_xx-small" label="If Yes, please provide details"></lightning-textarea> </template>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ4"
-                                            aria-describedby="additionalContractQ4" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ4" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Subcontractors_used__c" onchange={handleCheckboxChange}/>
+                                        <span class="slds-checkbox_faux_container"
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                        <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">If
+                                            Prime Contractor, are subcontractors used?</span> </label> </div> <template
+                                    if:true={showHideDetails.Subcontractors_used__c}> <label class="slds-m-top_small">
+                                        Please describe sub vetting process</label> <lightning-textarea name="Subcontractors_vetting_process__c" onchange={ACInformationSave}
+                                         variant="label-hidden" class="slds-m-top_xx-small" label="If Yes, please provide details"></lightning-textarea> </template>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
+                                            type="checkbox" name="Physicals_provided__c" onchange={handleCheckboxChange}/>
+                                        <span class="slds-checkbox_faux_container " aria-live="assertive"> 
+                                        <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
                                             physicals provided prior to deployment?</span> </label> </div> <template
-                                    if:true={showHideDetails.additionalContractQ4}> <label
-                                        for="additionalContractQ4Input" class="slds-m-top_small">Please describe
+                                    if:true={showHideDetails.Physicals_provided__c}> <label class="slds-m-top_small">Please describe
                                         pre-deployment process</label> <lightning-textarea
-                                        name="additionalContractQ4Input" id="additionalContractQ4Input"
+                                        name="Physicals_provided_description__c" onchange={ACInformationSave}
                                         variant="label-hidden" class="slds-m-top_xx-small"
                                         label="If Yes, please provide details"></lightning-textarea> </template>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ5"
-                                            aria-describedby="additionalContractQ5" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ5" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Psychiatric_prescreening__c" onchange={handleCheckboxChange}/>
+                                        <span id="additionalContractQ5" class="slds-checkbox_faux_container "
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
                                             psychiatric pre-screening completed prior to departure?</span> </label>
-                                </div> <template if:true={showHideDetails.additionalContractQ5}> <label
-                                        for="additionalContractQ5Input" class="slds-m-top_small">If Yes, who
-                                        administers?</label> <lightning-textarea name="additionalContractQ5Input"
-                                        id="additionalContractQ5Input" variant="label-hidden"
-                                        class="slds-m-top_xx-small"
-                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                                </div> <template if:true={showHideDetails.Psychiatric_prescreening__c}> <label class="slds-m-top_small">If Yes, who
+                                        administers?</label> <lightning-textarea name="Psychiatric_prescreening_description__c" onchange={ACInformationSave}
+                                         variant="label-hidden" class="slds-m-top_xx-small" label="If Yes, please provide details"></lightning-textarea> </template>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ6"
-                                            aria-describedby="additionalContractQ6" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ6" class="slds-checkbox_faux_container test"
-                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> <span
-                                                class="slds-checkbox_off"></span> </span> <span
-                                            class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
-                                            psychiatric pre-screening completed prior to departure?</span> </label>
-                                </div> <template if:true={showHideDetails.additionalContractQ6}> <label
-                                        for="additionalContractQ6Input" class="slds-m-top_small">If Yes, who
-                                        administers?</label> <lightning-textarea name="additionalContractQ6Input"
-                                        id="additionalContractQ6Input" variant="label-hidden"
-                                        class="slds-m-top_xx-small"
-                                        label="If Yes, please provide details"></lightning-textarea> </template>
-                            </div>
-                            <div
-                                class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
-                                <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ7"
-                                            aria-describedby="additionalContractQ7" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ7" class="slds-checkbox_faux_container test"
-                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                            type="checkbox" name="Post_deployment_screenings__c" onchange={handleCheckboxChange} />
+                                        <span class="slds-checkbox_faux_container " aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
-                                            post deployment screenings completed?</span> </label> </div> <template
-                                    if:true={showHideDetails.additionalContractQ7}> <label
-                                        for="additionalContractQ7Input" class="slds-m-top_small">If Yes, please
-                                        describe.</label> <lightning-textarea name="additionalContractQ7Input"
-                                        id="additionalContractQ7Input" variant="label-hidden"
-                                        class="slds-m-top_xx-small"
-                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                                            post deployment screenings completed?</span> </label> </div> 
+                                            <template if:true={showHideDetails.Post_deployment_screenings__c}> <label class="slds-m-top_small">If Yes, please
+                                        describe.</label> <lightning-textarea name="Post_deployment_screenings_description__c" onchange={ACInformationSave}
+                                          variant="label-hidden" class="slds-m-top_xx-small" label="If Yes, please provide details"></lightning-textarea> </template>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ8"
-                                            aria-describedby="additionalContractQ8" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ8" class="slds-checkbox_faux_container test"
-                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                            type="checkbox" name="Exclusively_military_or_embassy__c" onchange={handleCheckboxChange} />
+                                        <span class="slds-checkbox_faux_container " aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
                                             all work performed on a military base or embassy?</span> </label> </div>
-                                <template if:false={showHideDetails.additionalContractQ8}> <label
-                                        for="additionalContractQ8Input" class="slds-m-top_small">If No, please
-                                        describe.</label> <lightning-textarea name="additionalContractQ8Input"
-                                        id="additionalContractQ8Input" variant="label-hidden"
-                                        class="slds-m-top_xx-small"
-                                        label="If Yes, please provide details"></lightning-textarea> </template>
+                                <template if:false={showHideDetails.Exclusively_military_or_embassy__c}> <label class="slds-m-top_small">If No, please
+                                        describe.</label> <lightning-textarea name="Describe_non_military_or_embassy_work__c" onchange={ACInformationSave}
+                                         variant="label-hidden" class="slds-m-top_xx-small" label="If Yes, please provide details"></lightning-textarea> </template>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ9"
-                                            aria-describedby="additionalContractQ9" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ9" class="slds-checkbox_faux_container test"
-                                            aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
+                                            type="checkbox" name="Nonworkrelated_medical_insurance__c" onchange={handleCheckboxChange} />
+                                        <span class="slds-checkbox_faux_container " aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
                                             EEs provided with non-work-related medical insurance?</span> </label> </div>
-                                <template if:false={showHideDetails.additionalContractQ9}> <label
-                                        for="additionalContractQ9Input" class="slds-m-top_small">Maximum Flight
-                                        concentration to and from contract.</label> <lightning-textarea
-                                        name="additionalContractQ9Input" id="additionalContractQ9Input"
-                                        variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea>
-                                </template>
+                                <template if:false={showHideDetails.Nonworkrelated_medical_insurance__c}> <label class="slds-m-top_small">Maximum Flight
+                                    concentration to and from contract.</label> <lightning-input type="number" name="Maximum_flight_concentration__c" onchange={ACInformationSave}
+                                         variant="label-hidden" class="slds-m-top_xx-small" label="If Yes, please provide details"></lightning-input> </template>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ10"
-                                            aria-describedby="additionalContractQ10" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ10" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Housed_on_base__c" onchange={handleCheckboxChange}  />
+                                        <span class="slds-checkbox_faux_container "
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
-                                            employees housed on base?</span> </label> </div> <template
-                                    if:false={showHideDetails.additionalContractQ10}> <label
-                                        for="additionalContractQ10Input" class="slds-m-top_small">What type of housing
+                                            employees housed on base?</span> </label> </div> 
+                                    <template if:false={showHideDetails.Housed_on_base__c}> <label class="slds-m-top_small">What type of housing
                                         is provided to employees when on contract?</label> <lightning-textarea
-                                        name="additionalContractQ10Input" id="additionalContractQ10Input"
+                                        name="Type_of_housing__c" onchange={ACInformationSave}
                                         variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea>
-                                </template> <template if:false={showHideDetails.additionalContractQ10}> <label
-                                        for="additionalContractQ11Input" class="slds-m-top_small">How do EEs get to work
-                                        location?</label> <lightning-textarea name="additionalContractQ11Input"
-                                        id="additionalContractQ11Input" variant="label-hidden"
-                                        class="slds-m-top_xx-small"></lightning-textarea> </template> <template
-                                    if:false={showHideDetails.additionalContractQ10}> <label
-                                        for="additionalContractQ12Input" class="slds-m-top_small">How far is housing
-                                        from work?</label> <lightning-textarea name="additionalContractQ12Input"
-                                        id="additionalContractQ12Input" variant="label-hidden"
-                                        class="slds-m-top_xx-small"></lightning-textarea> </template> <template
-                                    if:false={showHideDetails.additionalContractQ10}> <label
-                                        for="additionalContractQ13Input" class="slds-m-top_small">What is the maximum
+                                     </template> 
+                                <template if:false={showHideDetails.Housed_on_base__c}> <label class="slds-m-top_small">How do EEs get to work
+                                        location?</label> <lightning-textarea name="Transport_to_work__c" onchange={ACInformationSave}
+                                         variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea> </template> 
+                                         <template if:false={showHideDetails.Housed_on_base__c}> <label class="slds-m-top_small">How far is housing
+                                        from work?</label> <lightning-textarea name="Distance_to_work__c" onchange={ACInformationSave}
+                                         variant="label-hidden"
+                                        class="slds-m-top_xx-small"></lightning-textarea> </template> 
+                                        <template if:false={showHideDetails.Housed_on_base__c}> <label class="slds-m-top_small">What is the maximum
                                         concentration of EE's during transportation?</label> <lightning-textarea
-                                        name="additionalContractQ13Input" id="additionalContractQ13Input"
+                                        name="Transportation_concentration__c" onchange={ACInformationSave}
                                         variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea>
-                                </template> <template if:false={showHideDetails.additionalContractQ10}> <label
-                                        for="additionalContractQ14Input" class="slds-m-top_small">What security (If any)
+                                </template> <template if:false={showHideDetails.Housed_on_base__c}> <label class="slds-m-top_small">What security (If any)
                                         is provided EEs at housing and during transportation?</label>
-                                    <lightning-textarea name="additionalContractQ14Input"
-                                        id="additionalContractQ14Input" variant="label-hidden"
+                                    <lightning-textarea name="Transport_security__c" onchange={ACInformationSave} variant="label-hidden"
                                         class="slds-m-top_xx-small"></lightning-textarea> </template>
                             </div>
                         </div>
@@ -1121,9 +1075,8 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ15"
-                                            aria-describedby="additionalContractQ15" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ15" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Flight_contractor__c" onchange={handleCheckboxChange} />
+                                        <span  class="slds-checkbox_faux_container "
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
                                             you a flight contractor?</span> </label> </div>
@@ -1131,9 +1084,8 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ16"
-                                            aria-describedby="additionalContractQ16" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ16" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Helicopter__c" onchange={handleCheckboxChange} />
+                                        <span  class="slds-checkbox_faux_container "
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
                                             the aircraft a helicopter?</span> </label> </div>
@@ -1141,9 +1093,8 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ17"
-                                            aria-describedby="additionalContractQ17" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ17" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Aircraft_service__c" onchange={handleCheckboxChange} />
+                                        <span class="slds-checkbox_faux_container "
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Do
                                             you also service the aircraft?</span> </label> </div>
@@ -1151,29 +1102,29 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="AddtionalContract">What type of aircraft are you flying?</label>
-                                <lightning-input type="text" variant="label-hidden"
+                                <lightning-input type="text" variant="label-hidden" name="Flight_aircraft_type__c" onchange={ACInformationSave}
                                     class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="AddtionalContract">Number of pilots and crew?</label> <lightning-input
-                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    type="number" name="Flight_crew__c" onchange={ACInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="AddtionalContract">How many flights per week?</label> <lightning-input
-                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    type="number" name="Number_of_flights__c" onchange={ACInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="AddtionalContract">Where are base operations located?</label>
-                                <lightning-input type="text" variant="label-hidden"
+                                <lightning-input type="text" name="Location_of_base_for_flights__c" onchange={ACInformationSave} variant="label-hidden"
                                     class="slds-m-top_xx-small"></lightning-input>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="AddtionalContract">Where are flights to?</label> <lightning-input
-                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                    type="text" name="Flight_destination__c" onchange={ACInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
                         </div>
                         <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space"
@@ -1181,9 +1132,8 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ18"
-                                            aria-describedby="additionalContractQ18" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ18" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Security_contractor__c" onchange={handleCheckboxChange}/>
+                                        <span  class="slds-checkbox_faux_container "
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
                                             you a Security Contractor?</span> </label> </div>
@@ -1191,9 +1141,8 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ19"
-                                            aria-describedby="additionalContractQ19" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ19" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Armed_employees__c" onchange={handleCheckboxChange} />
+                                        <span class="slds-checkbox_faux_container "
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are
                                             your EEs armed?</span> </label> </div>
@@ -1201,37 +1150,43 @@
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                            type="checkbox" value="checkbox-toggle-21" name="additionalContractQ20"
-                                            aria-describedby="additionalContractQ20" onchange={showHideDetailsHandle} />
-                                        <span id="additionalContractQ20" class="slds-checkbox_faux_container test"
+                                            type="checkbox" name="Security_Body_armour_required__c" onchange={handleCheckboxChange}/>
+                                        <span  class="slds-checkbox_faux_container "
                                             aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span>
                                         <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is
                                             body armour required to be worn?</span> </label> </div> <template
-                                    if:true={showHideDetails.additionalContractQ20}> <label
-                                        for="additionalContractQ20Input" class="slds-m-top_small">If yes, please
+                                    if:true={showHideDetails.Security_Body_armour_required__c}> <label class="slds-m-top_small">If yes, please
                                         describe what level of body armor and when its required</label>
-                                    <lightning-textarea name="additionalContractQ14Input"
-                                        id="additionalContractQ20Input" variant="label-hidden"
-                                        class="slds-m-top_xx-small"></lightning-textarea> </template>
+                                    <lightning-textarea name="Security_Body_armour_description__c" onchange={ACInformationSave}
+                                     variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea> </template>
                             </div>
                             <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
-                                <label for="AddtionalContract">What % of work is mobile?</label> <lightning-input
-                                    type="text" variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                                <label>What % of work is mobile?</label> <lightning-input
+                                    type="number" min="0" max="1" formatter="percent" step="0.01"
+                                    name="Security_Mobile_work__c" onchange={ACInformationSave} variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
                             </div>
-                            <div
+                            <!-- <div
                                 class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                                 <label for="AddtionalContract">Where are you providing security?</label>
-                                <lightning-input type="text" variant="label-hidden"
-                                    class="slds-m-top_xx-small"></lightning-input>
-                            </div>
+                                <lightning-input type="text" name="Security_location__c" onchange={ACInformationSave} 
+                                variant="label-hidden" class="slds-m-top_xx-small"></lightning-input>
+                            </div> -->
+                            <div
+                            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
+                            <label for="workProvided">Where are you providing security?</label> <lightning-combobox
+                                name="Security_location__c" placeholder="Where are you providing security?" options={providingSecurityOption}
+                                onchange={ACInformationhandle} variant="label-hidden" 
+                                class="slds-m-top_xx-small"> </lightning-combobox>
+                                <template if:true={showHideDetails.Security_location__c}> <lightning-input type ='text' name="Other_security_location__c" onchange={ACInformationSave}
+                                     variant="label-hidden" placeholder="Other providing security?" class="slds-m-top_xx-small"></lightning-input> </template>
+                        </div>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                        type="checkbox" value="checkbox-toggle-21" name="additionalContractQ21"
-                                        aria-describedby="additionalContractQ21" onchange={showHideDetailsHandle} />
-                                    <span id="additionalContractQ21" class="slds-checkbox_faux_container test"
+                                        type="checkbox" name="Translator_contractor__c" onchange={handleCheckboxChange} />
+                                    <span class="slds-checkbox_faux_container "
                                         aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span> <span
                                         class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Are you a
                                         linguistic/translator contractor?</span> </label> </div>
@@ -1239,40 +1194,35 @@
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <label for="workProvided">What type of work is being provided?</label> <lightning-combobox
-                                name="TypeofOrganization" value={value}
-                                placeholder="What type of work is being provided?" options={workOption}
-                                onchange={showHideDetailsHandle} required variant="label-hidden" id="workProvided"
+                                name="Translator_type__c" placeholder="What type of work is being provided?" options={workOption}
+                                onchange={ACInformationhandle} variant="label-hidden" 
                                 class="slds-m-top_xx-small"> </lightning-combobox>
+                                <template if:true={showHideDetails.Translator_type__c}> <lightning-input type ='text' name="Translator_other_type__c" onchange={ACInformationSave}
+                                     variant="label-hidden" placeholder="Other type of work is being provided?" class="slds-m-top_xx-small"></lightning-input> </template>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                        type="checkbox" value="checkbox-toggle-21" name="additionalContractQ22"
-                                        aria-describedby="additionalContractQ22" onchange={showHideDetailsHandle} />
-                                    <span id="additionalContractQ22" class="slds-checkbox_faux_container test"
+                                        type="checkbox" name="Forward_operating_units__c" onchange={handleCheckboxChange} />
+                                    <span  class="slds-checkbox_faux_container "
                                         aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span> <span
                                         class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is any
                                         work embedded with forward operating units?</span> </label> </div> <template
-                                if:true={showHideDetails.additionalContractQ22}> <label for="additionalContractQ22Input"
-                                    class="slds-m-top_small">If yes, what percentage of EEs will do off base
-                                    work:</label> <lightning-textarea name="additionalContractQ9Input"
-                                    id="additionalContractQ22Input" variant="label-hidden"
-                                    class="slds-m-top_xx-small"></lightning-textarea> </template>
+                                if:true={showHideDetails.Forward_operating_units__c}> <label class="slds-m-top_small">If yes, what percentage of EEs will do off base
+                                    work:</label> <lightning-input type ='text' name="Translator_Mobile_work__c" onchange={ACInformationSave}
+                                     variant="label-hidden" class="slds-m-top_xx-small"></lightning-input> </template>
                         </div>
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_2-of-2 slds-p-horizontal_medium slds-p-vertical_x-small">
                             <div class="slds-form-element "> <label class="slds-checkbox_toggle slds-grid"> <input
-                                        type="checkbox" value="checkbox-toggle-21" name="additionalContractQ23"
-                                        aria-describedby="additionalContractQ23" onchange={showHideDetailsHandle} />
-                                    <span id="additionalContractQ23" class="slds-checkbox_faux_container test"
+                                        type="checkbox" name="Translator_Body_armour_required__c" onchange={handleCheckboxChange} />
+                                    <span class="slds-checkbox_faux_container "
                                         aria-live="assertive"> <span class="slds-checkbox_faux"></span> </span> <span
                                         class="slds-form-element__label slds-m-bottom_none slds-m-left_small">Is body
                                         armor required to be worn?</span> </label> </div> <template
-                                if:true={showHideDetails.additionalContractQ23}> <label for="additionalContractQ23Input"
-                                    class="slds-m-top_small">If yes, please describe what level of body armor and when
-                                    its required</label> <lightning-textarea name="additionalContractQ9Input"
-                                    id="additionalContractQ23Input" variant="label-hidden"
-                                    class="slds-m-top_xx-small"></lightning-textarea> </template>
+                                if:true={showHideDetails.Translator_Body_armour_required__c}> <label class="slds-m-top_small">If yes, please describe what level of body armor and when
+                                    its required</label> <lightning-textarea name="Translator_Body_armour_description__c" onchange={ACInformationSave}
+                                    variant="label-hidden" class="slds-m-top_xx-small"></lightning-textarea> </template>
                         </div>
                     </div>
                 </div>
@@ -1282,7 +1232,7 @@
                         style="background-color: #9C8C7D; color: white;">
                         <div
                             class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_medium">
-                            <span style="font-size: 20px;">REQUESTED DOCUMENTS</span>
+                            <span style="font-size: 20px;">Requested Documents</span>
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-large-size_4-of-4 slds-no-space ">
