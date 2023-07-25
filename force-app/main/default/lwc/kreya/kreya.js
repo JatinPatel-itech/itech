@@ -114,5 +114,28 @@ CreateMilestone(){
         });   
 }
 
+// @track projectId = '0035i00003JkZcbAAF'; 
+//   handleSuccess1(event) {
+//       event.preventDefault();       // stop the form from submitting
+//     const fields = event.detail.fields;
+//            let inputField = this.template.querySelector( '[ data-id="Title" ]' );
+//         console.log( 
+//             'Value is',
+//             inputField.value            
+//         );
+//         if(inputField.value == 'jatin'){
+//             this.template.querySelector('lightning-record-edit-form').submit(fields);
+//         }else{}
+
+        
+//    // this.template.querySelector('lightning-record-edit-form').submit(fields);
+//         // Perform further processing or submit the form
+//     }
+    
+//     handleSuccess(){
+        
+//         console.log('success save');
+        
+//     }
 
 }
