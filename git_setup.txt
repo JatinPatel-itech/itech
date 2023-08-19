@@ -36,3 +36,6 @@ git branch -m main master
 git fetch origin
 git branch -u origin/master master
 git remote set-head origin -a
+
+git config user.name "full_name"
+git config --list
