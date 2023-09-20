@@ -1,6 +1,6 @@
 //20,000 records
 
-global class 	 Implements Database.Batchable<sObject>, Database.stateful, Database.AllowsCallouts
+global class Demo_BatchApex Implements Database.Batchable<sObject>, Database.stateful, Database.AllowsCallouts
 {
     global integer count = 0;
 	global Database.QueryLocator start(Database.BatchableContext bc)
