@@ -18,7 +18,7 @@ public static void notifyUsers(Set<String> recipientsIds, String targetId) {
         notification.setBody('The notifications are coming from INSIDE the Apex!');
 
         // Set the notification type and target
-        notification.setNotificationTypeId(userInfo.getUserId());
+        notification.setNotificationTypeId(notificationType.Id);
         notification.setTargetId(userInfo.getUserId());
         
         // Actually send the notification
