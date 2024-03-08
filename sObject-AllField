@@ -1,0 +1,10 @@
+Map <String,Schema.SObjectType> gd = Schema.getGlobalDescribe();
+Schema.SObjectType sobjType = gd.get('Account');
+Schema.DescribeSObjectResult r = sobjType.getDescribe();
+Map<String, Schema.SObjectField> MapofField = r.fields.getMap();
+for(String fieldName : MapofField.keySet()) 
+{
+Schema.SObjectField field = MapofField.get(fieldName);
+Schema.DescribeFieldResult F = field.getDescribe();
+System.debug('Field Name: '+F.getName()); 
+}
